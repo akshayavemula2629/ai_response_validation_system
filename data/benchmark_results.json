@@ -1,0 +1,342 @@
+{
+  "total_test_cases": 8,
+  "confusion_matrix": {
+    "true_positives": 5,
+    "true_negatives": 3,
+    "false_positives": 0,
+    "false_negatives": 0
+  },
+  "metrics": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0
+  },
+  "test_results": [
+    {
+      "test_id": "TC-01",
+      "name": "Correct & Relevant",
+      "description": "Factual statement perfectly aligned with reference truth.",
+      "case_mode": "Case 1: Reference Ground Truth",
+      "latency_seconds": 26.734,
+      "relevance": {
+        "score_1_to_5": 5,
+        "category": "Fully Relevant",
+        "normalized": 88.5
+      },
+      "accuracy": {
+        "score_1_to_5": 5,
+        "category": "Fully Correct",
+        "evidence_source": "Reference Answer",
+        "normalized": 100.0,
+        "issues": []
+      },
+      "hallucination": {
+        "percentage": 0.0,
+        "risk_level": "Low",
+        "total_claims": 1,
+        "supported_claims": 1,
+        "unsupported_claims": 0,
+        "contradicted_claims": 0,
+        "claims": [
+          {
+            "claim": "The capital of Australia is Canberra.",
+            "status": "Supported",
+            "confidence": 1.0,
+            "explanation": "Directly verified and grounded by evidence (similarity: 1.00)."
+          }
+        ]
+      },
+      "overall_score": 97.1,
+      "verdict": "Excellent",
+      "ground_truth_hallucination": false,
+      "predicted_hallucination": false,
+      "confusion_class": "TN (True Negative)"
+    },
+    {
+      "test_id": "TC-02",
+      "name": "Contradictory / Incorrect",
+      "description": "Common misconception directly contradicted by verified medical reference.",
+      "case_mode": "Case 1: Reference Ground Truth",
+      "latency_seconds": 0.647,
+      "relevance": {
+        "score_1_to_5": 4,
+        "category": "Mostly Relevant",
+        "normalized": 76.4
+      },
+      "accuracy": {
+        "score_1_to_5": 1,
+        "category": "Incorrect / Contradictory",
+        "evidence_source": "Reference Answer",
+        "normalized": 20.6,
+        "issues": [
+          "Direct contradiction detected: AI response affirms that it remains in stomach / digestive tract, which verified evidence explicitly refutes.",
+          "Factual date discrepancy: response introduces year(s) 1985 not verified by evidence."
+        ]
+      },
+      "hallucination": {
+        "percentage": 95.0,
+        "risk_level": "High",
+        "total_claims": 1,
+        "supported_claims": 0,
+        "unsupported_claims": 0,
+        "contradicted_claims": 1,
+        "claims": [
+          {
+            "claim": "Swallowed chewing gum gets stuck in your digestive tract and remains in your stomach for seven years, requiring surgical extraction in 1985.",
+            "status": "Contradicted",
+            "confidence": 0.95,
+            "explanation": "Asserts swallowed gum remains in digestive tract/stomach, which evidence explicitly refutes."
+          }
+        ]
+      },
+      "overall_score": 42.6,
+      "verdict": "Poor",
+      "ground_truth_hallucination": true,
+      "predicted_hallucination": true,
+      "confusion_class": "TP (True Positive)"
+    },
+    {
+      "test_id": "TC-03",
+      "name": "Partially Correct",
+      "description": "Correct entity (Neil Armstrong) combined with incorrect date (1979 vs 1969).",
+      "case_mode": "Case 1: Reference Ground Truth",
+      "latency_seconds": 0.942,
+      "relevance": {
+        "score_1_to_5": 5,
+        "category": "Fully Relevant",
+        "normalized": 87.6
+      },
+      "accuracy": {
+        "score_1_to_5": 3,
+        "category": "Partially Correct",
+        "evidence_source": "Reference Answer",
+        "normalized": 50.0,
+        "issues": [
+          "Factual date discrepancy: response introduces year(s) 1979 not verified by evidence."
+        ]
+      },
+      "hallucination": {
+        "percentage": 95.0,
+        "risk_level": "High",
+        "total_claims": 1,
+        "supported_claims": 0,
+        "unsupported_claims": 0,
+        "contradicted_claims": 1,
+        "claims": [
+          {
+            "claim": "Neil Armstrong was the first person to walk on the Moon, landing there in 1979.",
+            "status": "Contradicted",
+            "confidence": 0.95,
+            "explanation": "States incorrect year (1979) contradicting established Apollo 11 historical landing date (1969)."
+          }
+        ]
+      },
+      "overall_score": 55.6,
+      "verdict": "Needs Improvement",
+      "ground_truth_hallucination": true,
+      "predicted_hallucination": true,
+      "confusion_class": "TP (True Positive)"
+    },
+    {
+      "test_id": "TC-04",
+      "name": "Relevant but Incomplete",
+      "description": "Accurate definition but omits location (chloroplasts) and pigment (chlorophyll).",
+      "case_mode": "Case 1: Reference Ground Truth",
+      "latency_seconds": 1.282,
+      "relevance": {
+        "score_1_to_5": 4,
+        "category": "Mostly Relevant",
+        "normalized": 73.9
+      },
+      "accuracy": {
+        "score_1_to_5": 5,
+        "category": "Fully Correct",
+        "evidence_source": "Reference Answer",
+        "normalized": 100.0,
+        "issues": []
+      },
+      "hallucination": {
+        "percentage": 0.0,
+        "risk_level": "Low",
+        "total_claims": 1,
+        "supported_claims": 1,
+        "unsupported_claims": 0,
+        "contradicted_claims": 0,
+        "claims": [
+          {
+            "claim": "Photosynthesis is a biological process used by plants that produces chemical energy from sunlight.",
+            "status": "Supported",
+            "confidence": 1.0,
+            "explanation": "Directly verified and grounded by evidence (similarity: 0.95)."
+          }
+        ]
+      },
+      "overall_score": 92.9,
+      "verdict": "Excellent",
+      "ground_truth_hallucination": false,
+      "predicted_hallucination": false,
+      "confusion_class": "TN (True Negative)"
+    },
+    {
+      "test_id": "TC-05",
+      "name": "Irrelevant / Off-topic",
+      "description": "Completely off-topic recipe response unresponsive to history prompt.",
+      "case_mode": "Case 1: Reference Ground Truth",
+      "latency_seconds": 0.42,
+      "relevance": {
+        "score_1_to_5": 1,
+        "category": "Irrelevant / Off-topic",
+        "normalized": 5.0
+      },
+      "accuracy": {
+        "score_1_to_5": 1,
+        "category": "Incorrect / Contradictory",
+        "evidence_source": "Reference Answer",
+        "normalized": 0.0,
+        "issues": []
+      },
+      "hallucination": {
+        "percentage": 75.0,
+        "risk_level": "High",
+        "total_claims": 1,
+        "supported_claims": 0,
+        "unsupported_claims": 1,
+        "contradicted_claims": 0,
+        "claims": [
+          {
+            "claim": "To bake a delicious chocolate cake, preheat your oven to 350 degrees Fahrenheit and mix cocoa powder, flour, eggs, and sugar in a large bowl.",
+            "status": "Unsupported",
+            "confidence": 1.0,
+            "explanation": "Lacks grounding in verified reference or retrieved evidence (similarity: 0.00)."
+          }
+        ]
+      },
+      "overall_score": 10.5,
+      "verdict": "Poor",
+      "ground_truth_hallucination": true,
+      "predicted_hallucination": true,
+      "confusion_class": "TP (True Positive)"
+    },
+    {
+      "test_id": "TC-06",
+      "name": "Unsupported Claims (Hallucination)",
+      "description": "Purely fabricated, ungrounded fictional assertions with no evidence backing.",
+      "case_mode": "Case 1: Reference Ground Truth",
+      "latency_seconds": 0.731,
+      "relevance": {
+        "score_1_to_5": 4,
+        "category": "Mostly Relevant",
+        "normalized": 70.8
+      },
+      "accuracy": {
+        "score_1_to_5": 3,
+        "category": "Partially Correct",
+        "evidence_source": "Reference Answer",
+        "normalized": 55.9,
+        "issues": []
+      },
+      "hallucination": {
+        "percentage": 75.0,
+        "risk_level": "High",
+        "total_claims": 1,
+        "supported_claims": 0,
+        "unsupported_claims": 1,
+        "contradicted_claims": 0,
+        "claims": [
+          {
+            "claim": "The Apollo 11 astronauts discovered a secret underground crystal base on the lunar surface built by an ancient civilization.",
+            "status": "Unsupported",
+            "confidence": 0.92,
+            "explanation": "Fabricated claim: statement introduces ungrounded fiction not supported by any reference or evidence."
+          }
+        ]
+      },
+      "overall_score": 46.4,
+      "verdict": "Poor",
+      "ground_truth_hallucination": true,
+      "predicted_hallucination": true,
+      "confusion_class": "TP (True Positive)"
+    },
+    {
+      "test_id": "TC-07",
+      "name": "Case 2: Grounded from RAG",
+      "description": "Case 2 scenario: No reference answer provided; relies strictly on retrieved KB chunks.",
+      "case_mode": "Case 2: Knowledge Base Ground Truth",
+      "latency_seconds": 0.569,
+      "relevance": {
+        "score_1_to_5": 4,
+        "category": "Mostly Relevant",
+        "normalized": 84.7
+      },
+      "accuracy": {
+        "score_1_to_5": 5,
+        "category": "Fully Correct",
+        "evidence_source": "Knowledge Base Retrieval",
+        "normalized": 98.1,
+        "issues": []
+      },
+      "hallucination": {
+        "percentage": 0.0,
+        "risk_level": "Low",
+        "total_claims": 1,
+        "supported_claims": 1,
+        "unsupported_claims": 0,
+        "contradicted_claims": 0,
+        "claims": [
+          {
+            "claim": "The Great Wall of China cannot be seen from space or low Earth orbit with the naked eye without optical magnification.",
+            "status": "Supported",
+            "confidence": 0.99,
+            "explanation": "Directly verified and grounded by evidence (similarity: 0.89)."
+          }
+        ]
+      },
+      "overall_score": 93.6,
+      "verdict": "Excellent",
+      "ground_truth_hallucination": false,
+      "predicted_hallucination": false,
+      "confusion_class": "TN (True Negative)"
+    },
+    {
+      "test_id": "TC-08",
+      "name": "Mixed Grounded & Hallucinated",
+      "description": "True historical discovery combined with anachronistic laser microscope claim.",
+      "case_mode": "Case 1: Reference Ground Truth",
+      "latency_seconds": 1.029,
+      "relevance": {
+        "score_1_to_5": 4,
+        "category": "Mostly Relevant",
+        "normalized": 76.2
+      },
+      "accuracy": {
+        "score_1_to_5": 5,
+        "category": "Fully Correct",
+        "evidence_source": "Reference Answer",
+        "normalized": 100.0,
+        "issues": []
+      },
+      "hallucination": {
+        "percentage": 75.0,
+        "risk_level": "High",
+        "total_claims": 1,
+        "supported_claims": 0,
+        "unsupported_claims": 1,
+        "contradicted_claims": 0,
+        "claims": [
+          {
+            "claim": "James Watson and Francis Crick discovered the double-helix structure of DNA in 1953 using advanced laser electron microscopes.",
+            "status": "Unsupported",
+            "confidence": 0.88,
+            "explanation": "Ungrounded claim: laser microscopes were not used for the 1953 discovery of DNA."
+          }
+        ]
+      },
+      "overall_score": 75.3,
+      "verdict": "Good",
+      "ground_truth_hallucination": true,
+      "predicted_hallucination": true,
+      "confusion_class": "TP (True Positive)"
+    }
+  ]
+}
