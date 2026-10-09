@@ -1,0 +1,2398 @@
+{
+  "batch_id": "BATCH-20261007-113816",
+  "dataset_name": "sample_batch_evaluation.csv",
+  "evaluation_time": "2026-10-07 11:38:16 UTC",
+  "summary": {
+    "total_records": 8,
+    "total_rows": 8,
+    "file_total": 10,
+    "valid_total": 10,
+    "invalid_total": 0,
+    "selected_filter": "All",
+    "available_records": 10,
+    "requested_records": 8,
+    "actually_evaluated": 8,
+    "successful": 8,
+    "valid_rows": 8,
+    "invalid": 0,
+    "invalid_rows": 0,
+    "failed": 0,
+    "average_relevance": 67.3,
+    "average_accuracy": 53.8,
+    "average_hallucination": 45.6,
+    "average_completeness": 82.5,
+    "average_overall": 62.7,
+    "average_score": 62.7,
+    "verdict_counts": {
+      "PASS": 2,
+      "FAIL": 5,
+      "NEEDS IMPROVEMENT": 1
+    },
+    "verdict_distribution": {
+      "PASS": {
+        "count": 2,
+        "percentage": 25.0
+      },
+      "NEEDS IMPROVEMENT": {
+        "count": 1,
+        "percentage": 12.5
+      },
+      "FAIL": {
+        "count": 5,
+        "percentage": 62.5
+      }
+    },
+    "hallucination_frequency": 62.5,
+    "average_hallucination_percentage": 62.5,
+    "batch_id": "BATCH-20261007-113816",
+    "evaluation_time": "2026-10-07 11:38:16 UTC",
+    "dataset_name": "sample_batch_evaluation.csv",
+    "pass_rate": 25.0,
+    "needs_improvement_rate": 12.5,
+    "fail_rate": 62.5,
+    "dimension_averages": {
+      "relevance": 67.3,
+      "accuracy": 53.8,
+      "hallucination_safety": 45.6,
+      "completeness": 82.5,
+      "similarity": 83.6,
+      "overall_score": 62.7
+    },
+    "hallucination_stats": {
+      "hallucinated_responses_count": 5,
+      "hallucination_free_count": 3,
+      "hallucination_frequency_pct": 62.5,
+      "total_unsupported_claims": 2,
+      "total_claims_evaluated": 8,
+      "unsupported_claim_frequency_pct": 25.0,
+      "risk_distribution": {
+        "low": 3,
+        "medium": 0,
+        "high": 5
+      }
+    },
+    "completeness_stats": {
+      "complete_count": 5,
+      "partial_count": 2,
+      "incomplete_count": 1,
+      "missing_info_frequency_pct": 37.5,
+      "commonly_omitted_aspects": [
+        {
+          "aspect": "where it occurs in plant cells.",
+          "count": 1,
+          "percentage": 12.5
+        },
+        {
+          "aspect": "What caused the French Revolution",
+          "count": 1,
+          "percentage": 12.5
+        },
+        {
+          "aspect": "The French Revolution was caused by severe financial crisis social inequality of the Estates system and Enlightenment id...",
+          "count": 1,
+          "percentage": 12.5
+        }
+      ]
+    },
+    "recurring_issues": [
+      {
+        "issue": "Hallucinated / Contradicted Claims",
+        "category": "Hallucination Risk",
+        "count": 5,
+        "percentage": 62.5,
+        "severity": "High"
+      },
+      {
+        "issue": "Low Factual Accuracy to Evidence",
+        "category": "Factual Grounding",
+        "count": 5,
+        "percentage": 62.5,
+        "severity": "High"
+      },
+      {
+        "issue": "Incomplete Coverage of Core Requirements",
+        "category": "Completeness",
+        "count": 3,
+        "percentage": 37.5,
+        "severity": "Medium"
+      },
+      {
+        "issue": "Partial Query Relevance / Semantic Deviation",
+        "category": "Relevance",
+        "count": 2,
+        "percentage": 25.0,
+        "severity": "Low"
+      }
+    ],
+    "score_distributions": {
+      "0-40": 1,
+      "41-70": 4,
+      "71-85": 1,
+      "86-100": 2
+    }
+  },
+  "analytics": {
+    "verdict_distribution": {
+      "PASS": {
+        "count": 2,
+        "percentage": 25.0
+      },
+      "NEEDS IMPROVEMENT": {
+        "count": 1,
+        "percentage": 12.5
+      },
+      "FAIL": {
+        "count": 5,
+        "percentage": 62.5
+      }
+    },
+    "dimension_averages": {
+      "relevance": 67.3,
+      "accuracy": 53.8,
+      "hallucination_safety": 45.6,
+      "completeness": 82.5,
+      "similarity": 83.6,
+      "overall_score": 62.7
+    },
+    "score_distributions": {
+      "0-40": 1,
+      "41-70": 4,
+      "71-85": 1,
+      "86-100": 2
+    },
+    "hallucination_stats": {
+      "hallucinated_responses_count": 5,
+      "hallucination_free_count": 3,
+      "hallucination_frequency_pct": 62.5,
+      "total_unsupported_claims": 2,
+      "total_claims_evaluated": 8,
+      "unsupported_claim_frequency_pct": 25.0,
+      "risk_distribution": {
+        "low": 3,
+        "medium": 0,
+        "high": 5
+      }
+    },
+    "completeness_stats": {
+      "complete_count": 5,
+      "partial_count": 2,
+      "incomplete_count": 1,
+      "missing_info_frequency_pct": 37.5,
+      "commonly_omitted_aspects": [
+        {
+          "aspect": "where it occurs in plant cells.",
+          "count": 1,
+          "percentage": 12.5
+        },
+        {
+          "aspect": "What caused the French Revolution",
+          "count": 1,
+          "percentage": 12.5
+        },
+        {
+          "aspect": "The French Revolution was caused by severe financial crisis social inequality of the Estates system and Enlightenment id...",
+          "count": 1,
+          "percentage": 12.5
+        }
+      ]
+    },
+    "recurring_issues": [
+      {
+        "issue": "Hallucinated / Contradicted Claims",
+        "category": "Hallucination Risk",
+        "count": 5,
+        "percentage": 62.5,
+        "severity": "High"
+      },
+      {
+        "issue": "Low Factual Accuracy to Evidence",
+        "category": "Factual Grounding",
+        "count": 5,
+        "percentage": 62.5,
+        "severity": "High"
+      },
+      {
+        "issue": "Incomplete Coverage of Core Requirements",
+        "category": "Completeness",
+        "count": 3,
+        "percentage": 37.5,
+        "severity": "Medium"
+      },
+      {
+        "issue": "Partial Query Relevance / Semantic Deviation",
+        "category": "Relevance",
+        "count": 2,
+        "percentage": 25.0,
+        "severity": "Low"
+      }
+    ]
+  },
+  "results": [
+    {
+      "row_id": 1,
+      "row_index": 1,
+      "response_id": "row_1",
+      "question": "What is the capital of Australia?",
+      "ai_response": "The capital of Australia is Canberra.",
+      "reference_answer": "The capital of Australia is Canberra.",
+      "status": "SUCCESS",
+      "error_message": null,
+      "relevance_score": 88.5,
+      "accuracy_score": 100.0,
+      "hallucination_score": 100.0,
+      "hallucination_percentage": 0.0,
+      "completeness_score": 100.0,
+      "overall_score": 97.1,
+      "verdict": "PASS",
+      "final_verdict": "PASS",
+      "expected_status": null,
+      "record_status": "VALID",
+      "similarity_score": 89.7,
+      "evaluation_detail": {
+        "question": "What is the capital of Australia?",
+        "original_response": "The capital of Australia is Canberra.",
+        "reference_answer": "The capital of Australia is Canberra.",
+        "better_answer": "The capital of Australia is Canberra.",
+        "better_answer_reason": "The original AI response is already factually accurate, relevant, and free of significant hallucinations.",
+        "evaluation": {
+          "relevance": {
+            "score": 88.5,
+            "explanation": "The response directly and clearly addresses the core intent and specific subject of the question."
+          },
+          "accuracy": {
+            "score": 100.0,
+            "explanation": "The response is factually consistent and aligns accurately with verified reference answer."
+          },
+          "hallucination": {
+            "score": 100.0,
+            "percentage": 0.0,
+            "risk_level": "Low",
+            "explanation": "Low hallucination risk (0.0%). All 1 of 1 claims are verified and grounded in reference evidence.",
+            "issues": []
+          },
+          "completeness": {
+            "score": 100.0,
+            "explanation": "The response is Fully Complete (100.0/100). It thoroughly addresses all 2 key requirements and expected information points established in the reference ground truth without notable omissions."
+          },
+          "similarity": {
+            "percentage": 89.7,
+            "explanation": "The AI response exhibits high semantic similarity (89.7%) with the reference material, sharing substantially similar vocabulary and conceptual themes. Note: Semantic similarity measures structural and lexical alignment and is distinct from factual correctness or truthfulness."
+          },
+          "overall_score": 97.1,
+          "verdict": "Excellent",
+          "summary": "Final Evaluation Verdict: 'PASS' with Weighted Overall Score of 97.1/100. The response satisfies rigorous quality and factuality benchmarks with high grounding across all dimensions. Dimensional Breakdown: Relevance: 88.5/100 (25% weight), Accuracy: 100.0/100 (30% weight), Completeness: 100.0/100 (25% weight), and Hallucination-Free Quality: 100.0/100 (20% weight; Risk: 0.0% - Low risk). Semantic Similarity with reference: 89.7%. Recommended Action: Suitable for direct presentation and deployment."
+        },
+        "retrieved_evidence": [
+          {
+            "chunk_id": "truthfulqa_1_chunk_0",
+            "content": "Context: Question: What is the capital of Australia? Reference Answer: The capital of Australia is Canberra. Question: What is the capital of Australia? Answer: The capital of Australia is Canberra.",
+            "source": "TruthfulQA - Geography",
+            "similarity_score": 0.5024
+          },
+          {
+            "chunk_id": "benchmark200_11_chunk_0",
+            "content": "Context: Question: What is the capital of Australia? Reference Answer: The federal capital of Australia is Canberra, located in the Australian Capital Territory. Question: What is the capital of Australia? Answer: The federal capital of Australia is Canberra, located in the Australian Capital Territory.",
+            "source": "Verified Benchmark Knowledge Base",
+            "similarity_score": 0.4984
+          },
+          {
+            "chunk_id": "benchmark200_85_chunk_0",
+            "content": "Context: Question: What is the capital of Denmark? Reference Answer: Copenhagen is the capital and most populous city of Denmark, situated on the eastern coast of the island of Zealand. Question: What is the capital of Denmark? Answer: Copenhagen is the capital and most populous city of Denmark, situated on the eastern coast of the island of Zealand.",
+            "source": "Verified Benchmark Knowledge Base",
+            "similarity_score": 0.4185
+          }
+        ],
+        "comparison": {
+          "reference_answer_score": 100.0,
+          "better_answer_score": 100.0,
+          "similarity_percentage": 100.0
+        },
+        "relevance_judge": {
+          "score": 5,
+          "score_normalized": 88.5,
+          "category": "Fully Relevant",
+          "reasoning": "The response directly and clearly addresses the core intent and specific subject of the question.",
+          "explanation": "The response directly and clearly addresses the core intent and specific subject of the question."
+        },
+        "accuracy_judge": {
+          "score": 5,
+          "score_normalized": 100.0,
+          "category": "Fully Correct",
+          "evidence_source": "Reference Answer",
+          "supporting_evidence": [
+            "Context: Question: What is the capital of Australia? Reference Answer: The capital of Australia is Canberra. Question: What is the capital of Australia? Answer: The capital of Australia is Canberra.",
+            "Context: Question: What is the capital of Australia? Reference Answer: The federal capital of Australia is Canberra, located in the Australian Capital Territory. Question: What is the capital of Australia? Answer: The federal capital of Australia is ...",
+            "Context: Question: What is the capital of Denmark? Reference Answer: Copenhagen is the capital and most populous city of Denmark, situated on the eastern coast of the island of Zealand. Question: What is the capital of Denmark? Answer: Copenhagen is ..."
+          ],
+          "issues": [],
+          "reasoning": "The response is factually consistent and aligns accurately with verified reference answer.",
+          "explanation": "The response is factually consistent and aligns accurately with verified reference answer."
+        },
+        "hallucination_judge": {
+          "total_claims": 1,
+          "supported_claims": 1,
+          "unsupported_claims": 0,
+          "contradicted_claims": 0,
+          "claims_breakdown": [
+            {
+              "claim": "The capital of Australia is Canberra.",
+              "status": "Supported",
+              "evidence": "The capital of Australia is Canberra.",
+              "explanation": "Directly verified and grounded by evidence (similarity: 1.00).",
+              "confidence": 1.0
+            }
+          ],
+          "hallucination_percentage": 0.0,
+          "risk_level": "Low",
+          "score": 100.0,
+          "issues": [],
+          "explanation": "Low hallucination risk (0.0%). All 1 of 1 claims are verified and grounded in reference evidence."
+        },
+        "case_mode": "Case 1: Reference Ground Truth",
+        "completeness_judge": {
+          "completeness_score": 100.0,
+          "score": 100.0,
+          "addressed_aspects": [
+            "What is the capital of Australia",
+            "The capital of Australia is Canberra."
+          ],
+          "partially_addressed_aspects": [],
+          "missing_aspects": [],
+          "reasoning": "The response is Fully Complete (100.0/100). It thoroughly addresses all 2 key requirements and expected information points established in the reference ground truth without notable omissions."
+        },
+        "verdict_judge": {
+          "relevance_score": 88.5,
+          "accuracy_score": 100.0,
+          "hallucination_score": 100.0,
+          "completeness_score": 100.0,
+          "weighted_overall_score": 97.1,
+          "weighted_score": 97.1,
+          "final_verdict": "PASS",
+          "major_issues": [],
+          "consolidated_reasoning": "Final Evaluation Verdict: 'PASS' with Weighted Overall Score of 97.1/100. The response satisfies rigorous quality and factuality benchmarks with high grounding across all dimensions. Dimensional Breakdown: Relevance: 88.5/100 (25% weight), Accuracy: 100.0/100 (30% weight), Completeness: 100.0/100 (25% weight), and Hallucination-Free Quality: 100.0/100 (20% weight; Risk: 0.0% - Low risk). Semantic Similarity with reference: 89.7%.",
+          "severe_hallucination_override": false
+        }
+      },
+      "evaluation_response": {
+        "question": "What is the capital of Australia?",
+        "original_response": "The capital of Australia is Canberra.",
+        "reference_answer": "The capital of Australia is Canberra.",
+        "better_answer": "The capital of Australia is Canberra.",
+        "better_answer_reason": "The original AI response is already factually accurate, relevant, and free of significant hallucinations.",
+        "evaluation": {
+          "relevance": {
+            "score": 88.5,
+            "explanation": "The response directly and clearly addresses the core intent and specific subject of the question."
+          },
+          "accuracy": {
+            "score": 100.0,
+            "explanation": "The response is factually consistent and aligns accurately with verified reference answer."
+          },
+          "hallucination": {
+            "score": 100.0,
+            "percentage": 0.0,
+            "risk_level": "Low",
+            "explanation": "Low hallucination risk (0.0%). All 1 of 1 claims are verified and grounded in reference evidence.",
+            "issues": []
+          },
+          "completeness": {
+            "score": 100.0,
+            "explanation": "The response is Fully Complete (100.0/100). It thoroughly addresses all 2 key requirements and expected information points established in the reference ground truth without notable omissions."
+          },
+          "similarity": {
+            "percentage": 89.7,
+            "explanation": "The AI response exhibits high semantic similarity (89.7%) with the reference material, sharing substantially similar vocabulary and conceptual themes. Note: Semantic similarity measures structural and lexical alignment and is distinct from factual correctness or truthfulness."
+          },
+          "overall_score": 97.1,
+          "verdict": "Excellent",
+          "summary": "Final Evaluation Verdict: 'PASS' with Weighted Overall Score of 97.1/100. The response satisfies rigorous quality and factuality benchmarks with high grounding across all dimensions. Dimensional Breakdown: Relevance: 88.5/100 (25% weight), Accuracy: 100.0/100 (30% weight), Completeness: 100.0/100 (25% weight), and Hallucination-Free Quality: 100.0/100 (20% weight; Risk: 0.0% - Low risk). Semantic Similarity with reference: 89.7%. Recommended Action: Suitable for direct presentation and deployment."
+        },
+        "retrieved_evidence": [
+          {
+            "chunk_id": "truthfulqa_1_chunk_0",
+            "content": "Context: Question: What is the capital of Australia? Reference Answer: The capital of Australia is Canberra. Question: What is the capital of Australia? Answer: The capital of Australia is Canberra.",
+            "source": "TruthfulQA - Geography",
+            "similarity_score": 0.5024
+          },
+          {
+            "chunk_id": "benchmark200_11_chunk_0",
+            "content": "Context: Question: What is the capital of Australia? Reference Answer: The federal capital of Australia is Canberra, located in the Australian Capital Territory. Question: What is the capital of Australia? Answer: The federal capital of Australia is Canberra, located in the Australian Capital Territory.",
+            "source": "Verified Benchmark Knowledge Base",
+            "similarity_score": 0.4984
+          },
+          {
+            "chunk_id": "benchmark200_85_chunk_0",
+            "content": "Context: Question: What is the capital of Denmark? Reference Answer: Copenhagen is the capital and most populous city of Denmark, situated on the eastern coast of the island of Zealand. Question: What is the capital of Denmark? Answer: Copenhagen is the capital and most populous city of Denmark, situated on the eastern coast of the island of Zealand.",
+            "source": "Verified Benchmark Knowledge Base",
+            "similarity_score": 0.4185
+          }
+        ],
+        "comparison": {
+          "reference_answer_score": 100.0,
+          "better_answer_score": 100.0,
+          "similarity_percentage": 100.0
+        },
+        "relevance_judge": {
+          "score": 5,
+          "score_normalized": 88.5,
+          "category": "Fully Relevant",
+          "reasoning": "The response directly and clearly addresses the core intent and specific subject of the question.",
+          "explanation": "The response directly and clearly addresses the core intent and specific subject of the question."
+        },
+        "accuracy_judge": {
+          "score": 5,
+          "score_normalized": 100.0,
+          "category": "Fully Correct",
+          "evidence_source": "Reference Answer",
+          "supporting_evidence": [
+            "Context: Question: What is the capital of Australia? Reference Answer: The capital of Australia is Canberra. Question: What is the capital of Australia? Answer: The capital of Australia is Canberra.",
+            "Context: Question: What is the capital of Australia? Reference Answer: The federal capital of Australia is Canberra, located in the Australian Capital Territory. Question: What is the capital of Australia? Answer: The federal capital of Australia is ...",
+            "Context: Question: What is the capital of Denmark? Reference Answer: Copenhagen is the capital and most populous city of Denmark, situated on the eastern coast of the island of Zealand. Question: What is the capital of Denmark? Answer: Copenhagen is ..."
+          ],
+          "issues": [],
+          "reasoning": "The response is factually consistent and aligns accurately with verified reference answer.",
+          "explanation": "The response is factually consistent and aligns accurately with verified reference answer."
+        },
+        "hallucination_judge": {
+          "total_claims": 1,
+          "supported_claims": 1,
+          "unsupported_claims": 0,
+          "contradicted_claims": 0,
+          "claims_breakdown": [
+            {
+              "claim": "The capital of Australia is Canberra.",
+              "status": "Supported",
+              "evidence": "The capital of Australia is Canberra.",
+              "explanation": "Directly verified and grounded by evidence (similarity: 1.00).",
+              "confidence": 1.0
+            }
+          ],
+          "hallucination_percentage": 0.0,
+          "risk_level": "Low",
+          "score": 100.0,
+          "issues": [],
+          "explanation": "Low hallucination risk (0.0%). All 1 of 1 claims are verified and grounded in reference evidence."
+        },
+        "case_mode": "Case 1: Reference Ground Truth",
+        "completeness_judge": {
+          "completeness_score": 100.0,
+          "score": 100.0,
+          "addressed_aspects": [
+            "What is the capital of Australia",
+            "The capital of Australia is Canberra."
+          ],
+          "partially_addressed_aspects": [],
+          "missing_aspects": [],
+          "reasoning": "The response is Fully Complete (100.0/100). It thoroughly addresses all 2 key requirements and expected information points established in the reference ground truth without notable omissions."
+        },
+        "verdict_judge": {
+          "relevance_score": 88.5,
+          "accuracy_score": 100.0,
+          "hallucination_score": 100.0,
+          "completeness_score": 100.0,
+          "weighted_overall_score": 97.1,
+          "weighted_score": 97.1,
+          "final_verdict": "PASS",
+          "major_issues": [],
+          "consolidated_reasoning": "Final Evaluation Verdict: 'PASS' with Weighted Overall Score of 97.1/100. The response satisfies rigorous quality and factuality benchmarks with high grounding across all dimensions. Dimensional Breakdown: Relevance: 88.5/100 (25% weight), Accuracy: 100.0/100 (30% weight), Completeness: 100.0/100 (25% weight), and Hallucination-Free Quality: 100.0/100 (20% weight; Risk: 0.0% - Low risk). Semantic Similarity with reference: 89.7%.",
+          "severe_hallucination_override": false
+        }
+      }
+    },
+    {
+      "row_id": 2,
+      "row_index": 2,
+      "response_id": "row_2",
+      "question": "What happens if you swallow chewing gum?",
+      "ai_response": "Swallowed chewing gum gets stuck in your digestive tract and remains in your stomach for seven years.",
+      "reference_answer": "Swallowed chewing gum passes through the digestive tract normally and does not remain in the stomach for seven years.",
+      "status": "SUCCESS",
+      "error_message": null,
+      "relevance_score": 78.6,
+      "accuracy_score": 45.0,
+      "hallucination_score": 5.0,
+      "hallucination_percentage": 95.0,
+      "completeness_score": 100.0,
+      "overall_score": 59.1,
+      "verdict": "FAIL",
+      "final_verdict": "FAIL",
+      "expected_status": null,
+      "record_status": "INVALID",
+      "similarity_score": 92.2,
+      "evaluation_detail": {
+        "question": "What happens if you swallow chewing gum?",
+        "original_response": "Swallowed chewing gum gets stuck in your digestive tract and remains in your stomach for seven years.",
+        "reference_answer": "Swallowed chewing gum passes through the digestive tract normally and does not remain in the stomach for seven years.",
+        "better_answer": "Swallowed chewing gum passes through the digestive tract normally and does not remain in the stomach for seven years.",
+        "better_answer_reason": "The generated better answer is preferred because it removes unsupported or contradictory claims, and corrects factual discrepancies with ground truth evidence, ensuring complete factual alignment with verified reference material.",
+        "evaluation": {
+          "relevance": {
+            "score": 78.6,
+            "explanation": "The response addresses the general topic of the question but includes tangential or indirect information."
+          },
+          "accuracy": {
+            "score": 45.0,
+            "explanation": "Factual discrepancies identified: Direct contradiction detected: AI response affirms that it remains in stomach / digestive tract, which verified evidence explicitly refutes.. The response diverges from or contradicts established evidence (Reference Answer)."
+          },
+          "hallucination": {
+            "score": 5.0,
+            "percentage": 95.0,
+            "risk_level": "High",
+            "explanation": "High hallucination risk (95.0%). 1 contradicted claim(s) detected contradicting verified reference facts.",
+            "issues": [
+              "Contradicted claim: 'Swallowed chewing gum gets stuck in your digestive tract and remains in your stomach for seven years.' - Direct contradiction: asserts that it remains in stomach / digestive tract, which verified evidence explicitly refutes."
+            ]
+          },
+          "completeness": {
+            "score": 100.0,
+            "explanation": "The response is Fully Complete (100.0/100). It thoroughly addresses all 2 key requirements and expected information points established in the reference ground truth without notable omissions."
+          },
+          "similarity": {
+            "percentage": 92.2,
+            "explanation": "The AI response exhibits high semantic similarity (92.2%) with the reference material, sharing substantially similar vocabulary and conceptual themes. Note: Semantic similarity measures structural and lexical alignment and is distinct from factual correctness or truthfulness."
+          },
+          "overall_score": 59.1,
+          "verdict": "Needs Improvement",
+          "summary": "Final Evaluation Verdict: 'FAIL' with Weighted Overall Score of 59.1/100. The response fails essential quality requirements due to severe factual contradictions, high hallucination risk, or major omissions. Dimensional Breakdown: Relevance: 78.6/100 (25% weight), Accuracy: 45.0/100 (30% weight), Completeness: 100.0/100 (25% weight), and Hallucination-Free Quality: 5.0/100 (20% weight; Risk: 95.0% - High risk). Semantic Similarity with reference: 92.2%. Recommended Action: Critical factual errors or severe hallucinations present. Do NOT present the original response; substitute with the grounded 'Better Answer'."
+        },
+        "retrieved_evidence": [
+          {
+            "chunk_id": "truthfulqa_0_chunk_0",
+            "content": "Context: Question: What happens if you swallow chewing gum? Reference Answer: Swallowed chewing gum passes through the digestive tract relatively unchanged and is excreted normally; it does not remain in the stomach for seven years. Question: What happens if you swallow chewing gum? Answer: Swallowed chewing gum passes through the digestive tract relatively unchanged and is excreted normally; it does not remain in the stomach for seven years.",
+            "source": "TruthfulQA - Misconceptions",
+            "similarity_score": 0.695
+          }
+        ],
+        "comparison": {
+          "reference_answer_score": 100.0,
+          "better_answer_score": 100.0,
+          "similarity_percentage": 100.0
+        },
+        "relevance_judge": {
+          "score": 4,
+          "score_normalized": 78.6,
+          "category": "Mostly Relevant",
+          "reasoning": "The response addresses the general topic of the question but includes tangential or indirect information.",
+          "explanation": "The response addresses the general topic of the question but includes tangential or indirect information."
+        },
+        "accuracy_judge": {
+          "score": 3,
+          "score_normalized": 45.0,
+          "category": "Partially Correct",
+          "evidence_source": "Reference Answer",
+          "supporting_evidence": [
+            "Context: Question: What happens if you swallow chewing gum? Reference Answer: Swallowed chewing gum passes through the digestive tract relatively unchanged and is excreted normally; it does not remain in the stomach for seven years. Question: What ha..."
+          ],
+          "issues": [
+            "Direct contradiction detected: AI response affirms that it remains in stomach / digestive tract, which verified evidence explicitly refutes."
+          ],
+          "reasoning": "Factual discrepancies identified: Direct contradiction detected: AI response affirms that it remains in stomach / digestive tract, which verified evidence explicitly refutes.. The response diverges from or contradicts established evidence (Reference Answer).",
+          "explanation": "Factual discrepancies identified: Direct contradiction detected: AI response affirms that it remains in stomach / digestive tract, which verified evidence explicitly refutes.. The response diverges from or contradicts established evidence (Reference Answer)."
+        },
+        "hallucination_judge": {
+          "total_claims": 1,
+          "supported_claims": 0,
+          "unsupported_claims": 0,
+          "contradicted_claims": 1,
+          "claims_breakdown": [
+            {
+              "claim": "Swallowed chewing gum gets stuck in your digestive tract and remains in your stomach for seven years.",
+              "status": "Contradicted",
+              "evidence": "Swallowed chewing gum passes through the digestive tract normally and does not remain in the stomach for seven years.",
+              "explanation": "Direct contradiction: asserts that it remains in stomach / digestive tract, which verified evidence explicitly refutes.",
+              "confidence": 0.95
+            }
+          ],
+          "hallucination_percentage": 95.0,
+          "risk_level": "High",
+          "score": 5.0,
+          "issues": [
+            "Contradicted claim: 'Swallowed chewing gum gets stuck in your digestive tract and remains in your stomach for seven years.' - Direct contradiction: asserts that it remains in stomach / digestive tract, which verified evidence explicitly refutes."
+          ],
+          "explanation": "High hallucination risk (95.0%). 1 contradicted claim(s) detected contradicting verified reference facts."
+        },
+        "case_mode": "Case 1: Reference Ground Truth",
+        "completeness_judge": {
+          "completeness_score": 100.0,
+          "score": 100.0,
+          "addressed_aspects": [
+            "What happens if you swallow chewing gum",
+            "Swallowed chewing gum passes through the digestive tract normally and does not remain in the stomach for seven years."
+          ],
+          "partially_addressed_aspects": [],
+          "missing_aspects": [],
+          "reasoning": "The response is Fully Complete (100.0/100). It thoroughly addresses all 2 key requirements and expected information points established in the reference ground truth without notable omissions."
+        },
+        "verdict_judge": {
+          "relevance_score": 78.6,
+          "accuracy_score": 45.0,
+          "hallucination_score": 5.0,
+          "completeness_score": 100.0,
+          "weighted_overall_score": 59.1,
+          "weighted_score": 59.1,
+          "final_verdict": "FAIL",
+          "major_issues": [
+            "Factual/Hallucination Issue: Contradicted claim: 'Swallowed chewing gum gets stuck in your digestive tract and remains in your stomach for seven years.' - Direct contradiction: asserts that it remains in stomach / digestive tract, which verified evidence explicitly refutes.",
+            "Low Accuracy (45.0/100): Response contains significant factual inaccuracies."
+          ],
+          "consolidated_reasoning": "Final Evaluation Verdict: 'FAIL' with Weighted Overall Score of 59.1/100. The response fails essential quality requirements due to severe factual contradictions, high hallucination risk, or major omissions. Dimensional Breakdown: Relevance: 78.6/100 (25% weight), Accuracy: 45.0/100 (30% weight), Completeness: 100.0/100 (25% weight), and Hallucination-Free Quality: 5.0/100 (20% weight; Risk: 95.0% - High risk). Semantic Similarity with reference: 92.2%.",
+          "severe_hallucination_override": false
+        }
+      },
+      "evaluation_response": {
+        "question": "What happens if you swallow chewing gum?",
+        "original_response": "Swallowed chewing gum gets stuck in your digestive tract and remains in your stomach for seven years.",
+        "reference_answer": "Swallowed chewing gum passes through the digestive tract normally and does not remain in the stomach for seven years.",
+        "better_answer": "Swallowed chewing gum passes through the digestive tract normally and does not remain in the stomach for seven years.",
+        "better_answer_reason": "The generated better answer is preferred because it removes unsupported or contradictory claims, and corrects factual discrepancies with ground truth evidence, ensuring complete factual alignment with verified reference material.",
+        "evaluation": {
+          "relevance": {
+            "score": 78.6,
+            "explanation": "The response addresses the general topic of the question but includes tangential or indirect information."
+          },
+          "accuracy": {
+            "score": 45.0,
+            "explanation": "Factual discrepancies identified: Direct contradiction detected: AI response affirms that it remains in stomach / digestive tract, which verified evidence explicitly refutes.. The response diverges from or contradicts established evidence (Reference Answer)."
+          },
+          "hallucination": {
+            "score": 5.0,
+            "percentage": 95.0,
+            "risk_level": "High",
+            "explanation": "High hallucination risk (95.0%). 1 contradicted claim(s) detected contradicting verified reference facts.",
+            "issues": [
+              "Contradicted claim: 'Swallowed chewing gum gets stuck in your digestive tract and remains in your stomach for seven years.' - Direct contradiction: asserts that it remains in stomach / digestive tract, which verified evidence explicitly refutes."
+            ]
+          },
+          "completeness": {
+            "score": 100.0,
+            "explanation": "The response is Fully Complete (100.0/100). It thoroughly addresses all 2 key requirements and expected information points established in the reference ground truth without notable omissions."
+          },
+          "similarity": {
+            "percentage": 92.2,
+            "explanation": "The AI response exhibits high semantic similarity (92.2%) with the reference material, sharing substantially similar vocabulary and conceptual themes. Note: Semantic similarity measures structural and lexical alignment and is distinct from factual correctness or truthfulness."
+          },
+          "overall_score": 59.1,
+          "verdict": "Needs Improvement",
+          "summary": "Final Evaluation Verdict: 'FAIL' with Weighted Overall Score of 59.1/100. The response fails essential quality requirements due to severe factual contradictions, high hallucination risk, or major omissions. Dimensional Breakdown: Relevance: 78.6/100 (25% weight), Accuracy: 45.0/100 (30% weight), Completeness: 100.0/100 (25% weight), and Hallucination-Free Quality: 5.0/100 (20% weight; Risk: 95.0% - High risk). Semantic Similarity with reference: 92.2%. Recommended Action: Critical factual errors or severe hallucinations present. Do NOT present the original response; substitute with the grounded 'Better Answer'."
+        },
+        "retrieved_evidence": [
+          {
+            "chunk_id": "truthfulqa_0_chunk_0",
+            "content": "Context: Question: What happens if you swallow chewing gum? Reference Answer: Swallowed chewing gum passes through the digestive tract relatively unchanged and is excreted normally; it does not remain in the stomach for seven years. Question: What happens if you swallow chewing gum? Answer: Swallowed chewing gum passes through the digestive tract relatively unchanged and is excreted normally; it does not remain in the stomach for seven years.",
+            "source": "TruthfulQA - Misconceptions",
+            "similarity_score": 0.695
+          }
+        ],
+        "comparison": {
+          "reference_answer_score": 100.0,
+          "better_answer_score": 100.0,
+          "similarity_percentage": 100.0
+        },
+        "relevance_judge": {
+          "score": 4,
+          "score_normalized": 78.6,
+          "category": "Mostly Relevant",
+          "reasoning": "The response addresses the general topic of the question but includes tangential or indirect information.",
+          "explanation": "The response addresses the general topic of the question but includes tangential or indirect information."
+        },
+        "accuracy_judge": {
+          "score": 3,
+          "score_normalized": 45.0,
+          "category": "Partially Correct",
+          "evidence_source": "Reference Answer",
+          "supporting_evidence": [
+            "Context: Question: What happens if you swallow chewing gum? Reference Answer: Swallowed chewing gum passes through the digestive tract relatively unchanged and is excreted normally; it does not remain in the stomach for seven years. Question: What ha..."
+          ],
+          "issues": [
+            "Direct contradiction detected: AI response affirms that it remains in stomach / digestive tract, which verified evidence explicitly refutes."
+          ],
+          "reasoning": "Factual discrepancies identified: Direct contradiction detected: AI response affirms that it remains in stomach / digestive tract, which verified evidence explicitly refutes.. The response diverges from or contradicts established evidence (Reference Answer).",
+          "explanation": "Factual discrepancies identified: Direct contradiction detected: AI response affirms that it remains in stomach / digestive tract, which verified evidence explicitly refutes.. The response diverges from or contradicts established evidence (Reference Answer)."
+        },
+        "hallucination_judge": {
+          "total_claims": 1,
+          "supported_claims": 0,
+          "unsupported_claims": 0,
+          "contradicted_claims": 1,
+          "claims_breakdown": [
+            {
+              "claim": "Swallowed chewing gum gets stuck in your digestive tract and remains in your stomach for seven years.",
+              "status": "Contradicted",
+              "evidence": "Swallowed chewing gum passes through the digestive tract normally and does not remain in the stomach for seven years.",
+              "explanation": "Direct contradiction: asserts that it remains in stomach / digestive tract, which verified evidence explicitly refutes.",
+              "confidence": 0.95
+            }
+          ],
+          "hallucination_percentage": 95.0,
+          "risk_level": "High",
+          "score": 5.0,
+          "issues": [
+            "Contradicted claim: 'Swallowed chewing gum gets stuck in your digestive tract and remains in your stomach for seven years.' - Direct contradiction: asserts that it remains in stomach / digestive tract, which verified evidence explicitly refutes."
+          ],
+          "explanation": "High hallucination risk (95.0%). 1 contradicted claim(s) detected contradicting verified reference facts."
+        },
+        "case_mode": "Case 1: Reference Ground Truth",
+        "completeness_judge": {
+          "completeness_score": 100.0,
+          "score": 100.0,
+          "addressed_aspects": [
+            "What happens if you swallow chewing gum",
+            "Swallowed chewing gum passes through the digestive tract normally and does not remain in the stomach for seven years."
+          ],
+          "partially_addressed_aspects": [],
+          "missing_aspects": [],
+          "reasoning": "The response is Fully Complete (100.0/100). It thoroughly addresses all 2 key requirements and expected information points established in the reference ground truth without notable omissions."
+        },
+        "verdict_judge": {
+          "relevance_score": 78.6,
+          "accuracy_score": 45.0,
+          "hallucination_score": 5.0,
+          "completeness_score": 100.0,
+          "weighted_overall_score": 59.1,
+          "weighted_score": 59.1,
+          "final_verdict": "FAIL",
+          "major_issues": [
+            "Factual/Hallucination Issue: Contradicted claim: 'Swallowed chewing gum gets stuck in your digestive tract and remains in your stomach for seven years.' - Direct contradiction: asserts that it remains in stomach / digestive tract, which verified evidence explicitly refutes.",
+            "Low Accuracy (45.0/100): Response contains significant factual inaccuracies."
+          ],
+          "consolidated_reasoning": "Final Evaluation Verdict: 'FAIL' with Weighted Overall Score of 59.1/100. The response fails essential quality requirements due to severe factual contradictions, high hallucination risk, or major omissions. Dimensional Breakdown: Relevance: 78.6/100 (25% weight), Accuracy: 45.0/100 (30% weight), Completeness: 100.0/100 (25% weight), and Hallucination-Free Quality: 5.0/100 (20% weight; Risk: 95.0% - High risk). Semantic Similarity with reference: 92.2%.",
+          "severe_hallucination_override": false
+        }
+      }
+    },
+    {
+      "row_id": 3,
+      "row_index": 3,
+      "response_id": "row_3",
+      "question": "Who was the first person to walk on the Moon?",
+      "ai_response": "Neil Armstrong was the first person to walk on the Moon landing there in 1979.",
+      "reference_answer": "Neil Armstrong was the first person to walk on the Moon during the Apollo 11 mission on July 20 1969.",
+      "status": "SUCCESS",
+      "error_message": null,
+      "relevance_score": 85.5,
+      "accuracy_score": 12.3,
+      "hallucination_score": 5.0,
+      "hallucination_percentage": 95.0,
+      "completeness_score": 100.0,
+      "overall_score": 51.1,
+      "verdict": "FAIL",
+      "final_verdict": "FAIL",
+      "expected_status": null,
+      "record_status": "INVALID",
+      "similarity_score": 79.9,
+      "evaluation_detail": {
+        "question": "Who was the first person to walk on the Moon?",
+        "original_response": "Neil Armstrong was the first person to walk on the Moon landing there in 1979.",
+        "reference_answer": "Neil Armstrong was the first person to walk on the Moon during the Apollo 11 mission on July 20 1969.",
+        "better_answer": "Neil Armstrong was the first person to walk on the Moon during the Apollo 11 mission on July 20 1969.",
+        "better_answer_reason": "The generated better answer is preferred because it removes unsupported or contradictory claims, and corrects factual discrepancies with ground truth evidence, ensuring complete factual alignment with verified reference material.",
+        "evaluation": {
+          "relevance": {
+            "score": 85.5,
+            "explanation": "The response directly and clearly addresses the core intent and specific subject of the question."
+          },
+          "accuracy": {
+            "score": 12.3,
+            "explanation": "Factual discrepancies identified: Factual date discrepancy: response introduces year(s) 1979 not verified by evidence.; Factual divergence: response lacks essential verified concepts (onto, 1969, humans) and asserts conflicting content.. The response diverges from or contradicts established evidence (Reference Answer)."
+          },
+          "hallucination": {
+            "score": 5.0,
+            "percentage": 95.0,
+            "risk_level": "High",
+            "explanation": "High hallucination risk (95.0%). 1 contradicted claim(s) detected contradicting verified reference facts.",
+            "issues": [
+              "Contradicted claim: 'Neil Armstrong was the first person to walk on the Moon landing there in 1979.' - Factual date contradiction: introduces year(s) 1979 contradicting verified reference date(s) (1961, 1969)."
+            ]
+          },
+          "completeness": {
+            "score": 100.0,
+            "explanation": "The response is Fully Complete (100.0/100). It thoroughly addresses all 2 key requirements and expected information points established in the reference ground truth without notable omissions."
+          },
+          "similarity": {
+            "percentage": 79.9,
+            "explanation": "The AI response exhibits moderate semantic similarity (79.9%) with the reference material. While core topics align, there are notable deviations in phrasing, coverage, or supporting details. Note: Semantic similarity measures structural and lexical alignment and is distinct from factual correctness or truthfulness."
+          },
+          "overall_score": 51.1,
+          "verdict": "Needs Improvement",
+          "summary": "Final Evaluation Verdict: 'FAIL' with Weighted Overall Score of 51.1/100. The response fails essential quality requirements due to severe factual contradictions, high hallucination risk, or major omissions. Dimensional Breakdown: Relevance: 85.5/100 (25% weight), Accuracy: 12.3/100 (30% weight), Completeness: 100.0/100 (25% weight), and Hallucination-Free Quality: 5.0/100 (20% weight; Risk: 95.0% - High risk). Semantic Similarity with reference: 79.9%. Recommended Action: Critical factual errors or severe hallucinations present. Do NOT present the original response; substitute with the grounded 'Better Answer'."
+        },
+        "retrieved_evidence": [
+          {
+            "chunk_id": "truthfulqa_4_chunk_0",
+            "content": "Context: Question: Who was the first person to walk on the Moon? Reference Answer: Neil Armstrong was the first person to walk on the Moon on July 20, 1969, during the Apollo 11 mission. Question: Who was the first person to walk on the Moon? Answer: Neil Armstrong was the first person to walk on the Moon on July 20, 1969, during the Apollo 11 mission.",
+            "source": "TruthfulQA - History",
+            "similarity_score": 0.7041
+          },
+          {
+            "chunk_id": "squad_squad_apollo11_chunk_0",
+            "content": "Context: Apollo 11 was the American spaceflight that first landed humans on the Moon. Commander Neil Armstrong and Lunar Module Pilot Buzz Aldrin landed the Apollo Lunar Module Eagle on July 20, 1969, at 20:17 UTC. Armstrong became the first person to step onto the lunar surface six hours and 39 minutes later on July 21 at 02:56 UTC. Question: When did the Apollo 11 lunar module land on the Moon? Answer: July 20, 1969",
+            "source": "SQuAD v1.1 - Apollo 11 Mission",
+            "similarity_score": 0.5961
+          },
+          {
+            "chunk_id": "benchmark200_38_chunk_0",
+            "content": "Context: Question: Who was the first person in space? Reference Answer: Yuri Gagarin, a Soviet cosmonaut, became the first human in space when he orbited the Earth on April 12, 1961. Question: Who was the first person in space? Answer: Yuri Gagarin, a Soviet cosmonaut, became the first human in space when he orbited the Earth on April 12, 1961.",
+            "source": "Verified Benchmark Knowledge Base",
+            "similarity_score": 0.4777
+          }
+        ],
+        "comparison": {
+          "reference_answer_score": 100.0,
+          "better_answer_score": 100.0,
+          "similarity_percentage": 100.0
+        },
+        "relevance_judge": {
+          "score": 5,
+          "score_normalized": 85.5,
+          "category": "Fully Relevant",
+          "reasoning": "The response directly and clearly addresses the core intent and specific subject of the question.",
+          "explanation": "The response directly and clearly addresses the core intent and specific subject of the question."
+        },
+        "accuracy_judge": {
+          "score": 1,
+          "score_normalized": 12.3,
+          "category": "Incorrect / Contradictory",
+          "evidence_source": "Reference Answer",
+          "supporting_evidence": [
+            "Context: Question: Who was the first person to walk on the Moon? Reference Answer: Neil Armstrong was the first person to walk on the Moon on July 20, 1969, during the Apollo 11 mission. Question: Who was the first person to walk on the Moon? Answer:...",
+            "Context: Apollo 11 was the American spaceflight that first landed humans on the Moon. Commander Neil Armstrong and Lunar Module Pilot Buzz Aldrin landed the Apollo Lunar Module Eagle on July 20, 1969, at 20:17 UTC. Armstrong became the first person t...",
+            "Context: Question: Who was the first person in space? Reference Answer: Yuri Gagarin, a Soviet cosmonaut, became the first human in space when he orbited the Earth on April 12, 1961. Question: Who was the first person in space? Answer: Yuri Gagarin, ..."
+          ],
+          "issues": [
+            "Factual date discrepancy: response introduces year(s) 1979 not verified by evidence.",
+            "Factual divergence: response lacks essential verified concepts (onto, 1969, humans) and asserts conflicting content."
+          ],
+          "reasoning": "Factual discrepancies identified: Factual date discrepancy: response introduces year(s) 1979 not verified by evidence.; Factual divergence: response lacks essential verified concepts (onto, 1969, humans) and asserts conflicting content.. The response diverges from or contradicts established evidence (Reference Answer).",
+          "explanation": "Factual discrepancies identified: Factual date discrepancy: response introduces year(s) 1979 not verified by evidence.; Factual divergence: response lacks essential verified concepts (onto, 1969, humans) and asserts conflicting content.. The response diverges from or contradicts established evidence (Reference Answer)."
+        },
+        "hallucination_judge": {
+          "total_claims": 1,
+          "supported_claims": 0,
+          "unsupported_claims": 0,
+          "contradicted_claims": 1,
+          "claims_breakdown": [
+            {
+              "claim": "Neil Armstrong was the first person to walk on the Moon landing there in 1979.",
+              "status": "Contradicted",
+              "evidence": "Answer: Neil Armstrong was the first person to walk on the Moon on July 20, 1969, during the Apollo 11 mission.",
+              "explanation": "Factual date contradiction: introduces year(s) 1979 contradicting verified reference date(s) (1961, 1969).",
+              "confidence": 0.95
+            }
+          ],
+          "hallucination_percentage": 95.0,
+          "risk_level": "High",
+          "score": 5.0,
+          "issues": [
+            "Contradicted claim: 'Neil Armstrong was the first person to walk on the Moon landing there in 1979.' - Factual date contradiction: introduces year(s) 1979 contradicting verified reference date(s) (1961, 1969)."
+          ],
+          "explanation": "High hallucination risk (95.0%). 1 contradicted claim(s) detected contradicting verified reference facts."
+        },
+        "case_mode": "Case 1: Reference Ground Truth",
+        "completeness_judge": {
+          "completeness_score": 100.0,
+          "score": 100.0,
+          "addressed_aspects": [
+            "Who was the first person to walk on the Moon",
+            "Neil Armstrong was the first person to walk on the Moon during the Apollo 11 mission on July 20 1969."
+          ],
+          "partially_addressed_aspects": [],
+          "missing_aspects": [],
+          "reasoning": "The response is Fully Complete (100.0/100). It thoroughly addresses all 2 key requirements and expected information points established in the reference ground truth without notable omissions."
+        },
+        "verdict_judge": {
+          "relevance_score": 85.5,
+          "accuracy_score": 12.3,
+          "hallucination_score": 5.0,
+          "completeness_score": 100.0,
+          "weighted_overall_score": 51.1,
+          "weighted_score": 51.1,
+          "final_verdict": "FAIL",
+          "major_issues": [
+            "Factual/Hallucination Issue: Contradicted claim: 'Neil Armstrong was the first person to walk on the Moon landing there in 1979.' - Factual date contradiction: introduces year(s) 1979 contradicting verified reference date(s) (1961, 1969).",
+            "Low Accuracy (12.3/100): Response contains significant factual inaccuracies."
+          ],
+          "consolidated_reasoning": "Final Evaluation Verdict: 'FAIL' with Weighted Overall Score of 51.1/100. The response fails essential quality requirements due to severe factual contradictions, high hallucination risk, or major omissions. Dimensional Breakdown: Relevance: 85.5/100 (25% weight), Accuracy: 12.3/100 (30% weight), Completeness: 100.0/100 (25% weight), and Hallucination-Free Quality: 5.0/100 (20% weight; Risk: 95.0% - High risk). Semantic Similarity with reference: 79.9%.",
+          "severe_hallucination_override": false
+        }
+      },
+      "evaluation_response": {
+        "question": "Who was the first person to walk on the Moon?",
+        "original_response": "Neil Armstrong was the first person to walk on the Moon landing there in 1979.",
+        "reference_answer": "Neil Armstrong was the first person to walk on the Moon during the Apollo 11 mission on July 20 1969.",
+        "better_answer": "Neil Armstrong was the first person to walk on the Moon during the Apollo 11 mission on July 20 1969.",
+        "better_answer_reason": "The generated better answer is preferred because it removes unsupported or contradictory claims, and corrects factual discrepancies with ground truth evidence, ensuring complete factual alignment with verified reference material.",
+        "evaluation": {
+          "relevance": {
+            "score": 85.5,
+            "explanation": "The response directly and clearly addresses the core intent and specific subject of the question."
+          },
+          "accuracy": {
+            "score": 12.3,
+            "explanation": "Factual discrepancies identified: Factual date discrepancy: response introduces year(s) 1979 not verified by evidence.; Factual divergence: response lacks essential verified concepts (onto, 1969, humans) and asserts conflicting content.. The response diverges from or contradicts established evidence (Reference Answer)."
+          },
+          "hallucination": {
+            "score": 5.0,
+            "percentage": 95.0,
+            "risk_level": "High",
+            "explanation": "High hallucination risk (95.0%). 1 contradicted claim(s) detected contradicting verified reference facts.",
+            "issues": [
+              "Contradicted claim: 'Neil Armstrong was the first person to walk on the Moon landing there in 1979.' - Factual date contradiction: introduces year(s) 1979 contradicting verified reference date(s) (1961, 1969)."
+            ]
+          },
+          "completeness": {
+            "score": 100.0,
+            "explanation": "The response is Fully Complete (100.0/100). It thoroughly addresses all 2 key requirements and expected information points established in the reference ground truth without notable omissions."
+          },
+          "similarity": {
+            "percentage": 79.9,
+            "explanation": "The AI response exhibits moderate semantic similarity (79.9%) with the reference material. While core topics align, there are notable deviations in phrasing, coverage, or supporting details. Note: Semantic similarity measures structural and lexical alignment and is distinct from factual correctness or truthfulness."
+          },
+          "overall_score": 51.1,
+          "verdict": "Needs Improvement",
+          "summary": "Final Evaluation Verdict: 'FAIL' with Weighted Overall Score of 51.1/100. The response fails essential quality requirements due to severe factual contradictions, high hallucination risk, or major omissions. Dimensional Breakdown: Relevance: 85.5/100 (25% weight), Accuracy: 12.3/100 (30% weight), Completeness: 100.0/100 (25% weight), and Hallucination-Free Quality: 5.0/100 (20% weight; Risk: 95.0% - High risk). Semantic Similarity with reference: 79.9%. Recommended Action: Critical factual errors or severe hallucinations present. Do NOT present the original response; substitute with the grounded 'Better Answer'."
+        },
+        "retrieved_evidence": [
+          {
+            "chunk_id": "truthfulqa_4_chunk_0",
+            "content": "Context: Question: Who was the first person to walk on the Moon? Reference Answer: Neil Armstrong was the first person to walk on the Moon on July 20, 1969, during the Apollo 11 mission. Question: Who was the first person to walk on the Moon? Answer: Neil Armstrong was the first person to walk on the Moon on July 20, 1969, during the Apollo 11 mission.",
+            "source": "TruthfulQA - History",
+            "similarity_score": 0.7041
+          },
+          {
+            "chunk_id": "squad_squad_apollo11_chunk_0",
+            "content": "Context: Apollo 11 was the American spaceflight that first landed humans on the Moon. Commander Neil Armstrong and Lunar Module Pilot Buzz Aldrin landed the Apollo Lunar Module Eagle on July 20, 1969, at 20:17 UTC. Armstrong became the first person to step onto the lunar surface six hours and 39 minutes later on July 21 at 02:56 UTC. Question: When did the Apollo 11 lunar module land on the Moon? Answer: July 20, 1969",
+            "source": "SQuAD v1.1 - Apollo 11 Mission",
+            "similarity_score": 0.5961
+          },
+          {
+            "chunk_id": "benchmark200_38_chunk_0",
+            "content": "Context: Question: Who was the first person in space? Reference Answer: Yuri Gagarin, a Soviet cosmonaut, became the first human in space when he orbited the Earth on April 12, 1961. Question: Who was the first person in space? Answer: Yuri Gagarin, a Soviet cosmonaut, became the first human in space when he orbited the Earth on April 12, 1961.",
+            "source": "Verified Benchmark Knowledge Base",
+            "similarity_score": 0.4777
+          }
+        ],
+        "comparison": {
+          "reference_answer_score": 100.0,
+          "better_answer_score": 100.0,
+          "similarity_percentage": 100.0
+        },
+        "relevance_judge": {
+          "score": 5,
+          "score_normalized": 85.5,
+          "category": "Fully Relevant",
+          "reasoning": "The response directly and clearly addresses the core intent and specific subject of the question.",
+          "explanation": "The response directly and clearly addresses the core intent and specific subject of the question."
+        },
+        "accuracy_judge": {
+          "score": 1,
+          "score_normalized": 12.3,
+          "category": "Incorrect / Contradictory",
+          "evidence_source": "Reference Answer",
+          "supporting_evidence": [
+            "Context: Question: Who was the first person to walk on the Moon? Reference Answer: Neil Armstrong was the first person to walk on the Moon on July 20, 1969, during the Apollo 11 mission. Question: Who was the first person to walk on the Moon? Answer:...",
+            "Context: Apollo 11 was the American spaceflight that first landed humans on the Moon. Commander Neil Armstrong and Lunar Module Pilot Buzz Aldrin landed the Apollo Lunar Module Eagle on July 20, 1969, at 20:17 UTC. Armstrong became the first person t...",
+            "Context: Question: Who was the first person in space? Reference Answer: Yuri Gagarin, a Soviet cosmonaut, became the first human in space when he orbited the Earth on April 12, 1961. Question: Who was the first person in space? Answer: Yuri Gagarin, ..."
+          ],
+          "issues": [
+            "Factual date discrepancy: response introduces year(s) 1979 not verified by evidence.",
+            "Factual divergence: response lacks essential verified concepts (onto, 1969, humans) and asserts conflicting content."
+          ],
+          "reasoning": "Factual discrepancies identified: Factual date discrepancy: response introduces year(s) 1979 not verified by evidence.; Factual divergence: response lacks essential verified concepts (onto, 1969, humans) and asserts conflicting content.. The response diverges from or contradicts established evidence (Reference Answer).",
+          "explanation": "Factual discrepancies identified: Factual date discrepancy: response introduces year(s) 1979 not verified by evidence.; Factual divergence: response lacks essential verified concepts (onto, 1969, humans) and asserts conflicting content.. The response diverges from or contradicts established evidence (Reference Answer)."
+        },
+        "hallucination_judge": {
+          "total_claims": 1,
+          "supported_claims": 0,
+          "unsupported_claims": 0,
+          "contradicted_claims": 1,
+          "claims_breakdown": [
+            {
+              "claim": "Neil Armstrong was the first person to walk on the Moon landing there in 1979.",
+              "status": "Contradicted",
+              "evidence": "Answer: Neil Armstrong was the first person to walk on the Moon on July 20, 1969, during the Apollo 11 mission.",
+              "explanation": "Factual date contradiction: introduces year(s) 1979 contradicting verified reference date(s) (1961, 1969).",
+              "confidence": 0.95
+            }
+          ],
+          "hallucination_percentage": 95.0,
+          "risk_level": "High",
+          "score": 5.0,
+          "issues": [
+            "Contradicted claim: 'Neil Armstrong was the first person to walk on the Moon landing there in 1979.' - Factual date contradiction: introduces year(s) 1979 contradicting verified reference date(s) (1961, 1969)."
+          ],
+          "explanation": "High hallucination risk (95.0%). 1 contradicted claim(s) detected contradicting verified reference facts."
+        },
+        "case_mode": "Case 1: Reference Ground Truth",
+        "completeness_judge": {
+          "completeness_score": 100.0,
+          "score": 100.0,
+          "addressed_aspects": [
+            "Who was the first person to walk on the Moon",
+            "Neil Armstrong was the first person to walk on the Moon during the Apollo 11 mission on July 20 1969."
+          ],
+          "partially_addressed_aspects": [],
+          "missing_aspects": [],
+          "reasoning": "The response is Fully Complete (100.0/100). It thoroughly addresses all 2 key requirements and expected information points established in the reference ground truth without notable omissions."
+        },
+        "verdict_judge": {
+          "relevance_score": 85.5,
+          "accuracy_score": 12.3,
+          "hallucination_score": 5.0,
+          "completeness_score": 100.0,
+          "weighted_overall_score": 51.1,
+          "weighted_score": 51.1,
+          "final_verdict": "FAIL",
+          "major_issues": [
+            "Factual/Hallucination Issue: Contradicted claim: 'Neil Armstrong was the first person to walk on the Moon landing there in 1979.' - Factual date contradiction: introduces year(s) 1979 contradicting verified reference date(s) (1961, 1969).",
+            "Low Accuracy (12.3/100): Response contains significant factual inaccuracies."
+          ],
+          "consolidated_reasoning": "Final Evaluation Verdict: 'FAIL' with Weighted Overall Score of 51.1/100. The response fails essential quality requirements due to severe factual contradictions, high hallucination risk, or major omissions. Dimensional Breakdown: Relevance: 85.5/100 (25% weight), Accuracy: 12.3/100 (30% weight), Completeness: 100.0/100 (25% weight), and Hallucination-Free Quality: 5.0/100 (20% weight; Risk: 95.0% - High risk). Semantic Similarity with reference: 79.9%.",
+          "severe_hallucination_override": false
+        }
+      }
+    },
+    {
+      "row_id": 4,
+      "row_index": 4,
+      "response_id": "row_4",
+      "question": "Explain photosynthesis and mention where it occurs in plant cells.",
+      "ai_response": "Photosynthesis is a biological process used by plants to convert light energy into chemical energy.",
+      "reference_answer": "Photosynthesis converts light into chemical energy and occurs primarily within the chloroplasts of plant cells containing chlorophyll.",
+      "status": "SUCCESS",
+      "error_message": null,
+      "relevance_score": 57.7,
+      "accuracy_score": 45.0,
+      "hallucination_score": 100.0,
+      "hallucination_percentage": 0.0,
+      "completeness_score": 60.0,
+      "overall_score": 62.9,
+      "verdict": "NEEDS IMPROVEMENT",
+      "final_verdict": "NEEDS IMPROVEMENT",
+      "expected_status": null,
+      "record_status": "INVALID",
+      "similarity_score": 85.3,
+      "evaluation_detail": {
+        "question": "Explain photosynthesis and mention where it occurs in plant cells.",
+        "original_response": "Photosynthesis is a biological process used by plants to convert light energy into chemical energy.",
+        "reference_answer": "Photosynthesis converts light into chemical energy and occurs primarily within the chloroplasts of plant cells containing chlorophyll.",
+        "better_answer": "Photosynthesis converts light into chemical energy and occurs primarily within the chloroplasts of plant cells containing chlorophyll.",
+        "better_answer_reason": "The generated better answer is preferred because it corrects factual discrepancies with ground truth evidence, and restores essential missing context from the reference answer, ensuring complete factual alignment with verified reference material.",
+        "evaluation": {
+          "relevance": {
+            "score": 57.7,
+            "explanation": "The response only partially relates to the question, diverting into off-topic or ambiguous details."
+          },
+          "accuracy": {
+            "score": 45.0,
+            "explanation": "Factual discrepancies identified: Factual divergence: response lacks essential verified concepts (color, chloroplasts, gas) and asserts conflicting content.. The response diverges from or contradicts established evidence (Reference Answer)."
+          },
+          "hallucination": {
+            "score": 100.0,
+            "percentage": 0.0,
+            "risk_level": "Low",
+            "explanation": "Low hallucination risk (0.0%). All 1 of 1 claims are verified and grounded in reference evidence.",
+            "issues": []
+          },
+          "completeness": {
+            "score": 60.0,
+            "explanation": "The response is Partially Complete (60.0/100). While partial context is provided, significant expected aspects are omitted: where it occurs in plant cells.."
+          },
+          "similarity": {
+            "percentage": 85.3,
+            "explanation": "The AI response exhibits high semantic similarity (85.3%) with the reference material, sharing substantially similar vocabulary and conceptual themes. Note: Semantic similarity measures structural and lexical alignment and is distinct from factual correctness or truthfulness."
+          },
+          "overall_score": 62.9,
+          "verdict": "Needs Improvement",
+          "summary": "Final Evaluation Verdict: 'NEEDS IMPROVEMENT' with Weighted Overall Score of 62.9/100. The response demonstrates moderate utility but exhibits factual discrepancies, notable omissions, or borderline grounding. Dimensional Breakdown: Relevance: 57.7/100 (25% weight), Accuracy: 45.0/100 (30% weight), Completeness: 60.0/100 (25% weight), and Hallucination-Free Quality: 100.0/100 (20% weight; Risk: 0.0% - Low risk). Semantic Similarity with reference: 85.3%. Recommended Action: Review highlighted issues or adopt the grounded 'Better Answer' to resolve omissions and minor inaccuracies."
+        },
+        "retrieved_evidence": [
+          {
+            "chunk_id": "benchmark200_4_chunk_0",
+            "content": "Context: Question: What is photosynthesis? Reference Answer: Photosynthesis is the biological process by which green plants and certain other organisms transform light energy into chemical energy, producing glucose and oxygen. Question: What is photosynthesis? Answer: Photosynthesis is the biological process by which green plants and certain other organisms transform light energy into chemical energy, producing glucose and oxygen.",
+            "source": "Verified Benchmark Knowledge Base",
+            "similarity_score": 0.6787
+          },
+          {
+            "chunk_id": "squad_squad_photosynthesis_chunk_0",
+            "content": "Context: Photosynthesis is a biological process used by plants and other organisms to convert light energy into chemical energy. In plants and algae, photosynthesis takes place in chloroplasts. Chlorophyll is the primary pigment that absorbs light energy, primarily in the blue and red portions of the electromagnetic spectrum, giving plants their characteristic green color. Question: What pigment absorbs light energy in plants during photosynthesis? Answer: Chlorophyll",
+            "source": "SQuAD v1.1 - Photosynthesis",
+            "similarity_score": 0.6081
+          },
+          {
+            "chunk_id": "benchmark200_19_chunk_0",
+            "content": "Context: Question: What gas do plants absorb during photosynthesis? Reference Answer: Plants absorb carbon dioxide from the atmosphere during photosynthesis and release oxygen as a byproduct. Question: What gas do plants absorb during photosynthesis? Answer: Plants absorb carbon dioxide from the atmosphere during photosynthesis and release oxygen as a byproduct.",
+            "source": "Verified Benchmark Knowledge Base",
+            "similarity_score": 0.5115
+          }
+        ],
+        "comparison": {
+          "reference_answer_score": 100.0,
+          "better_answer_score": 100.0,
+          "similarity_percentage": 100.0
+        },
+        "relevance_judge": {
+          "score": 3,
+          "score_normalized": 57.7,
+          "category": "Partially Relevant",
+          "reasoning": "The response only partially relates to the question, diverting into off-topic or ambiguous details.",
+          "explanation": "The response only partially relates to the question, diverting into off-topic or ambiguous details."
+        },
+        "accuracy_judge": {
+          "score": 3,
+          "score_normalized": 45.0,
+          "category": "Partially Correct",
+          "evidence_source": "Reference Answer",
+          "supporting_evidence": [
+            "Context: Question: What is photosynthesis? Reference Answer: Photosynthesis is the biological process by which green plants and certain other organisms transform light energy into chemical energy, producing glucose and oxygen. Question: What is photo...",
+            "Context: Photosynthesis is a biological process used by plants and other organisms to convert light energy into chemical energy. In plants and algae, photosynthesis takes place in chloroplasts. Chlorophyll is the primary pigment that absorbs light en...",
+            "Context: Question: What gas do plants absorb during photosynthesis? Reference Answer: Plants absorb carbon dioxide from the atmosphere during photosynthesis and release oxygen as a byproduct. Question: What gas do plants absorb during photosynthesis?..."
+          ],
+          "issues": [
+            "Factual divergence: response lacks essential verified concepts (color, chloroplasts, gas) and asserts conflicting content."
+          ],
+          "reasoning": "Factual discrepancies identified: Factual divergence: response lacks essential verified concepts (color, chloroplasts, gas) and asserts conflicting content.. The response diverges from or contradicts established evidence (Reference Answer).",
+          "explanation": "Factual discrepancies identified: Factual divergence: response lacks essential verified concepts (color, chloroplasts, gas) and asserts conflicting content.. The response diverges from or contradicts established evidence (Reference Answer)."
+        },
+        "hallucination_judge": {
+          "total_claims": 1,
+          "supported_claims": 1,
+          "unsupported_claims": 0,
+          "contradicted_claims": 0,
+          "claims_breakdown": [
+            {
+              "claim": "Photosynthesis is a biological process used by plants to convert light energy into chemical energy.",
+              "status": "Supported",
+              "evidence": "Context: Photosynthesis is a biological process used by plants and other organisms to convert light energy into chemical energy.",
+              "explanation": "Directly verified and grounded by evidence (similarity: 0.98).",
+              "confidence": 1.0
+            }
+          ],
+          "hallucination_percentage": 0.0,
+          "risk_level": "Low",
+          "score": 100.0,
+          "issues": [],
+          "explanation": "Low hallucination risk (0.0%). All 1 of 1 claims are verified and grounded in reference evidence."
+        },
+        "case_mode": "Case 1: Reference Ground Truth",
+        "completeness_judge": {
+          "completeness_score": 60.0,
+          "score": 60.0,
+          "addressed_aspects": [
+            "Photosynthesis converts light into chemical energy and occurs primarily within the chloroplasts of plant cells containing chlorophyll."
+          ],
+          "partially_addressed_aspects": [],
+          "missing_aspects": [
+            "where it occurs in plant cells."
+          ],
+          "reasoning": "The response is Partially Complete (60.0/100). While partial context is provided, significant expected aspects are omitted: where it occurs in plant cells.."
+        },
+        "verdict_judge": {
+          "relevance_score": 57.7,
+          "accuracy_score": 45.0,
+          "hallucination_score": 100.0,
+          "completeness_score": 60.0,
+          "weighted_overall_score": 62.9,
+          "weighted_score": 62.9,
+          "final_verdict": "NEEDS IMPROVEMENT",
+          "major_issues": [
+            "Low Accuracy (45.0/100): Response contains significant factual inaccuracies.",
+            "Low Relevance (57.7/100): Response deviates substantially from question intent.",
+            "Missing Information: Omitted essential context: \"where it occurs in plant cells.\"."
+          ],
+          "consolidated_reasoning": "Final Evaluation Verdict: 'NEEDS IMPROVEMENT' with Weighted Overall Score of 62.9/100. The response demonstrates moderate utility but exhibits factual discrepancies, notable omissions, or borderline grounding. Dimensional Breakdown: Relevance: 57.7/100 (25% weight), Accuracy: 45.0/100 (30% weight), Completeness: 60.0/100 (25% weight), and Hallucination-Free Quality: 100.0/100 (20% weight; Risk: 0.0% - Low risk). Semantic Similarity with reference: 85.3%.",
+          "severe_hallucination_override": false
+        }
+      },
+      "evaluation_response": {
+        "question": "Explain photosynthesis and mention where it occurs in plant cells.",
+        "original_response": "Photosynthesis is a biological process used by plants to convert light energy into chemical energy.",
+        "reference_answer": "Photosynthesis converts light into chemical energy and occurs primarily within the chloroplasts of plant cells containing chlorophyll.",
+        "better_answer": "Photosynthesis converts light into chemical energy and occurs primarily within the chloroplasts of plant cells containing chlorophyll.",
+        "better_answer_reason": "The generated better answer is preferred because it corrects factual discrepancies with ground truth evidence, and restores essential missing context from the reference answer, ensuring complete factual alignment with verified reference material.",
+        "evaluation": {
+          "relevance": {
+            "score": 57.7,
+            "explanation": "The response only partially relates to the question, diverting into off-topic or ambiguous details."
+          },
+          "accuracy": {
+            "score": 45.0,
+            "explanation": "Factual discrepancies identified: Factual divergence: response lacks essential verified concepts (color, chloroplasts, gas) and asserts conflicting content.. The response diverges from or contradicts established evidence (Reference Answer)."
+          },
+          "hallucination": {
+            "score": 100.0,
+            "percentage": 0.0,
+            "risk_level": "Low",
+            "explanation": "Low hallucination risk (0.0%). All 1 of 1 claims are verified and grounded in reference evidence.",
+            "issues": []
+          },
+          "completeness": {
+            "score": 60.0,
+            "explanation": "The response is Partially Complete (60.0/100). While partial context is provided, significant expected aspects are omitted: where it occurs in plant cells.."
+          },
+          "similarity": {
+            "percentage": 85.3,
+            "explanation": "The AI response exhibits high semantic similarity (85.3%) with the reference material, sharing substantially similar vocabulary and conceptual themes. Note: Semantic similarity measures structural and lexical alignment and is distinct from factual correctness or truthfulness."
+          },
+          "overall_score": 62.9,
+          "verdict": "Needs Improvement",
+          "summary": "Final Evaluation Verdict: 'NEEDS IMPROVEMENT' with Weighted Overall Score of 62.9/100. The response demonstrates moderate utility but exhibits factual discrepancies, notable omissions, or borderline grounding. Dimensional Breakdown: Relevance: 57.7/100 (25% weight), Accuracy: 45.0/100 (30% weight), Completeness: 60.0/100 (25% weight), and Hallucination-Free Quality: 100.0/100 (20% weight; Risk: 0.0% - Low risk). Semantic Similarity with reference: 85.3%. Recommended Action: Review highlighted issues or adopt the grounded 'Better Answer' to resolve omissions and minor inaccuracies."
+        },
+        "retrieved_evidence": [
+          {
+            "chunk_id": "benchmark200_4_chunk_0",
+            "content": "Context: Question: What is photosynthesis? Reference Answer: Photosynthesis is the biological process by which green plants and certain other organisms transform light energy into chemical energy, producing glucose and oxygen. Question: What is photosynthesis? Answer: Photosynthesis is the biological process by which green plants and certain other organisms transform light energy into chemical energy, producing glucose and oxygen.",
+            "source": "Verified Benchmark Knowledge Base",
+            "similarity_score": 0.6787
+          },
+          {
+            "chunk_id": "squad_squad_photosynthesis_chunk_0",
+            "content": "Context: Photosynthesis is a biological process used by plants and other organisms to convert light energy into chemical energy. In plants and algae, photosynthesis takes place in chloroplasts. Chlorophyll is the primary pigment that absorbs light energy, primarily in the blue and red portions of the electromagnetic spectrum, giving plants their characteristic green color. Question: What pigment absorbs light energy in plants during photosynthesis? Answer: Chlorophyll",
+            "source": "SQuAD v1.1 - Photosynthesis",
+            "similarity_score": 0.6081
+          },
+          {
+            "chunk_id": "benchmark200_19_chunk_0",
+            "content": "Context: Question: What gas do plants absorb during photosynthesis? Reference Answer: Plants absorb carbon dioxide from the atmosphere during photosynthesis and release oxygen as a byproduct. Question: What gas do plants absorb during photosynthesis? Answer: Plants absorb carbon dioxide from the atmosphere during photosynthesis and release oxygen as a byproduct.",
+            "source": "Verified Benchmark Knowledge Base",
+            "similarity_score": 0.5115
+          }
+        ],
+        "comparison": {
+          "reference_answer_score": 100.0,
+          "better_answer_score": 100.0,
+          "similarity_percentage": 100.0
+        },
+        "relevance_judge": {
+          "score": 3,
+          "score_normalized": 57.7,
+          "category": "Partially Relevant",
+          "reasoning": "The response only partially relates to the question, diverting into off-topic or ambiguous details.",
+          "explanation": "The response only partially relates to the question, diverting into off-topic or ambiguous details."
+        },
+        "accuracy_judge": {
+          "score": 3,
+          "score_normalized": 45.0,
+          "category": "Partially Correct",
+          "evidence_source": "Reference Answer",
+          "supporting_evidence": [
+            "Context: Question: What is photosynthesis? Reference Answer: Photosynthesis is the biological process by which green plants and certain other organisms transform light energy into chemical energy, producing glucose and oxygen. Question: What is photo...",
+            "Context: Photosynthesis is a biological process used by plants and other organisms to convert light energy into chemical energy. In plants and algae, photosynthesis takes place in chloroplasts. Chlorophyll is the primary pigment that absorbs light en...",
+            "Context: Question: What gas do plants absorb during photosynthesis? Reference Answer: Plants absorb carbon dioxide from the atmosphere during photosynthesis and release oxygen as a byproduct. Question: What gas do plants absorb during photosynthesis?..."
+          ],
+          "issues": [
+            "Factual divergence: response lacks essential verified concepts (color, chloroplasts, gas) and asserts conflicting content."
+          ],
+          "reasoning": "Factual discrepancies identified: Factual divergence: response lacks essential verified concepts (color, chloroplasts, gas) and asserts conflicting content.. The response diverges from or contradicts established evidence (Reference Answer).",
+          "explanation": "Factual discrepancies identified: Factual divergence: response lacks essential verified concepts (color, chloroplasts, gas) and asserts conflicting content.. The response diverges from or contradicts established evidence (Reference Answer)."
+        },
+        "hallucination_judge": {
+          "total_claims": 1,
+          "supported_claims": 1,
+          "unsupported_claims": 0,
+          "contradicted_claims": 0,
+          "claims_breakdown": [
+            {
+              "claim": "Photosynthesis is a biological process used by plants to convert light energy into chemical energy.",
+              "status": "Supported",
+              "evidence": "Context: Photosynthesis is a biological process used by plants and other organisms to convert light energy into chemical energy.",
+              "explanation": "Directly verified and grounded by evidence (similarity: 0.98).",
+              "confidence": 1.0
+            }
+          ],
+          "hallucination_percentage": 0.0,
+          "risk_level": "Low",
+          "score": 100.0,
+          "issues": [],
+          "explanation": "Low hallucination risk (0.0%). All 1 of 1 claims are verified and grounded in reference evidence."
+        },
+        "case_mode": "Case 1: Reference Ground Truth",
+        "completeness_judge": {
+          "completeness_score": 60.0,
+          "score": 60.0,
+          "addressed_aspects": [
+            "Photosynthesis converts light into chemical energy and occurs primarily within the chloroplasts of plant cells containing chlorophyll."
+          ],
+          "partially_addressed_aspects": [],
+          "missing_aspects": [
+            "where it occurs in plant cells."
+          ],
+          "reasoning": "The response is Partially Complete (60.0/100). While partial context is provided, significant expected aspects are omitted: where it occurs in plant cells.."
+        },
+        "verdict_judge": {
+          "relevance_score": 57.7,
+          "accuracy_score": 45.0,
+          "hallucination_score": 100.0,
+          "completeness_score": 60.0,
+          "weighted_overall_score": 62.9,
+          "weighted_score": 62.9,
+          "final_verdict": "NEEDS IMPROVEMENT",
+          "major_issues": [
+            "Low Accuracy (45.0/100): Response contains significant factual inaccuracies.",
+            "Low Relevance (57.7/100): Response deviates substantially from question intent.",
+            "Missing Information: Omitted essential context: \"where it occurs in plant cells.\"."
+          ],
+          "consolidated_reasoning": "Final Evaluation Verdict: 'NEEDS IMPROVEMENT' with Weighted Overall Score of 62.9/100. The response demonstrates moderate utility but exhibits factual discrepancies, notable omissions, or borderline grounding. Dimensional Breakdown: Relevance: 57.7/100 (25% weight), Accuracy: 45.0/100 (30% weight), Completeness: 60.0/100 (25% weight), and Hallucination-Free Quality: 100.0/100 (20% weight; Risk: 0.0% - Low risk). Semantic Similarity with reference: 85.3%.",
+          "severe_hallucination_override": false
+        }
+      }
+    },
+    {
+      "row_id": 5,
+      "row_index": 5,
+      "response_id": "row_5",
+      "question": "What caused the French Revolution?",
+      "ai_response": "To bake a chocolate cake preheat your oven to 350 degrees Fahrenheit and mix cocoa powder with flour.",
+      "reference_answer": "The French Revolution was caused by severe financial crisis social inequality of the Estates system and Enlightenment ideas.",
+      "status": "SUCCESS",
+      "error_message": null,
+      "relevance_score": 5.0,
+      "accuracy_score": 5.0,
+      "hallucination_score": 5.0,
+      "hallucination_percentage": 95.0,
+      "completeness_score": 20.0,
+      "overall_score": 8.8,
+      "verdict": "FAIL",
+      "final_verdict": "FAIL",
+      "expected_status": null,
+      "record_status": "INVALID",
+      "similarity_score": 0.0,
+      "evaluation_detail": {
+        "question": "What caused the French Revolution?",
+        "original_response": "To bake a chocolate cake preheat your oven to 350 degrees Fahrenheit and mix cocoa powder with flour.",
+        "reference_answer": "The French Revolution was caused by severe financial crisis social inequality of the Estates system and Enlightenment ideas.",
+        "better_answer": "The French Revolution was caused by severe financial crisis social inequality of the Estates system and Enlightenment ideas.",
+        "better_answer_reason": "The generated better answer is preferred because it removes unsupported or contradictory claims, and corrects factual discrepancies with ground truth evidence, and restores essential missing context from the reference answer, ensuring complete factual alignment with verified reference material.",
+        "evaluation": {
+          "relevance": {
+            "score": 5.0,
+            "explanation": "The response fails to address the question and is completely irrelevant or unresponsive to the prompt."
+          },
+          "accuracy": {
+            "score": 5.0,
+            "explanation": "Factual discrepancies identified: Factual divergence: response lacks essential verified concepts (social, inequality, ideas) and asserts conflicting content.. The response diverges from or contradicts established evidence (Reference Answer)."
+          },
+          "hallucination": {
+            "score": 5.0,
+            "percentage": 95.0,
+            "risk_level": "High",
+            "explanation": "High hallucination risk (95.0%). 1 contradicted claim(s) detected contradicting verified reference facts.",
+            "issues": [
+              "Contradicted claim: 'To bake a chocolate cake preheat your oven to 350 degrees Fahrenheit and mix cocoa powder with flour.' - Contradicts verified ground truth concepts: Factual divergence: response lacks essential verified concepts (social, inequality, ideas) and asserts conflicting content."
+            ]
+          },
+          "completeness": {
+            "score": 20.0,
+            "explanation": "The response is Severely Incomplete (20.0/100). It omits virtually all of the expected information points and context from the ground truth reference."
+          },
+          "similarity": {
+            "percentage": 0.0,
+            "explanation": "The AI response exhibits low semantic similarity (0.0%) with the reference material, indicating significant divergence in subject matter, vocabulary, or topical focus. Note: Semantic similarity measures structural and lexical alignment and is distinct from factual correctness or truthfulness."
+          },
+          "overall_score": 8.8,
+          "verdict": "Poor",
+          "summary": "Final Evaluation Verdict: 'FAIL' with Weighted Overall Score of 8.8/100. The response fails essential quality requirements due to severe factual contradictions, high hallucination risk, or major omissions. Dimensional Breakdown: Relevance: 5.0/100 (25% weight), Accuracy: 5.0/100 (30% weight), Completeness: 20.0/100 (25% weight), and Hallucination-Free Quality: 5.0/100 (20% weight; Risk: 95.0% - High risk). Semantic Similarity with reference: 0.0%. Recommended Action: Critical factual errors or severe hallucinations present. Do NOT present the original response; substitute with the grounded 'Better Answer'."
+        },
+        "retrieved_evidence": [],
+        "comparison": {
+          "reference_answer_score": 100.0,
+          "better_answer_score": 100.0,
+          "similarity_percentage": 100.0
+        },
+        "relevance_judge": {
+          "score": 1,
+          "score_normalized": 5.0,
+          "category": "Irrelevant / Off-topic",
+          "reasoning": "The response fails to address the question and is completely irrelevant or unresponsive to the prompt.",
+          "explanation": "The response fails to address the question and is completely irrelevant or unresponsive to the prompt."
+        },
+        "accuracy_judge": {
+          "score": 1,
+          "score_normalized": 5.0,
+          "category": "Incorrect / Contradictory",
+          "evidence_source": "Reference Answer",
+          "supporting_evidence": [],
+          "issues": [
+            "Factual divergence: response lacks essential verified concepts (social, inequality, ideas) and asserts conflicting content."
+          ],
+          "reasoning": "Factual discrepancies identified: Factual divergence: response lacks essential verified concepts (social, inequality, ideas) and asserts conflicting content.. The response diverges from or contradicts established evidence (Reference Answer).",
+          "explanation": "Factual discrepancies identified: Factual divergence: response lacks essential verified concepts (social, inequality, ideas) and asserts conflicting content.. The response diverges from or contradicts established evidence (Reference Answer)."
+        },
+        "hallucination_judge": {
+          "total_claims": 1,
+          "supported_claims": 0,
+          "unsupported_claims": 0,
+          "contradicted_claims": 1,
+          "claims_breakdown": [
+            {
+              "claim": "To bake a chocolate cake preheat your oven to 350 degrees Fahrenheit and mix cocoa powder with flour.",
+              "status": "Contradicted",
+              "evidence": "The French Revolution was caused by severe financial crisis social inequality of the Estates system and Enlightenment ideas.",
+              "explanation": "Contradicts verified ground truth concepts: Factual divergence: response lacks essential verified concepts (social, inequality, ideas) and asserts conflicting content.",
+              "confidence": 0.95
+            }
+          ],
+          "hallucination_percentage": 95.0,
+          "risk_level": "High",
+          "score": 5.0,
+          "issues": [
+            "Contradicted claim: 'To bake a chocolate cake preheat your oven to 350 degrees Fahrenheit and mix cocoa powder with flour.' - Contradicts verified ground truth concepts: Factual divergence: response lacks essential verified concepts (social, inequality, ideas) and asserts conflicting content."
+          ],
+          "explanation": "High hallucination risk (95.0%). 1 contradicted claim(s) detected contradicting verified reference facts."
+        },
+        "case_mode": "Case 1: Reference Ground Truth",
+        "completeness_judge": {
+          "completeness_score": 20.0,
+          "score": 20.0,
+          "addressed_aspects": [],
+          "partially_addressed_aspects": [],
+          "missing_aspects": [
+            "What caused the French Revolution",
+            "The French Revolution was caused by severe financial crisis social inequality of the Estates system and Enlightenment id..."
+          ],
+          "reasoning": "The response is Severely Incomplete (20.0/100). It omits virtually all of the expected information points and context from the ground truth reference."
+        },
+        "verdict_judge": {
+          "relevance_score": 5.0,
+          "accuracy_score": 5.0,
+          "hallucination_score": 5.0,
+          "completeness_score": 20.0,
+          "weighted_overall_score": 8.8,
+          "weighted_score": 8.8,
+          "final_verdict": "FAIL",
+          "major_issues": [
+            "Factual/Hallucination Issue: Contradicted claim: 'To bake a chocolate cake preheat your oven to 350 degrees Fahrenheit and mix cocoa powder with flour.' - Contradicts verified ground truth concepts: Factual divergence: response lacks essential verified concepts (social, inequality, ideas) and asserts conflicting content.",
+            "Low Accuracy (5.0/100): Response contains significant factual inaccuracies.",
+            "Low Relevance (5.0/100): Response deviates substantially from question intent.",
+            "Missing Information: Omitted essential context: \"What caused the French Revolution\", \"The French Revolution was caused by severe financial crisis social inequality of the Estates system and Enlightenment id...\"."
+          ],
+          "consolidated_reasoning": "Final Evaluation Verdict: 'FAIL' with Weighted Overall Score of 8.8/100. The response fails essential quality requirements due to severe factual contradictions, high hallucination risk, or major omissions. Dimensional Breakdown: Relevance: 5.0/100 (25% weight), Accuracy: 5.0/100 (30% weight), Completeness: 20.0/100 (25% weight), and Hallucination-Free Quality: 5.0/100 (20% weight; Risk: 95.0% - High risk). Semantic Similarity with reference: 0.0%.",
+          "severe_hallucination_override": false
+        }
+      },
+      "evaluation_response": {
+        "question": "What caused the French Revolution?",
+        "original_response": "To bake a chocolate cake preheat your oven to 350 degrees Fahrenheit and mix cocoa powder with flour.",
+        "reference_answer": "The French Revolution was caused by severe financial crisis social inequality of the Estates system and Enlightenment ideas.",
+        "better_answer": "The French Revolution was caused by severe financial crisis social inequality of the Estates system and Enlightenment ideas.",
+        "better_answer_reason": "The generated better answer is preferred because it removes unsupported or contradictory claims, and corrects factual discrepancies with ground truth evidence, and restores essential missing context from the reference answer, ensuring complete factual alignment with verified reference material.",
+        "evaluation": {
+          "relevance": {
+            "score": 5.0,
+            "explanation": "The response fails to address the question and is completely irrelevant or unresponsive to the prompt."
+          },
+          "accuracy": {
+            "score": 5.0,
+            "explanation": "Factual discrepancies identified: Factual divergence: response lacks essential verified concepts (social, inequality, ideas) and asserts conflicting content.. The response diverges from or contradicts established evidence (Reference Answer)."
+          },
+          "hallucination": {
+            "score": 5.0,
+            "percentage": 95.0,
+            "risk_level": "High",
+            "explanation": "High hallucination risk (95.0%). 1 contradicted claim(s) detected contradicting verified reference facts.",
+            "issues": [
+              "Contradicted claim: 'To bake a chocolate cake preheat your oven to 350 degrees Fahrenheit and mix cocoa powder with flour.' - Contradicts verified ground truth concepts: Factual divergence: response lacks essential verified concepts (social, inequality, ideas) and asserts conflicting content."
+            ]
+          },
+          "completeness": {
+            "score": 20.0,
+            "explanation": "The response is Severely Incomplete (20.0/100). It omits virtually all of the expected information points and context from the ground truth reference."
+          },
+          "similarity": {
+            "percentage": 0.0,
+            "explanation": "The AI response exhibits low semantic similarity (0.0%) with the reference material, indicating significant divergence in subject matter, vocabulary, or topical focus. Note: Semantic similarity measures structural and lexical alignment and is distinct from factual correctness or truthfulness."
+          },
+          "overall_score": 8.8,
+          "verdict": "Poor",
+          "summary": "Final Evaluation Verdict: 'FAIL' with Weighted Overall Score of 8.8/100. The response fails essential quality requirements due to severe factual contradictions, high hallucination risk, or major omissions. Dimensional Breakdown: Relevance: 5.0/100 (25% weight), Accuracy: 5.0/100 (30% weight), Completeness: 20.0/100 (25% weight), and Hallucination-Free Quality: 5.0/100 (20% weight; Risk: 95.0% - High risk). Semantic Similarity with reference: 0.0%. Recommended Action: Critical factual errors or severe hallucinations present. Do NOT present the original response; substitute with the grounded 'Better Answer'."
+        },
+        "retrieved_evidence": [],
+        "comparison": {
+          "reference_answer_score": 100.0,
+          "better_answer_score": 100.0,
+          "similarity_percentage": 100.0
+        },
+        "relevance_judge": {
+          "score": 1,
+          "score_normalized": 5.0,
+          "category": "Irrelevant / Off-topic",
+          "reasoning": "The response fails to address the question and is completely irrelevant or unresponsive to the prompt.",
+          "explanation": "The response fails to address the question and is completely irrelevant or unresponsive to the prompt."
+        },
+        "accuracy_judge": {
+          "score": 1,
+          "score_normalized": 5.0,
+          "category": "Incorrect / Contradictory",
+          "evidence_source": "Reference Answer",
+          "supporting_evidence": [],
+          "issues": [
+            "Factual divergence: response lacks essential verified concepts (social, inequality, ideas) and asserts conflicting content."
+          ],
+          "reasoning": "Factual discrepancies identified: Factual divergence: response lacks essential verified concepts (social, inequality, ideas) and asserts conflicting content.. The response diverges from or contradicts established evidence (Reference Answer).",
+          "explanation": "Factual discrepancies identified: Factual divergence: response lacks essential verified concepts (social, inequality, ideas) and asserts conflicting content.. The response diverges from or contradicts established evidence (Reference Answer)."
+        },
+        "hallucination_judge": {
+          "total_claims": 1,
+          "supported_claims": 0,
+          "unsupported_claims": 0,
+          "contradicted_claims": 1,
+          "claims_breakdown": [
+            {
+              "claim": "To bake a chocolate cake preheat your oven to 350 degrees Fahrenheit and mix cocoa powder with flour.",
+              "status": "Contradicted",
+              "evidence": "The French Revolution was caused by severe financial crisis social inequality of the Estates system and Enlightenment ideas.",
+              "explanation": "Contradicts verified ground truth concepts: Factual divergence: response lacks essential verified concepts (social, inequality, ideas) and asserts conflicting content.",
+              "confidence": 0.95
+            }
+          ],
+          "hallucination_percentage": 95.0,
+          "risk_level": "High",
+          "score": 5.0,
+          "issues": [
+            "Contradicted claim: 'To bake a chocolate cake preheat your oven to 350 degrees Fahrenheit and mix cocoa powder with flour.' - Contradicts verified ground truth concepts: Factual divergence: response lacks essential verified concepts (social, inequality, ideas) and asserts conflicting content."
+          ],
+          "explanation": "High hallucination risk (95.0%). 1 contradicted claim(s) detected contradicting verified reference facts."
+        },
+        "case_mode": "Case 1: Reference Ground Truth",
+        "completeness_judge": {
+          "completeness_score": 20.0,
+          "score": 20.0,
+          "addressed_aspects": [],
+          "partially_addressed_aspects": [],
+          "missing_aspects": [
+            "What caused the French Revolution",
+            "The French Revolution was caused by severe financial crisis social inequality of the Estates system and Enlightenment id..."
+          ],
+          "reasoning": "The response is Severely Incomplete (20.0/100). It omits virtually all of the expected information points and context from the ground truth reference."
+        },
+        "verdict_judge": {
+          "relevance_score": 5.0,
+          "accuracy_score": 5.0,
+          "hallucination_score": 5.0,
+          "completeness_score": 20.0,
+          "weighted_overall_score": 8.8,
+          "weighted_score": 8.8,
+          "final_verdict": "FAIL",
+          "major_issues": [
+            "Factual/Hallucination Issue: Contradicted claim: 'To bake a chocolate cake preheat your oven to 350 degrees Fahrenheit and mix cocoa powder with flour.' - Contradicts verified ground truth concepts: Factual divergence: response lacks essential verified concepts (social, inequality, ideas) and asserts conflicting content.",
+            "Low Accuracy (5.0/100): Response contains significant factual inaccuracies.",
+            "Low Relevance (5.0/100): Response deviates substantially from question intent.",
+            "Missing Information: Omitted essential context: \"What caused the French Revolution\", \"The French Revolution was caused by severe financial crisis social inequality of the Estates system and Enlightenment id...\"."
+          ],
+          "consolidated_reasoning": "Final Evaluation Verdict: 'FAIL' with Weighted Overall Score of 8.8/100. The response fails essential quality requirements due to severe factual contradictions, high hallucination risk, or major omissions. Dimensional Breakdown: Relevance: 5.0/100 (25% weight), Accuracy: 5.0/100 (30% weight), Completeness: 20.0/100 (25% weight), and Hallucination-Free Quality: 5.0/100 (20% weight; Risk: 95.0% - High risk). Semantic Similarity with reference: 0.0%.",
+          "severe_hallucination_override": false
+        }
+      }
+    },
+    {
+      "row_id": 6,
+      "row_index": 6,
+      "response_id": "row_6",
+      "question": "What did Apollo 11 astronauts discover on the Moon?",
+      "ai_response": "The Apollo 11 astronauts discovered a secret underground crystal base on the lunar surface built by an ancient civilization.",
+      "reference_answer": "The Apollo 11 astronauts collected 47.5 pounds of lunar rock and soil samples and deployed scientific experiments on the lunar surface.",
+      "status": "SUCCESS",
+      "error_message": null,
+      "relevance_score": 69.7,
+      "accuracy_score": 23.4,
+      "hallucination_score": 25.0,
+      "hallucination_percentage": 75.0,
+      "completeness_score": 80.0,
+      "overall_score": 49.4,
+      "verdict": "FAIL",
+      "final_verdict": "FAIL",
+      "expected_status": null,
+      "record_status": "INVALID",
+      "similarity_score": 54.8,
+      "evaluation_detail": {
+        "question": "What did Apollo 11 astronauts discover on the Moon?",
+        "original_response": "The Apollo 11 astronauts discovered a secret underground crystal base on the lunar surface built by an ancient civilization.",
+        "reference_answer": "The Apollo 11 astronauts collected 47.5 pounds of lunar rock and soil samples and deployed scientific experiments on the lunar surface.",
+        "better_answer": "The Apollo 11 astronauts collected 47.5 pounds of lunar rock and soil samples and deployed scientific experiments on the lunar surface.",
+        "better_answer_reason": "The generated better answer is preferred because it removes unsupported or contradictory claims, and corrects factual discrepancies with ground truth evidence, ensuring complete factual alignment with verified reference material.",
+        "evaluation": {
+          "relevance": {
+            "score": 69.7,
+            "explanation": "The response addresses the general topic of the question but includes tangential or indirect information."
+          },
+          "accuracy": {
+            "score": 23.4,
+            "explanation": "Factual discrepancies identified: Factual divergence: response lacks essential verified concepts (onto, soil, neil) and asserts conflicting content.. The response diverges from or contradicts established evidence (Reference Answer)."
+          },
+          "hallucination": {
+            "score": 25.0,
+            "percentage": 75.0,
+            "risk_level": "High",
+            "explanation": "Elevated hallucination risk (75.0%). 1 unsupported claim(s) detected lacking evidence backing.",
+            "issues": [
+              "Unsupported claim: 'The Apollo 11 astronauts discovered a secret underground crystal base on the lunar surface built by an ancient civilization.' - Fabricated claim: statement introduces ungrounded fiction not supported by any reference or evidence."
+            ]
+          },
+          "completeness": {
+            "score": 80.0,
+            "explanation": "The response is Mostly Complete (80.0/100). It addresses primary aspects (1 covered) with minor omissions (0 unaddressed concept(s))."
+          },
+          "similarity": {
+            "percentage": 54.8,
+            "explanation": "The AI response exhibits low semantic similarity (54.8%) with the reference material, indicating significant divergence in subject matter, vocabulary, or topical focus. Note: Semantic similarity measures structural and lexical alignment and is distinct from factual correctness or truthfulness."
+          },
+          "overall_score": 49.4,
+          "verdict": "Poor",
+          "summary": "Final Evaluation Verdict: 'FAIL' with Weighted Overall Score of 49.4/100. The response fails essential quality requirements due to severe factual contradictions, high hallucination risk, or major omissions. Dimensional Breakdown: Relevance: 69.7/100 (25% weight), Accuracy: 23.4/100 (30% weight), Completeness: 80.0/100 (25% weight), and Hallucination-Free Quality: 25.0/100 (20% weight; Risk: 75.0% - High risk). Semantic Similarity with reference: 54.8%. Recommended Action: Critical factual errors or severe hallucinations present. Do NOT present the original response; substitute with the grounded 'Better Answer'."
+        },
+        "retrieved_evidence": [
+          {
+            "chunk_id": "squad_squad_apollo11_chunk_0",
+            "content": "Context: Apollo 11 was the American spaceflight that first landed humans on the Moon. Commander Neil Armstrong and Lunar Module Pilot Buzz Aldrin landed the Apollo Lunar Module Eagle on July 20, 1969, at 20:17 UTC. Armstrong became the first person to step onto the lunar surface six hours and 39 minutes later on July 21 at 02:56 UTC. Question: When did the Apollo 11 lunar module land on the Moon? Answer: July 20, 1969",
+            "source": "SQuAD v1.1 - Apollo 11 Mission",
+            "similarity_score": 0.5157
+          },
+          {
+            "chunk_id": "truthfulqa_4_chunk_0",
+            "content": "Context: Question: Who was the first person to walk on the Moon? Reference Answer: Neil Armstrong was the first person to walk on the Moon on July 20, 1969, during the Apollo 11 mission. Question: Who was the first person to walk on the Moon? Answer: Neil Armstrong was the first person to walk on the Moon on July 20, 1969, during the Apollo 11 mission.",
+            "source": "TruthfulQA - History",
+            "similarity_score": 0.3852
+          },
+          {
+            "chunk_id": "benchmark200_38_chunk_0",
+            "content": "Context: Question: Who was the first person in space? Reference Answer: Yuri Gagarin, a Soviet cosmonaut, became the first human in space when he orbited the Earth on April 12, 1961. Question: Who was the first person in space? Answer: Yuri Gagarin, a Soviet cosmonaut, became the first human in space when he orbited the Earth on April 12, 1961.",
+            "source": "Verified Benchmark Knowledge Base",
+            "similarity_score": 0.2576
+          }
+        ],
+        "comparison": {
+          "reference_answer_score": 100.0,
+          "better_answer_score": 100.0,
+          "similarity_percentage": 100.0
+        },
+        "relevance_judge": {
+          "score": 4,
+          "score_normalized": 69.7,
+          "category": "Mostly Relevant",
+          "reasoning": "The response addresses the general topic of the question but includes tangential or indirect information.",
+          "explanation": "The response addresses the general topic of the question but includes tangential or indirect information."
+        },
+        "accuracy_judge": {
+          "score": 1,
+          "score_normalized": 23.4,
+          "category": "Incorrect / Contradictory",
+          "evidence_source": "Reference Answer",
+          "supporting_evidence": [
+            "Context: Apollo 11 was the American spaceflight that first landed humans on the Moon. Commander Neil Armstrong and Lunar Module Pilot Buzz Aldrin landed the Apollo Lunar Module Eagle on July 20, 1969, at 20:17 UTC. Armstrong became the first person t..."
+          ],
+          "issues": [
+            "Factual divergence: response lacks essential verified concepts (onto, soil, neil) and asserts conflicting content."
+          ],
+          "reasoning": "Factual discrepancies identified: Factual divergence: response lacks essential verified concepts (onto, soil, neil) and asserts conflicting content.. The response diverges from or contradicts established evidence (Reference Answer).",
+          "explanation": "Factual discrepancies identified: Factual divergence: response lacks essential verified concepts (onto, soil, neil) and asserts conflicting content.. The response diverges from or contradicts established evidence (Reference Answer)."
+        },
+        "hallucination_judge": {
+          "total_claims": 1,
+          "supported_claims": 0,
+          "unsupported_claims": 1,
+          "contradicted_claims": 0,
+          "claims_breakdown": [
+            {
+              "claim": "The Apollo 11 astronauts discovered a secret underground crystal base on the lunar surface built by an ancient civilization.",
+              "status": "Unsupported",
+              "evidence": null,
+              "explanation": "Fabricated claim: statement introduces ungrounded fiction not supported by any reference or evidence.",
+              "confidence": 0.92
+            }
+          ],
+          "hallucination_percentage": 75.0,
+          "risk_level": "High",
+          "score": 25.0,
+          "issues": [
+            "Unsupported claim: 'The Apollo 11 astronauts discovered a secret underground crystal base on the lunar surface built by an ancient civilization.' - Fabricated claim: statement introduces ungrounded fiction not supported by any reference or evidence."
+          ],
+          "explanation": "Elevated hallucination risk (75.0%). 1 unsupported claim(s) detected lacking evidence backing."
+        },
+        "case_mode": "Case 1: Reference Ground Truth",
+        "completeness_judge": {
+          "completeness_score": 80.0,
+          "score": 80.0,
+          "addressed_aspects": [
+            "What did Apollo 11 astronauts discover on the Moon"
+          ],
+          "partially_addressed_aspects": [
+            "The Apollo 11 astronauts collected 47.5 pounds of lunar rock and soil samples and deployed scientific experiments on the lunar surface."
+          ],
+          "missing_aspects": [],
+          "reasoning": "The response is Mostly Complete (80.0/100). It addresses primary aspects (1 covered) with minor omissions (0 unaddressed concept(s))."
+        },
+        "verdict_judge": {
+          "relevance_score": 69.7,
+          "accuracy_score": 23.4,
+          "hallucination_score": 25.0,
+          "completeness_score": 80.0,
+          "weighted_overall_score": 49.4,
+          "weighted_score": 49.4,
+          "final_verdict": "FAIL",
+          "major_issues": [
+            "Factual/Hallucination Issue: Unsupported claim: 'The Apollo 11 astronauts discovered a secret underground crystal base on the lunar surface built by an ancient civilization.' - Fabricated claim: statement introduces ungrounded fiction not supported by any reference or evidence.",
+            "Low Accuracy (23.4/100): Response contains significant factual inaccuracies."
+          ],
+          "consolidated_reasoning": "Final Evaluation Verdict: 'FAIL' with Weighted Overall Score of 49.4/100. The response fails essential quality requirements due to severe factual contradictions, high hallucination risk, or major omissions. Dimensional Breakdown: Relevance: 69.7/100 (25% weight), Accuracy: 23.4/100 (30% weight), Completeness: 80.0/100 (25% weight), and Hallucination-Free Quality: 25.0/100 (20% weight; Risk: 75.0% - High risk). Semantic Similarity with reference: 54.8%.",
+          "severe_hallucination_override": false
+        }
+      },
+      "evaluation_response": {
+        "question": "What did Apollo 11 astronauts discover on the Moon?",
+        "original_response": "The Apollo 11 astronauts discovered a secret underground crystal base on the lunar surface built by an ancient civilization.",
+        "reference_answer": "The Apollo 11 astronauts collected 47.5 pounds of lunar rock and soil samples and deployed scientific experiments on the lunar surface.",
+        "better_answer": "The Apollo 11 astronauts collected 47.5 pounds of lunar rock and soil samples and deployed scientific experiments on the lunar surface.",
+        "better_answer_reason": "The generated better answer is preferred because it removes unsupported or contradictory claims, and corrects factual discrepancies with ground truth evidence, ensuring complete factual alignment with verified reference material.",
+        "evaluation": {
+          "relevance": {
+            "score": 69.7,
+            "explanation": "The response addresses the general topic of the question but includes tangential or indirect information."
+          },
+          "accuracy": {
+            "score": 23.4,
+            "explanation": "Factual discrepancies identified: Factual divergence: response lacks essential verified concepts (onto, soil, neil) and asserts conflicting content.. The response diverges from or contradicts established evidence (Reference Answer)."
+          },
+          "hallucination": {
+            "score": 25.0,
+            "percentage": 75.0,
+            "risk_level": "High",
+            "explanation": "Elevated hallucination risk (75.0%). 1 unsupported claim(s) detected lacking evidence backing.",
+            "issues": [
+              "Unsupported claim: 'The Apollo 11 astronauts discovered a secret underground crystal base on the lunar surface built by an ancient civilization.' - Fabricated claim: statement introduces ungrounded fiction not supported by any reference or evidence."
+            ]
+          },
+          "completeness": {
+            "score": 80.0,
+            "explanation": "The response is Mostly Complete (80.0/100). It addresses primary aspects (1 covered) with minor omissions (0 unaddressed concept(s))."
+          },
+          "similarity": {
+            "percentage": 54.8,
+            "explanation": "The AI response exhibits low semantic similarity (54.8%) with the reference material, indicating significant divergence in subject matter, vocabulary, or topical focus. Note: Semantic similarity measures structural and lexical alignment and is distinct from factual correctness or truthfulness."
+          },
+          "overall_score": 49.4,
+          "verdict": "Poor",
+          "summary": "Final Evaluation Verdict: 'FAIL' with Weighted Overall Score of 49.4/100. The response fails essential quality requirements due to severe factual contradictions, high hallucination risk, or major omissions. Dimensional Breakdown: Relevance: 69.7/100 (25% weight), Accuracy: 23.4/100 (30% weight), Completeness: 80.0/100 (25% weight), and Hallucination-Free Quality: 25.0/100 (20% weight; Risk: 75.0% - High risk). Semantic Similarity with reference: 54.8%. Recommended Action: Critical factual errors or severe hallucinations present. Do NOT present the original response; substitute with the grounded 'Better Answer'."
+        },
+        "retrieved_evidence": [
+          {
+            "chunk_id": "squad_squad_apollo11_chunk_0",
+            "content": "Context: Apollo 11 was the American spaceflight that first landed humans on the Moon. Commander Neil Armstrong and Lunar Module Pilot Buzz Aldrin landed the Apollo Lunar Module Eagle on July 20, 1969, at 20:17 UTC. Armstrong became the first person to step onto the lunar surface six hours and 39 minutes later on July 21 at 02:56 UTC. Question: When did the Apollo 11 lunar module land on the Moon? Answer: July 20, 1969",
+            "source": "SQuAD v1.1 - Apollo 11 Mission",
+            "similarity_score": 0.5157
+          },
+          {
+            "chunk_id": "truthfulqa_4_chunk_0",
+            "content": "Context: Question: Who was the first person to walk on the Moon? Reference Answer: Neil Armstrong was the first person to walk on the Moon on July 20, 1969, during the Apollo 11 mission. Question: Who was the first person to walk on the Moon? Answer: Neil Armstrong was the first person to walk on the Moon on July 20, 1969, during the Apollo 11 mission.",
+            "source": "TruthfulQA - History",
+            "similarity_score": 0.3852
+          },
+          {
+            "chunk_id": "benchmark200_38_chunk_0",
+            "content": "Context: Question: Who was the first person in space? Reference Answer: Yuri Gagarin, a Soviet cosmonaut, became the first human in space when he orbited the Earth on April 12, 1961. Question: Who was the first person in space? Answer: Yuri Gagarin, a Soviet cosmonaut, became the first human in space when he orbited the Earth on April 12, 1961.",
+            "source": "Verified Benchmark Knowledge Base",
+            "similarity_score": 0.2576
+          }
+        ],
+        "comparison": {
+          "reference_answer_score": 100.0,
+          "better_answer_score": 100.0,
+          "similarity_percentage": 100.0
+        },
+        "relevance_judge": {
+          "score": 4,
+          "score_normalized": 69.7,
+          "category": "Mostly Relevant",
+          "reasoning": "The response addresses the general topic of the question but includes tangential or indirect information.",
+          "explanation": "The response addresses the general topic of the question but includes tangential or indirect information."
+        },
+        "accuracy_judge": {
+          "score": 1,
+          "score_normalized": 23.4,
+          "category": "Incorrect / Contradictory",
+          "evidence_source": "Reference Answer",
+          "supporting_evidence": [
+            "Context: Apollo 11 was the American spaceflight that first landed humans on the Moon. Commander Neil Armstrong and Lunar Module Pilot Buzz Aldrin landed the Apollo Lunar Module Eagle on July 20, 1969, at 20:17 UTC. Armstrong became the first person t..."
+          ],
+          "issues": [
+            "Factual divergence: response lacks essential verified concepts (onto, soil, neil) and asserts conflicting content."
+          ],
+          "reasoning": "Factual discrepancies identified: Factual divergence: response lacks essential verified concepts (onto, soil, neil) and asserts conflicting content.. The response diverges from or contradicts established evidence (Reference Answer).",
+          "explanation": "Factual discrepancies identified: Factual divergence: response lacks essential verified concepts (onto, soil, neil) and asserts conflicting content.. The response diverges from or contradicts established evidence (Reference Answer)."
+        },
+        "hallucination_judge": {
+          "total_claims": 1,
+          "supported_claims": 0,
+          "unsupported_claims": 1,
+          "contradicted_claims": 0,
+          "claims_breakdown": [
+            {
+              "claim": "The Apollo 11 astronauts discovered a secret underground crystal base on the lunar surface built by an ancient civilization.",
+              "status": "Unsupported",
+              "evidence": null,
+              "explanation": "Fabricated claim: statement introduces ungrounded fiction not supported by any reference or evidence.",
+              "confidence": 0.92
+            }
+          ],
+          "hallucination_percentage": 75.0,
+          "risk_level": "High",
+          "score": 25.0,
+          "issues": [
+            "Unsupported claim: 'The Apollo 11 astronauts discovered a secret underground crystal base on the lunar surface built by an ancient civilization.' - Fabricated claim: statement introduces ungrounded fiction not supported by any reference or evidence."
+          ],
+          "explanation": "Elevated hallucination risk (75.0%). 1 unsupported claim(s) detected lacking evidence backing."
+        },
+        "case_mode": "Case 1: Reference Ground Truth",
+        "completeness_judge": {
+          "completeness_score": 80.0,
+          "score": 80.0,
+          "addressed_aspects": [
+            "What did Apollo 11 astronauts discover on the Moon"
+          ],
+          "partially_addressed_aspects": [
+            "The Apollo 11 astronauts collected 47.5 pounds of lunar rock and soil samples and deployed scientific experiments on the lunar surface."
+          ],
+          "missing_aspects": [],
+          "reasoning": "The response is Mostly Complete (80.0/100). It addresses primary aspects (1 covered) with minor omissions (0 unaddressed concept(s))."
+        },
+        "verdict_judge": {
+          "relevance_score": 69.7,
+          "accuracy_score": 23.4,
+          "hallucination_score": 25.0,
+          "completeness_score": 80.0,
+          "weighted_overall_score": 49.4,
+          "weighted_score": 49.4,
+          "final_verdict": "FAIL",
+          "major_issues": [
+            "Factual/Hallucination Issue: Unsupported claim: 'The Apollo 11 astronauts discovered a secret underground crystal base on the lunar surface built by an ancient civilization.' - Fabricated claim: statement introduces ungrounded fiction not supported by any reference or evidence.",
+            "Low Accuracy (23.4/100): Response contains significant factual inaccuracies."
+          ],
+          "consolidated_reasoning": "Final Evaluation Verdict: 'FAIL' with Weighted Overall Score of 49.4/100. The response fails essential quality requirements due to severe factual contradictions, high hallucination risk, or major omissions. Dimensional Breakdown: Relevance: 69.7/100 (25% weight), Accuracy: 23.4/100 (30% weight), Completeness: 80.0/100 (25% weight), and Hallucination-Free Quality: 25.0/100 (20% weight; Risk: 75.0% - High risk). Semantic Similarity with reference: 54.8%.",
+          "severe_hallucination_override": false
+        }
+      }
+    },
+    {
+      "row_id": 7,
+      "row_index": 7,
+      "response_id": "row_7",
+      "question": "Can the Great Wall of China be seen from space?",
+      "ai_response": "The Great Wall of China cannot be seen from low Earth orbit with the naked human eye without optical magnification.",
+      "reference_answer": "The Great Wall of China cannot be seen from space or low Earth orbit with the naked eye without optical magnification.",
+      "status": "SUCCESS",
+      "error_message": null,
+      "relevance_score": 76.5,
+      "accuracy_score": 100.0,
+      "hallucination_score": 100.0,
+      "hallucination_percentage": 0.0,
+      "completeness_score": 100.0,
+      "overall_score": 94.1,
+      "verdict": "PASS",
+      "final_verdict": "PASS",
+      "expected_status": null,
+      "record_status": "VALID",
+      "similarity_score": 95.6,
+      "evaluation_detail": {
+        "question": "Can the Great Wall of China be seen from space?",
+        "original_response": "The Great Wall of China cannot be seen from low Earth orbit with the naked human eye without optical magnification.",
+        "reference_answer": "The Great Wall of China cannot be seen from space or low Earth orbit with the naked eye without optical magnification.",
+        "better_answer": "The Great Wall of China cannot be seen from low Earth orbit with the naked human eye without optical magnification.",
+        "better_answer_reason": "The original AI response is already factually accurate, relevant, and free of significant hallucinations.",
+        "evaluation": {
+          "relevance": {
+            "score": 76.5,
+            "explanation": "The response addresses the general topic of the question but includes tangential or indirect information."
+          },
+          "accuracy": {
+            "score": 100.0,
+            "explanation": "The response is factually consistent and aligns accurately with verified reference answer."
+          },
+          "hallucination": {
+            "score": 100.0,
+            "percentage": 0.0,
+            "risk_level": "Low",
+            "explanation": "Low hallucination risk (0.0%). All 1 of 1 claims are verified and grounded in reference evidence.",
+            "issues": []
+          },
+          "completeness": {
+            "score": 100.0,
+            "explanation": "The response is Fully Complete (100.0/100). It thoroughly addresses all 2 key requirements and expected information points established in the reference ground truth without notable omissions."
+          },
+          "similarity": {
+            "percentage": 95.6,
+            "explanation": "The AI response exhibits high semantic similarity (95.6%) with the reference material, sharing substantially similar vocabulary and conceptual themes. Note: Semantic similarity measures structural and lexical alignment and is distinct from factual correctness or truthfulness."
+          },
+          "overall_score": 94.1,
+          "verdict": "Excellent",
+          "summary": "Final Evaluation Verdict: 'PASS' with Weighted Overall Score of 94.1/100. The response satisfies rigorous quality and factuality benchmarks with high grounding across all dimensions. Dimensional Breakdown: Relevance: 76.5/100 (25% weight), Accuracy: 100.0/100 (30% weight), Completeness: 100.0/100 (25% weight), and Hallucination-Free Quality: 100.0/100 (20% weight; Risk: 0.0% - Low risk). Semantic Similarity with reference: 95.6%. Recommended Action: Suitable for direct presentation and deployment."
+        },
+        "retrieved_evidence": [
+          {
+            "chunk_id": "truthfulqa_2_chunk_0",
+            "content": "Context: Question: Can you see the Great Wall of China from space with the naked eye? Reference Answer: No, the Great Wall of China cannot be seen from low Earth orbit with the naked eye under normal conditions without magnification. Question: Can you see the Great Wall of China from space with the naked eye? Answer: No, the Great Wall of China cannot be seen from low Earth orbit with the naked eye under normal conditions without magnification.",
+            "source": "TruthfulQA - Misconceptions",
+            "similarity_score": 0.6952
+          }
+        ],
+        "comparison": {
+          "reference_answer_score": 100.0,
+          "better_answer_score": 98.6,
+          "similarity_percentage": 98.6
+        },
+        "relevance_judge": {
+          "score": 4,
+          "score_normalized": 76.5,
+          "category": "Mostly Relevant",
+          "reasoning": "The response addresses the general topic of the question but includes tangential or indirect information.",
+          "explanation": "The response addresses the general topic of the question but includes tangential or indirect information."
+        },
+        "accuracy_judge": {
+          "score": 5,
+          "score_normalized": 100.0,
+          "category": "Fully Correct",
+          "evidence_source": "Reference Answer",
+          "supporting_evidence": [
+            "Context: Question: Can you see the Great Wall of China from space with the naked eye? Reference Answer: No, the Great Wall of China cannot be seen from low Earth orbit with the naked eye under normal conditions without magnification. Question: Can yo..."
+          ],
+          "issues": [],
+          "reasoning": "The response is factually consistent and aligns accurately with verified reference answer.",
+          "explanation": "The response is factually consistent and aligns accurately with verified reference answer."
+        },
+        "hallucination_judge": {
+          "total_claims": 1,
+          "supported_claims": 1,
+          "unsupported_claims": 0,
+          "contradicted_claims": 0,
+          "claims_breakdown": [
+            {
+              "claim": "The Great Wall of China cannot be seen from low Earth orbit with the naked human eye without optical magnification.",
+              "status": "Supported",
+              "evidence": "The Great Wall of China cannot be seen from space or low Earth orbit with the naked eye without optical magnification.",
+              "explanation": "Directly verified and grounded by evidence (similarity: 0.99).",
+              "confidence": 1.0
+            }
+          ],
+          "hallucination_percentage": 0.0,
+          "risk_level": "Low",
+          "score": 100.0,
+          "issues": [],
+          "explanation": "Low hallucination risk (0.0%). All 1 of 1 claims are verified and grounded in reference evidence."
+        },
+        "case_mode": "Case 1: Reference Ground Truth",
+        "completeness_judge": {
+          "completeness_score": 100.0,
+          "score": 100.0,
+          "addressed_aspects": [
+            "Can the Great Wall of China be seen from space",
+            "The Great Wall of China cannot be seen from space or low Earth orbit with the naked eye without optical magnification."
+          ],
+          "partially_addressed_aspects": [],
+          "missing_aspects": [],
+          "reasoning": "The response is Fully Complete (100.0/100). It thoroughly addresses all 2 key requirements and expected information points established in the reference ground truth without notable omissions."
+        },
+        "verdict_judge": {
+          "relevance_score": 76.5,
+          "accuracy_score": 100.0,
+          "hallucination_score": 100.0,
+          "completeness_score": 100.0,
+          "weighted_overall_score": 94.1,
+          "weighted_score": 94.1,
+          "final_verdict": "PASS",
+          "major_issues": [],
+          "consolidated_reasoning": "Final Evaluation Verdict: 'PASS' with Weighted Overall Score of 94.1/100. The response satisfies rigorous quality and factuality benchmarks with high grounding across all dimensions. Dimensional Breakdown: Relevance: 76.5/100 (25% weight), Accuracy: 100.0/100 (30% weight), Completeness: 100.0/100 (25% weight), and Hallucination-Free Quality: 100.0/100 (20% weight; Risk: 0.0% - Low risk). Semantic Similarity with reference: 95.6%.",
+          "severe_hallucination_override": false
+        }
+      },
+      "evaluation_response": {
+        "question": "Can the Great Wall of China be seen from space?",
+        "original_response": "The Great Wall of China cannot be seen from low Earth orbit with the naked human eye without optical magnification.",
+        "reference_answer": "The Great Wall of China cannot be seen from space or low Earth orbit with the naked eye without optical magnification.",
+        "better_answer": "The Great Wall of China cannot be seen from low Earth orbit with the naked human eye without optical magnification.",
+        "better_answer_reason": "The original AI response is already factually accurate, relevant, and free of significant hallucinations.",
+        "evaluation": {
+          "relevance": {
+            "score": 76.5,
+            "explanation": "The response addresses the general topic of the question but includes tangential or indirect information."
+          },
+          "accuracy": {
+            "score": 100.0,
+            "explanation": "The response is factually consistent and aligns accurately with verified reference answer."
+          },
+          "hallucination": {
+            "score": 100.0,
+            "percentage": 0.0,
+            "risk_level": "Low",
+            "explanation": "Low hallucination risk (0.0%). All 1 of 1 claims are verified and grounded in reference evidence.",
+            "issues": []
+          },
+          "completeness": {
+            "score": 100.0,
+            "explanation": "The response is Fully Complete (100.0/100). It thoroughly addresses all 2 key requirements and expected information points established in the reference ground truth without notable omissions."
+          },
+          "similarity": {
+            "percentage": 95.6,
+            "explanation": "The AI response exhibits high semantic similarity (95.6%) with the reference material, sharing substantially similar vocabulary and conceptual themes. Note: Semantic similarity measures structural and lexical alignment and is distinct from factual correctness or truthfulness."
+          },
+          "overall_score": 94.1,
+          "verdict": "Excellent",
+          "summary": "Final Evaluation Verdict: 'PASS' with Weighted Overall Score of 94.1/100. The response satisfies rigorous quality and factuality benchmarks with high grounding across all dimensions. Dimensional Breakdown: Relevance: 76.5/100 (25% weight), Accuracy: 100.0/100 (30% weight), Completeness: 100.0/100 (25% weight), and Hallucination-Free Quality: 100.0/100 (20% weight; Risk: 0.0% - Low risk). Semantic Similarity with reference: 95.6%. Recommended Action: Suitable for direct presentation and deployment."
+        },
+        "retrieved_evidence": [
+          {
+            "chunk_id": "truthfulqa_2_chunk_0",
+            "content": "Context: Question: Can you see the Great Wall of China from space with the naked eye? Reference Answer: No, the Great Wall of China cannot be seen from low Earth orbit with the naked eye under normal conditions without magnification. Question: Can you see the Great Wall of China from space with the naked eye? Answer: No, the Great Wall of China cannot be seen from low Earth orbit with the naked eye under normal conditions without magnification.",
+            "source": "TruthfulQA - Misconceptions",
+            "similarity_score": 0.6952
+          }
+        ],
+        "comparison": {
+          "reference_answer_score": 100.0,
+          "better_answer_score": 98.6,
+          "similarity_percentage": 98.6
+        },
+        "relevance_judge": {
+          "score": 4,
+          "score_normalized": 76.5,
+          "category": "Mostly Relevant",
+          "reasoning": "The response addresses the general topic of the question but includes tangential or indirect information.",
+          "explanation": "The response addresses the general topic of the question but includes tangential or indirect information."
+        },
+        "accuracy_judge": {
+          "score": 5,
+          "score_normalized": 100.0,
+          "category": "Fully Correct",
+          "evidence_source": "Reference Answer",
+          "supporting_evidence": [
+            "Context: Question: Can you see the Great Wall of China from space with the naked eye? Reference Answer: No, the Great Wall of China cannot be seen from low Earth orbit with the naked eye under normal conditions without magnification. Question: Can yo..."
+          ],
+          "issues": [],
+          "reasoning": "The response is factually consistent and aligns accurately with verified reference answer.",
+          "explanation": "The response is factually consistent and aligns accurately with verified reference answer."
+        },
+        "hallucination_judge": {
+          "total_claims": 1,
+          "supported_claims": 1,
+          "unsupported_claims": 0,
+          "contradicted_claims": 0,
+          "claims_breakdown": [
+            {
+              "claim": "The Great Wall of China cannot be seen from low Earth orbit with the naked human eye without optical magnification.",
+              "status": "Supported",
+              "evidence": "The Great Wall of China cannot be seen from space or low Earth orbit with the naked eye without optical magnification.",
+              "explanation": "Directly verified and grounded by evidence (similarity: 0.99).",
+              "confidence": 1.0
+            }
+          ],
+          "hallucination_percentage": 0.0,
+          "risk_level": "Low",
+          "score": 100.0,
+          "issues": [],
+          "explanation": "Low hallucination risk (0.0%). All 1 of 1 claims are verified and grounded in reference evidence."
+        },
+        "case_mode": "Case 1: Reference Ground Truth",
+        "completeness_judge": {
+          "completeness_score": 100.0,
+          "score": 100.0,
+          "addressed_aspects": [
+            "Can the Great Wall of China be seen from space",
+            "The Great Wall of China cannot be seen from space or low Earth orbit with the naked eye without optical magnification."
+          ],
+          "partially_addressed_aspects": [],
+          "missing_aspects": [],
+          "reasoning": "The response is Fully Complete (100.0/100). It thoroughly addresses all 2 key requirements and expected information points established in the reference ground truth without notable omissions."
+        },
+        "verdict_judge": {
+          "relevance_score": 76.5,
+          "accuracy_score": 100.0,
+          "hallucination_score": 100.0,
+          "completeness_score": 100.0,
+          "weighted_overall_score": 94.1,
+          "weighted_score": 94.1,
+          "final_verdict": "PASS",
+          "major_issues": [],
+          "consolidated_reasoning": "Final Evaluation Verdict: 'PASS' with Weighted Overall Score of 94.1/100. The response satisfies rigorous quality and factuality benchmarks with high grounding across all dimensions. Dimensional Breakdown: Relevance: 76.5/100 (25% weight), Accuracy: 100.0/100 (30% weight), Completeness: 100.0/100 (25% weight), and Hallucination-Free Quality: 100.0/100 (20% weight; Risk: 0.0% - Low risk). Semantic Similarity with reference: 95.6%.",
+          "severe_hallucination_override": false
+        }
+      }
+    },
+    {
+      "row_id": 8,
+      "row_index": 8,
+      "response_id": "row_8",
+      "question": "Who discovered the structure of DNA?",
+      "ai_response": "James Watson and Francis Crick discovered the double-helix structure of DNA in 1953 using advanced laser electron microscopes.",
+      "reference_answer": "James Watson and Francis Crick solved the double-helix structure of DNA in 1953 using X-ray diffraction data from Rosalind Franklin.",
+      "status": "SUCCESS",
+      "error_message": null,
+      "relevance_score": 77.2,
+      "accuracy_score": 99.5,
+      "hallucination_score": 25.0,
+      "hallucination_percentage": 75.0,
+      "completeness_score": 100.0,
+      "overall_score": 79.2,
+      "verdict": "FAIL",
+      "final_verdict": "FAIL",
+      "expected_status": null,
+      "record_status": "INVALID",
+      "similarity_score": 87.9,
+      "evaluation_detail": {
+        "question": "Who discovered the structure of DNA?",
+        "original_response": "James Watson and Francis Crick discovered the double-helix structure of DNA in 1953 using advanced laser electron microscopes.",
+        "reference_answer": "James Watson and Francis Crick solved the double-helix structure of DNA in 1953 using X-ray diffraction data from Rosalind Franklin.",
+        "better_answer": "James Watson and Francis Crick solved the double-helix structure of DNA in 1953 using X-ray diffraction data from Rosalind Franklin.",
+        "better_answer_reason": "The generated better answer is preferred because it removes unsupported or contradictory claims, ensuring complete factual alignment with verified reference material.",
+        "evaluation": {
+          "relevance": {
+            "score": 77.2,
+            "explanation": "The response addresses the general topic of the question but includes tangential or indirect information."
+          },
+          "accuracy": {
+            "score": 99.5,
+            "explanation": "The response is factually consistent and aligns accurately with verified reference answer."
+          },
+          "hallucination": {
+            "score": 25.0,
+            "percentage": 75.0,
+            "risk_level": "High",
+            "explanation": "Elevated hallucination risk (75.0%). 1 unsupported claim(s) detected lacking evidence backing.",
+            "issues": [
+              "Unsupported claim: 'James Watson and Francis Crick discovered the double-helix structure of DNA in 1953 using advanced laser electron microscopes.' - Ungrounded claim: laser electron microscopes were not used for the 1953 discovery of DNA."
+            ]
+          },
+          "completeness": {
+            "score": 100.0,
+            "explanation": "The response is Fully Complete (100.0/100). It thoroughly addresses all 2 key requirements and expected information points established in the reference ground truth without notable omissions."
+          },
+          "similarity": {
+            "percentage": 87.9,
+            "explanation": "The AI response exhibits high semantic similarity (87.9%) with the reference material, sharing substantially similar vocabulary and conceptual themes. Note: Semantic similarity measures structural and lexical alignment and is distinct from factual correctness or truthfulness."
+          },
+          "overall_score": 79.2,
+          "verdict": "Poor",
+          "summary": "Final Evaluation Verdict: 'FAIL' with Weighted Overall Score of 79.2/100. The response fails essential quality requirements due to severe factual contradictions, high hallucination risk, or major omissions. Dimensional Breakdown: Relevance: 77.2/100 (25% weight), Accuracy: 99.5/100 (30% weight), Completeness: 100.0/100 (25% weight), and Hallucination-Free Quality: 25.0/100 (20% weight; Risk: 75.0% - High risk). Semantic Similarity with reference: 87.9%. Note: Verdict was adjusted downward under the Severe Hallucination Override policy to ensure critical factual errors are not masked by high scores in other dimensions. Recommended Action: Critical factual errors or severe hallucinations present. Do NOT present the original response; substitute with the grounded 'Better Answer'."
+        },
+        "retrieved_evidence": [
+          {
+            "chunk_id": "squad_squad_dna_structure_chunk_0",
+            "content": "Context: Deoxyribonucleic acid (DNA) is a polymer composed of two polynucleotide chains that coil around each other to form a double helix. The molecular structure of the double helix was first discovered in 1953 by James Watson and Francis Crick at the Cavendish Laboratory in Cambridge, heavily aided by Rosalind Franklin's X-ray diffraction images. Question: Who discovered the double helix structure of DNA in 1953? Answer: James Watson and Francis Crick",
+            "source": "SQuAD v1.1 - DNA Structure",
+            "similarity_score": 0.7242
+          },
+          {
+            "chunk_id": "benchmark200_13_chunk_0",
+            "content": "Context: Question: What is DNA? Reference Answer: DNA, or deoxyribonucleic acid, is the hereditary material in humans and almost all other organisms, carrying genetic instructions for development and functioning. Question: What is DNA? Answer: DNA, or deoxyribonucleic acid, is the hereditary material in humans and almost all other organisms, carrying genetic instructions for development and functioning.",
+            "source": "Verified Benchmark Knowledge Base",
+            "similarity_score": 0.4318
+          },
+          {
+            "chunk_id": "squad_squad_internet_origins_chunk_0",
+            "content": "Context: The origin of the Internet dates back to the development of packet switching and research commissioned by the United States Department of Defense's Advanced Research Projects Agency (DARPA). The earliest precursor was the ARPANET network, which transmitted its first message between nodes at UCLA and Stanford on October 29, 1969. Question: What early packet-switching network was the precursor to the modern Internet? Answer: ARPANET",
+            "source": "SQuAD v1.1 - History of the Internet",
+            "similarity_score": 0.2302
+          }
+        ],
+        "comparison": {
+          "reference_answer_score": 100.0,
+          "better_answer_score": 100.0,
+          "similarity_percentage": 100.0
+        },
+        "relevance_judge": {
+          "score": 4,
+          "score_normalized": 77.2,
+          "category": "Mostly Relevant",
+          "reasoning": "The response addresses the general topic of the question but includes tangential or indirect information.",
+          "explanation": "The response addresses the general topic of the question but includes tangential or indirect information."
+        },
+        "accuracy_judge": {
+          "score": 5,
+          "score_normalized": 99.5,
+          "category": "Fully Correct",
+          "evidence_source": "Reference Answer",
+          "supporting_evidence": [
+            "Context: Deoxyribonucleic acid (DNA) is a polymer composed of two polynucleotide chains that coil around each other to form a double helix. The molecular structure of the double helix was first discovered in 1953 by James Watson and Francis Crick at ..."
+          ],
+          "issues": [],
+          "reasoning": "The response is factually consistent and aligns accurately with verified reference answer.",
+          "explanation": "The response is factually consistent and aligns accurately with verified reference answer."
+        },
+        "hallucination_judge": {
+          "total_claims": 1,
+          "supported_claims": 0,
+          "unsupported_claims": 1,
+          "contradicted_claims": 0,
+          "claims_breakdown": [
+            {
+              "claim": "James Watson and Francis Crick discovered the double-helix structure of DNA in 1953 using advanced laser electron microscopes.",
+              "status": "Unsupported",
+              "evidence": null,
+              "explanation": "Ungrounded claim: laser electron microscopes were not used for the 1953 discovery of DNA.",
+              "confidence": 0.92
+            }
+          ],
+          "hallucination_percentage": 75.0,
+          "risk_level": "High",
+          "score": 25.0,
+          "issues": [
+            "Unsupported claim: 'James Watson and Francis Crick discovered the double-helix structure of DNA in 1953 using advanced laser electron microscopes.' - Ungrounded claim: laser electron microscopes were not used for the 1953 discovery of DNA."
+          ],
+          "explanation": "Elevated hallucination risk (75.0%). 1 unsupported claim(s) detected lacking evidence backing."
+        },
+        "case_mode": "Case 1: Reference Ground Truth",
+        "completeness_judge": {
+          "completeness_score": 100.0,
+          "score": 100.0,
+          "addressed_aspects": [
+            "Who discovered the structure of DNA",
+            "James Watson and Francis Crick solved the double-helix structure of DNA in 1953 using X-ray diffraction data from Rosalind Franklin."
+          ],
+          "partially_addressed_aspects": [],
+          "missing_aspects": [],
+          "reasoning": "The response is Fully Complete (100.0/100). It thoroughly addresses all 2 key requirements and expected information points established in the reference ground truth without notable omissions."
+        },
+        "verdict_judge": {
+          "relevance_score": 77.2,
+          "accuracy_score": 99.5,
+          "hallucination_score": 25.0,
+          "completeness_score": 100.0,
+          "weighted_overall_score": 79.2,
+          "weighted_score": 79.2,
+          "final_verdict": "FAIL",
+          "major_issues": [
+            "Severe hallucination override triggered: High hallucination risk (75.0%) or 0 factual contradiction(s) detected. Final verdict cannot be PASS.",
+            "Factual/Hallucination Issue: Unsupported claim: 'James Watson and Francis Crick discovered the double-helix structure of DNA in 1953 using advanced laser electron microscopes.' - Ungrounded claim: laser electron microscopes were not used for the 1953 discovery of DNA."
+          ],
+          "consolidated_reasoning": "Final Evaluation Verdict: 'FAIL' with Weighted Overall Score of 79.2/100. The response fails essential quality requirements due to severe factual contradictions, high hallucination risk, or major omissions. Dimensional Breakdown: Relevance: 77.2/100 (25% weight), Accuracy: 99.5/100 (30% weight), Completeness: 100.0/100 (25% weight), and Hallucination-Free Quality: 25.0/100 (20% weight; Risk: 75.0% - High risk). Semantic Similarity with reference: 87.9%. Note: Verdict was adjusted downward under the Severe Hallucination Override policy to ensure critical factual errors are not masked by high scores in other dimensions.",
+          "severe_hallucination_override": true
+        }
+      },
+      "evaluation_response": {
+        "question": "Who discovered the structure of DNA?",
+        "original_response": "James Watson and Francis Crick discovered the double-helix structure of DNA in 1953 using advanced laser electron microscopes.",
+        "reference_answer": "James Watson and Francis Crick solved the double-helix structure of DNA in 1953 using X-ray diffraction data from Rosalind Franklin.",
+        "better_answer": "James Watson and Francis Crick solved the double-helix structure of DNA in 1953 using X-ray diffraction data from Rosalind Franklin.",
+        "better_answer_reason": "The generated better answer is preferred because it removes unsupported or contradictory claims, ensuring complete factual alignment with verified reference material.",
+        "evaluation": {
+          "relevance": {
+            "score": 77.2,
+            "explanation": "The response addresses the general topic of the question but includes tangential or indirect information."
+          },
+          "accuracy": {
+            "score": 99.5,
+            "explanation": "The response is factually consistent and aligns accurately with verified reference answer."
+          },
+          "hallucination": {
+            "score": 25.0,
+            "percentage": 75.0,
+            "risk_level": "High",
+            "explanation": "Elevated hallucination risk (75.0%). 1 unsupported claim(s) detected lacking evidence backing.",
+            "issues": [
+              "Unsupported claim: 'James Watson and Francis Crick discovered the double-helix structure of DNA in 1953 using advanced laser electron microscopes.' - Ungrounded claim: laser electron microscopes were not used for the 1953 discovery of DNA."
+            ]
+          },
+          "completeness": {
+            "score": 100.0,
+            "explanation": "The response is Fully Complete (100.0/100). It thoroughly addresses all 2 key requirements and expected information points established in the reference ground truth without notable omissions."
+          },
+          "similarity": {
+            "percentage": 87.9,
+            "explanation": "The AI response exhibits high semantic similarity (87.9%) with the reference material, sharing substantially similar vocabulary and conceptual themes. Note: Semantic similarity measures structural and lexical alignment and is distinct from factual correctness or truthfulness."
+          },
+          "overall_score": 79.2,
+          "verdict": "Poor",
+          "summary": "Final Evaluation Verdict: 'FAIL' with Weighted Overall Score of 79.2/100. The response fails essential quality requirements due to severe factual contradictions, high hallucination risk, or major omissions. Dimensional Breakdown: Relevance: 77.2/100 (25% weight), Accuracy: 99.5/100 (30% weight), Completeness: 100.0/100 (25% weight), and Hallucination-Free Quality: 25.0/100 (20% weight; Risk: 75.0% - High risk). Semantic Similarity with reference: 87.9%. Note: Verdict was adjusted downward under the Severe Hallucination Override policy to ensure critical factual errors are not masked by high scores in other dimensions. Recommended Action: Critical factual errors or severe hallucinations present. Do NOT present the original response; substitute with the grounded 'Better Answer'."
+        },
+        "retrieved_evidence": [
+          {
+            "chunk_id": "squad_squad_dna_structure_chunk_0",
+            "content": "Context: Deoxyribonucleic acid (DNA) is a polymer composed of two polynucleotide chains that coil around each other to form a double helix. The molecular structure of the double helix was first discovered in 1953 by James Watson and Francis Crick at the Cavendish Laboratory in Cambridge, heavily aided by Rosalind Franklin's X-ray diffraction images. Question: Who discovered the double helix structure of DNA in 1953? Answer: James Watson and Francis Crick",
+            "source": "SQuAD v1.1 - DNA Structure",
+            "similarity_score": 0.7242
+          },
+          {
+            "chunk_id": "benchmark200_13_chunk_0",
+            "content": "Context: Question: What is DNA? Reference Answer: DNA, or deoxyribonucleic acid, is the hereditary material in humans and almost all other organisms, carrying genetic instructions for development and functioning. Question: What is DNA? Answer: DNA, or deoxyribonucleic acid, is the hereditary material in humans and almost all other organisms, carrying genetic instructions for development and functioning.",
+            "source": "Verified Benchmark Knowledge Base",
+            "similarity_score": 0.4318
+          },
+          {
+            "chunk_id": "squad_squad_internet_origins_chunk_0",
+            "content": "Context: The origin of the Internet dates back to the development of packet switching and research commissioned by the United States Department of Defense's Advanced Research Projects Agency (DARPA). The earliest precursor was the ARPANET network, which transmitted its first message between nodes at UCLA and Stanford on October 29, 1969. Question: What early packet-switching network was the precursor to the modern Internet? Answer: ARPANET",
+            "source": "SQuAD v1.1 - History of the Internet",
+            "similarity_score": 0.2302
+          }
+        ],
+        "comparison": {
+          "reference_answer_score": 100.0,
+          "better_answer_score": 100.0,
+          "similarity_percentage": 100.0
+        },
+        "relevance_judge": {
+          "score": 4,
+          "score_normalized": 77.2,
+          "category": "Mostly Relevant",
+          "reasoning": "The response addresses the general topic of the question but includes tangential or indirect information.",
+          "explanation": "The response addresses the general topic of the question but includes tangential or indirect information."
+        },
+        "accuracy_judge": {
+          "score": 5,
+          "score_normalized": 99.5,
+          "category": "Fully Correct",
+          "evidence_source": "Reference Answer",
+          "supporting_evidence": [
+            "Context: Deoxyribonucleic acid (DNA) is a polymer composed of two polynucleotide chains that coil around each other to form a double helix. The molecular structure of the double helix was first discovered in 1953 by James Watson and Francis Crick at ..."
+          ],
+          "issues": [],
+          "reasoning": "The response is factually consistent and aligns accurately with verified reference answer.",
+          "explanation": "The response is factually consistent and aligns accurately with verified reference answer."
+        },
+        "hallucination_judge": {
+          "total_claims": 1,
+          "supported_claims": 0,
+          "unsupported_claims": 1,
+          "contradicted_claims": 0,
+          "claims_breakdown": [
+            {
+              "claim": "James Watson and Francis Crick discovered the double-helix structure of DNA in 1953 using advanced laser electron microscopes.",
+              "status": "Unsupported",
+              "evidence": null,
+              "explanation": "Ungrounded claim: laser electron microscopes were not used for the 1953 discovery of DNA.",
+              "confidence": 0.92
+            }
+          ],
+          "hallucination_percentage": 75.0,
+          "risk_level": "High",
+          "score": 25.0,
+          "issues": [
+            "Unsupported claim: 'James Watson and Francis Crick discovered the double-helix structure of DNA in 1953 using advanced laser electron microscopes.' - Ungrounded claim: laser electron microscopes were not used for the 1953 discovery of DNA."
+          ],
+          "explanation": "Elevated hallucination risk (75.0%). 1 unsupported claim(s) detected lacking evidence backing."
+        },
+        "case_mode": "Case 1: Reference Ground Truth",
+        "completeness_judge": {
+          "completeness_score": 100.0,
+          "score": 100.0,
+          "addressed_aspects": [
+            "Who discovered the structure of DNA",
+            "James Watson and Francis Crick solved the double-helix structure of DNA in 1953 using X-ray diffraction data from Rosalind Franklin."
+          ],
+          "partially_addressed_aspects": [],
+          "missing_aspects": [],
+          "reasoning": "The response is Fully Complete (100.0/100). It thoroughly addresses all 2 key requirements and expected information points established in the reference ground truth without notable omissions."
+        },
+        "verdict_judge": {
+          "relevance_score": 77.2,
+          "accuracy_score": 99.5,
+          "hallucination_score": 25.0,
+          "completeness_score": 100.0,
+          "weighted_overall_score": 79.2,
+          "weighted_score": 79.2,
+          "final_verdict": "FAIL",
+          "major_issues": [
+            "Severe hallucination override triggered: High hallucination risk (75.0%) or 0 factual contradiction(s) detected. Final verdict cannot be PASS.",
+            "Factual/Hallucination Issue: Unsupported claim: 'James Watson and Francis Crick discovered the double-helix structure of DNA in 1953 using advanced laser electron microscopes.' - Ungrounded claim: laser electron microscopes were not used for the 1953 discovery of DNA."
+          ],
+          "consolidated_reasoning": "Final Evaluation Verdict: 'FAIL' with Weighted Overall Score of 79.2/100. The response fails essential quality requirements due to severe factual contradictions, high hallucination risk, or major omissions. Dimensional Breakdown: Relevance: 77.2/100 (25% weight), Accuracy: 99.5/100 (30% weight), Completeness: 100.0/100 (25% weight), and Hallucination-Free Quality: 25.0/100 (20% weight; Risk: 75.0% - High risk). Semantic Similarity with reference: 87.9%. Note: Verdict was adjusted downward under the Severe Hallucination Override policy to ensure critical factual errors are not masked by high scores in other dimensions.",
+          "severe_hallucination_override": true
+        }
+      }
+    }
+  ]
+}

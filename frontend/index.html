@@ -1,0 +1,1742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Response Validation System — Enterprise Multi-Agent Grounding Platform</title>
+  
+  <!-- Google Fonts: Space Grotesk & DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Chart.js CDN for interactive analytics charts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="aurora-bg"></div>
+
+  <div class="app-layout">
+    
+    <!-- 4. SIDEBAR NAVIGATION -->
+    <aside id="app-sidebar" class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-brand">
+          <div class="brand-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M2 17L12 22L22 17" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M2 12L12 17L22 12" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <h2>AI Response Validation System</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-divider"></div>
+
+      <nav class="sidebar-nav">
+        <button type="button" class="sidebar-nav-btn active" data-page="single">
+          <span class="nav-icon">⚡</span>
+          <span class="nav-label">Single Evaluation</span>
+        </button>
+        <button type="button" class="sidebar-nav-btn" data-page="batch">
+          <span class="nav-icon">📊</span>
+          <span class="nav-label">Batch Evaluation</span>
+        </button>
+        <button type="button" class="sidebar-nav-btn" data-page="dashboard">
+          <span class="nav-icon">📈</span>
+          <span class="nav-label">Dashboard</span>
+        </button>
+        <button type="button" class="sidebar-nav-btn" data-page="evaluation">
+          <span class="nav-icon">📑</span>
+          <span class="nav-label">Evaluation</span>
+        </button>
+        <button type="button" class="sidebar-nav-btn" data-page="testing">
+          <span class="nav-icon">🧪</span>
+          <span class="nav-label">End-to-End Testing</span>
+        </button>
+        <button type="button" class="sidebar-nav-btn" data-page="docs">
+          <span class="nav-icon">📚</span>
+          <span class="nav-label">Doc &amp; Final Reports</span>
+        </button>
+        <button type="button" class="sidebar-nav-btn" data-page="architecture">
+          <span class="nav-icon">🏛️</span>
+          <span class="nav-label">Architecture</span>
+        </button>
+        <button type="button" class="sidebar-nav-btn" data-page="history">
+          <span class="nav-icon">🕒</span>
+          <span class="nav-label">History</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div id="backend-status-pill" class="status-pill status-online">
+          <span class="status-dot"></span> Backend Online
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN VIEW CONTAINER -->
+    <main class="app-main">
+
+      <!-- TOP HEADER BAR -->
+      <header class="main-topbar">
+        <div class="topbar-left">
+          <h1 id="page-heading-title">Single Evaluation</h1>
+          <p id="page-heading-desc">Evaluate single response against question and reference ground truth</p>
+        </div>
+      </header>
+
+      <!-- =========================================================================
+           PAGE 1: SINGLE EVALUATION VIEW (100% PRESERVED MILESTONE 3)
+           ========================================================================= -->
+      <section id="view-single" class="page-view active">
+        <!-- HERO / INTRO SECTION -->
+    <section class="hero-section">
+      <div class="hero-badge-pill">
+        <span>✨ Powered by Multi-Agent RAG Validation</span>
+      </div>
+      <h2 class="hero-title">
+        Validate AI Responses with <span class="gradient-text">Confidence</span>
+      </h2>
+      <p class="hero-subtitle">
+        Evaluate relevance, accuracy, completeness, similarity, and hallucination risk using grounded AI evaluation.
+      </p>
+
+      <!-- Quick Demo Preset Buttons -->
+      <div class="sample-presets-bar">
+        <span class="presets-label">Quick Demos:</span>
+        <button type="button" class="btn-sample-pill" data-sample-preset="ACCURATE">
+          <span>✅ Australia Capital (Accurate)</span>
+        </button>
+        <button type="button" class="btn-sample-pill" data-sample-preset="MISCONCEPTION">
+          <span>⚠️ Chewing Gum Myth (Contradiction)</span>
+        </button>
+        <button type="button" class="btn-sample-pill" data-sample-preset="PARTIAL">
+          <span>⏳ Moon Landing (Date Conflict)</span>
+        </button>
+        <button type="button" class="btn-sample-pill" data-sample-preset="CASE2_RAG">
+          <span>🏛️ Great Wall from Space (Myth Check)</span>
+        </button>
+        <button type="button" class="btn-sample-pill" data-sample-preset="UNSUPPORTED">
+          <span>🛸 Lunar Crystal Base (Unsupported)</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- TOP-LEVEL EVALUATION MODE SELECTION (Option 1 vs Option 2) -->
+    <div class="mode-selection-container">
+      <div class="mode-selection-grid" role="tablist">
+        <div class="mode-card active" id="tab-single-mode" role="tab" aria-selected="true" tabindex="0">
+          <div class="mode-card-icon">⚡</div>
+          <div>
+            <div class="mode-card-title">Question Evaluation</div>
+            <div class="mode-card-desc">Evaluate one question and AI response</div>
+          </div>
+        </div>
+        <div class="mode-card" id="tab-batch-mode" role="tab" aria-selected="false" tabindex="0">
+          <div class="mode-card-icon">📊</div>
+          <div>
+            <div class="mode-card-title">Batch Evaluation</div>
+            <div class="mode-card-desc">Evaluate multiple questions using CSV, TXT, or PDF</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EVALUATION INPUT CARD (Single Evaluation) -->
+    <section id="evaluation-form-card" class="clay-card clay-card-static" style="margin-bottom: 2rem;">
+      <div class="form-header">
+        <h2>Evaluate an AI Response</h2>
+        <p>Submit an AI-generated output alongside the user prompt to initiate multi-agent verification.</p>
+      </div>
+
+      <!-- Validation Error Banner -->
+      <div id="form-error-alert" class="alert-error hidden" role="alert">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18Z" stroke="#991B1B" stroke-width="2"/>
+          <path d="M10 6V10M10 14H10.01" stroke="#991B1B" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span id="form-error-text">Please complete all required fields.</span>
+      </div>
+
+      <form id="evaluation-form" novalidate>
+        <div class="form-grid">
+          
+          <!-- 1. Question -->
+          <div class="form-group">
+            <label for="input-question" class="form-label">
+              <span>Question <span class="label-required">*</span></span>
+            </label>
+            <input 
+              type="text" 
+              id="input-question" 
+              class="clay-input" 
+              placeholder="Enter the question..."
+              required
+            >
+          </div>
+
+          <!-- 2. AI Generated Response -->
+          <div class="form-group">
+            <label for="input-ai-response" class="form-label">
+              <span>AI Generated Response <span class="label-required">*</span></span>
+            </label>
+            <textarea 
+              id="input-ai-response" 
+              class="clay-textarea" 
+              rows="3" 
+              placeholder="Paste the AI-generated response..."
+              required
+            ></textarea>
+          </div>
+
+          <!-- 3. Reference Answer (Ground Truth / Knowledge Base Alignment) -->
+          <div class="form-group" id="reference-answer-group">
+            <label for="input-reference-answer" class="form-label" id="label-reference-answer">
+              <span>Reference Answer (Ground Truth) <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">(Optional — auto-retrieves from Knowledge Base if empty)</span></span>
+            </label>
+            <textarea 
+              id="input-reference-answer" 
+              class="clay-textarea" 
+              rows="3" 
+              placeholder="Enter verified reference answer, or leave blank to retrieve automatically from Knowledge Base..."
+            ></textarea>
+          </div>
+
+          <!-- 4. Source Document (Hidden in Question Evaluation UI per user specification) -->
+          <div class="form-group hidden" id="source-doc-group" style="display: none;">
+            <label for="input-source-doc" class="form-label">
+              <span>Source Document / Reference Material</span>
+            </label>
+            <textarea 
+              id="input-source-doc" 
+              class="clay-textarea" 
+              rows="2" 
+              placeholder="Internal supporting documentation..."
+            ></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" id="btn-evaluate" class="btn-primary-clay">
+            <span id="btn-spinner" class="spinner hidden"></span>
+            <span id="btn-text">Evaluate Response</span>
+          </button>
+
+        </div>
+      </form>
+    </section>
+
+    <!-- LIVE EVALUATION PROGRESS TRACKER (Milestone 3) -->
+    <div id="evaluation-progress-card" class="clay-card progress-card hidden">
+      <div class="progress-card-header">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <span class="pulse-indicator"></span>
+          <h3 style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: #1E293B;">Live Evaluation in Progress</h3>
+        </div>
+        <span id="progress-pct" class="progress-pct-badge">0%</span>
+      </div>
+      
+      <div class="progress-track" style="height: 10px; margin-bottom: 0.75rem;">
+        <div id="progress-bar" class="progress-fill fill-relevance" style="width: 0%; transition: width 0.35s ease;"></div>
+      </div>
+
+      <div id="progress-current-stage" class="progress-current-label">
+        Initializing multi-agent evaluation pipeline...
+      </div>
+
+      <div class="progress-stages-grid">
+        <div class="stage-item stage-pending" id="stage-step-1">
+          <span class="stage-icon">○</span>
+          <span>1. Relevance</span>
+        </div>
+        <div class="stage-item stage-pending" id="stage-step-2">
+          <span class="stage-icon">○</span>
+          <span>2. Accuracy</span>
+        </div>
+        <div class="stage-item stage-pending" id="stage-step-3">
+          <span class="stage-icon">○</span>
+          <span>3. Hallucination Detection</span>
+        </div>
+        <div class="stage-item stage-pending" id="stage-step-4">
+          <span class="stage-icon">○</span>
+          <span>4. Completeness</span>
+        </div>
+        <div class="stage-item stage-pending" id="stage-step-5">
+          <span class="stage-icon">○</span>
+          <span>5. Verdict</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESULTS DASHBOARD (Initially Hidden, Smoothly Appears on Evaluation) -->
+    <section id="results-dashboard" class="results-section hidden">
+      
+      <div class="dashboard-header">
+        <h2>Evaluation Results Dashboard</h2>
+        <p>Comprehensive multi-agent analysis, grounding verification, and quality benchmarks.</p>
+      </div>
+
+      <!-- OVERALL SCORE CARD -->
+      <div class="clay-card overall-card">
+        <span class="card-tag tag-reference" style="margin-bottom: 0.5rem;">Authoritative Milestone 3 Verdict</span>
+        <div id="overall-score-gauge">
+          <!-- Circular SVG Gauge injected via gauge.js -->
+        </div>
+        <div class="overall-summary-box">
+          <p id="verdict-summary-text">Awaiting evaluation summary...</p>
+        </div>
+      </div>
+
+      <!-- VERDICT AGENT DECISION CARD (Milestone 3) -->
+      <div id="verdict-summary-card" class="clay-card" style="margin-bottom: 2rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.85rem;">
+            <span style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: #1E293B;">Final Verdict:</span>
+            <span id="verdict-decision-badge" class="verdict-badge-large badge-pass">PASS</span>
+          </div>
+          <div style="font-family: var(--font-heading); font-size: 1.05rem; font-weight: 700; color: #4338CA;">
+            Weighted Composite Score: <span id="verdict-weighted-score">0.0</span> / 100
+          </div>
+        </div>
+
+        <!-- Severe Hallucination Override Banner -->
+        <div id="verdict-override-alert" class="alert-error hidden" style="margin-bottom: 1rem; background: #FFFBEB; border-color: #FDE68A; color: #92400E;">
+          <span style="font-size: 1.1rem; margin-right: 0.5rem;">⚠️</span>
+          <span><strong>Severe Hallucination Override:</strong> High hallucination risk or direct factual contradiction detected. Final score is capped and PASS verdict is strictly prohibited.</span>
+        </div>
+
+        <p id="verdict-reasoning-text" style="font-size: 0.95rem; color: #334155; line-height: 1.6; background: #F8FAFC; padding: 1rem; border-radius: 12px; border: 1px solid #E2E8F0;">
+          Consolidated arbitration reasoning...
+        </p>
+
+        <!-- Major Issues List -->
+        <div id="verdict-major-issues-box" class="major-issues-box hidden">
+          <strong style="font-size: 0.9rem; color: #991B1B; display: block; margin-bottom: 0.5rem;">Major Critical Issues Identified:</strong>
+          <div id="verdict-major-issues-list">
+            <!-- Injected issue items -->
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 METRICS CARDS -->
+      <div class="metrics-grid">
+        
+        <!-- Metric 1: Relevance -->
+        <div class="clay-card metric-card">
+          <div class="metric-header">
+            <span class="metric-title">Relevance</span>
+            <span class="metric-icon">🎯</span>
+          </div>
+          <div class="metric-score-row">
+            <span id="metric-relevance-score" class="metric-score-val">0.0%</span>
+            <span id="metric-relevance-rating" class="badge-pill badge-rating">5 / 5</span>
+          </div>
+          <span id="metric-relevance-category" class="metric-category-tag">Fully Relevant</span>
+          <div class="progress-track">
+            <div id="metric-relevance-bar" class="progress-fill fill-relevance" style="width: 0%;"></div>
+          </div>
+          <p id="metric-relevance-desc" class="metric-desc">Measures direct responsiveness to question intent.</p>
+        </div>
+
+        <!-- Metric 2: Accuracy -->
+        <div class="clay-card metric-card">
+          <div class="metric-header">
+            <span class="metric-title">Accuracy</span>
+            <span class="metric-icon">🛡️</span>
+          </div>
+          <div class="metric-score-row">
+            <span id="metric-accuracy-score" class="metric-score-val">0.0%</span>
+            <span id="metric-accuracy-rating" class="badge-pill badge-rating">5 / 5</span>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; margin-bottom: 0.45rem; flex-wrap: wrap;">
+            <span id="metric-accuracy-category" class="metric-category-tag">Fully Correct</span>
+            <span id="metric-accuracy-source" class="badge-pill badge-source">Source: Reference</span>
+          </div>
+          <div class="progress-track">
+            <div id="metric-accuracy-bar" class="progress-fill fill-accuracy" style="width: 0%;"></div>
+          </div>
+          <p id="metric-accuracy-desc" class="metric-desc">Factual consistency against ground truth evidence.</p>
+        </div>
+
+        <!-- Metric 3: Completeness -->
+        <div class="clay-card metric-card">
+          <div class="metric-header">
+            <span class="metric-title">Completeness</span>
+            <span class="metric-icon">📚</span>
+          </div>
+          <div class="metric-score-row">
+            <span id="metric-completeness-score" class="metric-score-val">0.0%</span>
+          </div>
+          <div class="progress-track">
+            <div id="metric-completeness-bar" class="progress-fill fill-completeness" style="width: 0%;"></div>
+          </div>
+          <p id="metric-completeness-desc" class="metric-desc">Coverage of essential reference concepts.</p>
+        </div>
+
+        <!-- Metric 4: Similarity -->
+        <div class="clay-card metric-card">
+          <div class="metric-header">
+            <span class="metric-title">Similarity</span>
+            <span class="metric-icon">🔍</span>
+          </div>
+          <div class="metric-score-row">
+            <span id="metric-similarity-score" class="metric-score-val">0.0%</span>
+          </div>
+          <div class="progress-track">
+            <div id="metric-similarity-bar" class="progress-fill fill-similarity" style="width: 0%;"></div>
+          </div>
+          <p id="metric-similarity-desc" class="metric-desc">Embedding cosine similarity (distinct from truth).</p>
+        </div>
+
+        <!-- Metric 5: Hallucination Risk -->
+        <div class="clay-card metric-card">
+          <div class="metric-header">
+            <span class="metric-title">Hallucination Risk</span>
+            <span class="metric-icon">⚠️</span>
+          </div>
+          <div class="metric-score-row">
+            <span id="metric-hallucination-score" class="metric-score-val">0.0%</span>
+            <span id="metric-hallucination-level" class="badge-pill risk-low">Low</span>
+          </div>
+          <div class="progress-track">
+            <div id="metric-hallucination-bar" class="progress-fill fill-hallucination" style="width: 0%;"></div>
+          </div>
+          <p id="metric-hallucination-desc" class="metric-desc">Percentage risk of fabricated or contradicted statements.</p>
+        </div>
+
+      </div>
+
+      <!-- COMPLETENESS JUDGE BREAKDOWN CARD (Milestone 3) -->
+      <div id="completeness-breakdown-card" class="clay-card" style="margin-bottom: 2rem;">
+        <div class="section-heading-row" style="margin-bottom: 0.85rem;">
+          <div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700;">Completeness Judge Breakdown (3-Tier Analysis)</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.15rem;">
+              Classification of question requirements and ground truth coverage across three distinct tiers.
+            </p>
+          </div>
+          <span id="completeness-score-badge" class="badge-pill" style="background: #E0E7FF; color: #4338CA; font-weight: 700; font-size: 0.9rem;">0.0%</span>
+        </div>
+
+        <div class="claims-summary-bar" style="margin-bottom: 1rem;">
+          <span class="claim-stat-pill pill-supported">✓ Addressed: <strong id="completeness-addressed-count">0</strong></span>
+          <span class="claim-stat-pill pill-unsupported">⏳ Partially Addressed: <strong id="completeness-partial-count">0</strong></span>
+          <span class="claim-stat-pill pill-contradicted">✕ Missing / Omitted: <strong id="completeness-missing-count">0</strong></span>
+        </div>
+
+        <div id="completeness-aspects-list" class="aspects-grid">
+          <!-- Populated with aspect chips -->
+        </div>
+
+        <div style="margin-top: 1rem; padding: 0.85rem 1rem; background: #F8FAFC; border-radius: 12px; border: 1px solid #E2E8F0;">
+          <span style="font-weight: 600; font-size: 0.85rem; color: #475569; text-transform: uppercase; letter-spacing: 0.04em;">Completeness Reasoning &amp; Omissions:</span>
+          <p id="completeness-reasoning-text" style="font-size: 0.92rem; color: #334155; line-height: 1.6; margin-top: 0.35rem;">
+            Completeness evaluation details...
+          </p>
+        </div>
+      </div>
+
+      <!-- EVALUATION METRICS PROFILE (LINE CHART) (Milestone 3) -->
+      <div class="clay-card chart-card" style="margin-bottom: 2rem;">
+        <div class="section-heading-row">
+          <div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700;">Evaluation Metrics Profile (Line Chart)</h3>
+            <p style="color: var(--text-muted); font-size: 0.88rem; margin-top: 0.2rem;">
+              Multi-dimensional profile tracking Relevance, Accuracy, Hallucination-Free Quality, Completeness, Overall Verdict Score, and Semantic Similarity.
+            </p>
+          </div>
+        </div>
+        <div class="chart-canvas-container">
+          <canvas id="metrics-line-chart-canvas"></canvas>
+        </div>
+      </div>
+
+      <!-- MANDATORY INTERACTIVE COMPARISON CHART -->
+      <div class="clay-card chart-card">
+        <div class="section-heading-row">
+          <div>
+            <h3>Answer Quality Comparison</h3>
+            <p style="color: var(--text-muted); font-size: 0.88rem; margin-top: 0.2rem;">
+              Interactive graphical benchmark comparing reference baseline, improved answer, and semantic alignment.
+            </p>
+          </div>
+        </div>
+        <div class="chart-canvas-container">
+          <canvas id="comparison-chart-canvas"></canvas>
+        </div>
+      </div>
+
+      <!-- SIDE-BY-SIDE ANSWER COMPARISON -->
+      <div class="comparison-grid">
+        
+        <!-- Left: Reference Ground Truth -->
+        <div class="clay-card answer-card">
+          <div>
+            <span class="card-tag tag-reference">Reference Answer (Ground Truth)</span>
+            <div id="comparison-ref-text" class="answer-content-box">
+              Reference answer text...
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Improved Answer -->
+        <div class="clay-card answer-card">
+          <div>
+            <span class="card-tag tag-improved">Improved Answer (Grounded)</span>
+            <div id="comparison-better-text" class="answer-content-box">
+              Improved answer text...
+            </div>
+          </div>
+          <div class="better-reason-box">
+            <strong>Why this is preferred:</strong>
+            <p id="better-answer-reason-text" style="margin-top: 0.35rem;">Reasoning explanation...</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ORIGINAL AI RESPONSE SECTION -->
+      <div class="clay-card original-response-card">
+        <span class="card-tag tag-original">Original AI Response</span>
+        <div id="original-response-text" class="answer-content-box" style="margin-top: 0.65rem;">
+          Original AI response text...
+        </div>
+      </div>
+
+      <!-- DEDICATED HALLUCINATION ANALYSIS -->
+      <div class="clay-card hallucination-section-card">
+        <div class="hallucination-top-bar">
+          <div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700;">Hallucination Detection & Claim Grounding</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.15rem;">Atomic claim-level factual grounding against verified reference and knowledge base evidence.</p>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <span class="hallucination-pct-badge">Risk: <span id="hallucination-pct-text">0.0%</span></span>
+            <span id="hallucination-risk-badge" class="badge-pill badge-large risk-low">Low Risk</span>
+          </div>
+        </div>
+
+        <!-- Claims Summary Counters Bar (Milestone 2) -->
+        <div class="claims-summary-bar">
+          <span class="claim-stat-pill">Total Claims: <strong id="hallucination-total-claims">0</strong></span>
+          <span class="claim-stat-pill pill-supported">✓ Supported: <strong id="hallucination-supported-claims">0</strong></span>
+          <span class="claim-stat-pill pill-unsupported">⚠ Unsupported: <strong id="hallucination-unsupported-claims">0</strong></span>
+          <span class="claim-stat-pill pill-contradicted">✕ Contradicted: <strong id="hallucination-contradicted-claims">0</strong></span>
+        </div>
+
+        <p id="hallucination-explanation" style="font-size: 0.92rem; color: #334155; line-height: 1.6; margin-top: 0.8rem;">
+          Analysis explanation...
+        </p>
+
+        <!-- Claim-by-Claim Breakdown List (Milestone 2) -->
+        <div style="margin-top: 1.25rem;">
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: #1E293B; margin-bottom: 0.5rem;">Atomic Claims Verification Breakdown:</h4>
+          <div id="hallucination-claims-list" class="claims-breakdown-list">
+            <!-- Dynamically populated with individual claim cards -->
+          </div>
+        </div>
+
+        <div id="hallucination-issues-list" style="margin-top: 1rem;">
+          <!-- Issues or clean banner dynamically inserted here -->
+        </div>
+      </div>
+
+      <!-- RETRIEVED EVIDENCE SECTION -->
+      <div id="evidence-section" class="clay-card evidence-section-card">
+        <div class="section-heading-row" style="margin-bottom: 0.85rem;">
+          <div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700;">Retrieved Knowledge Base Evidence</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.15rem;">Top semantic chunks retrieved from indexed TruthfulQA and SQuAD benchmarks.</p>
+          </div>
+          <span id="evidence-count-badge" class="badge-pill" style="background: #F1F5F9; color: #475569;">0 items</span>
+        </div>
+
+        <div id="retrieved-evidence-container" class="evidence-list">
+          <!-- Collapsible evidence items dynamically populated here -->
+        </div>
+      </div>
+
+      <!-- ADDITIONAL M3 RESULTS: DROPDOWN ACCORDION BOXES -->
+      <div class="dropdown-boxes-section">
+        
+        <!-- 1. Completeness Judge Agent Dropdown -->
+        <div class="dropdown-box" id="dropdown-completeness">
+          <div class="dropdown-header">
+            <div class="dropdown-header-left">
+              <span class="dropdown-chevron">▶</span>
+              <span class="dropdown-title">Completeness Judge Agent</span>
+            </div>
+            <span class="dropdown-badge" id="dropdown-completeness-badge">0.0%</span>
+          </div>
+          <div class="dropdown-content">
+            <div class="dropdown-block">
+              <div class="dropdown-label">Result:</div>
+              <div class="dropdown-text" style="font-weight: 700; color: #4338CA; font-size: 1.15rem;" id="dropdown-completeness-val">0.0%</div>
+            </div>
+            <div class="dropdown-block">
+              <div class="dropdown-label">How it was calculated:</div>
+              <div class="calc-box">
+                The agent checks what the question asks for. It then checks which required parts are covered by the AI response. The final completeness score is based on the proportion of important aspects that were addressed.
+              </div>
+            </div>
+            <div class="dropdown-block">
+              <div class="dropdown-label">Reason:</div>
+              <p class="dropdown-text" id="dropdown-completeness-reason">Detailed coverage reasoning...</p>
+            </div>
+            <div class="dropdown-block" id="dropdown-completeness-aspects" style="margin-top: 0.5rem;">
+              <!-- Dynamic aspects badges -->
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Verdict Agent Dropdown -->
+        <div class="dropdown-box" id="dropdown-verdict">
+          <div class="dropdown-header">
+            <div class="dropdown-header-left">
+              <span class="dropdown-chevron">▶</span>
+              <span class="dropdown-title">Verdict Agent</span>
+            </div>
+            <span class="dropdown-badge" id="dropdown-verdict-badge">PASS</span>
+          </div>
+          <div class="dropdown-content">
+            <div class="dropdown-block">
+              <div class="dropdown-label">Result:</div>
+              <div class="dropdown-text" style="font-weight: 700; font-size: 1.15rem;" id="dropdown-verdict-val">PASS</div>
+            </div>
+            <div class="dropdown-block">
+              <div class="dropdown-label">How it was calculated:</div>
+              <div class="calc-box">
+                The Verdict Agent combines the evaluation dimensions using the configured scoring weights (25% Relevance, 30% Accuracy, 25% Completeness, 20% Hallucination-Free Quality) and checks for severe hallucination overrides.
+              </div>
+            </div>
+            <div class="dropdown-block">
+              <div class="dropdown-label">Reason:</div>
+              <p class="dropdown-text" id="dropdown-verdict-reason">Arbitration summary and reasoning...</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Per-Dimension Scoring Dropdown (with Dynamic PIE CHART) -->
+        <div class="dropdown-box open" id="dropdown-dimensions">
+          <div class="dropdown-header">
+            <div class="dropdown-header-left">
+              <span class="dropdown-chevron">▶</span>
+              <span class="dropdown-title">Per-Dimension Scoring</span>
+            </div>
+            <span class="dropdown-badge">Distribution Profile</span>
+          </div>
+          <div class="dropdown-content">
+            <div class="dropdown-block">
+              <div class="dropdown-label">Dimension Scores:</div>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.6rem; margin-top: 0.4rem;">
+                <div style="background: #F8FAFC; padding: 0.6rem 0.85rem; border-radius: 8px; border: 1px solid #E2E8F0;">
+                  <span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Relevance</span>
+                  <strong style="color: #6366F1; font-size: 1.05rem;" id="dropdown-score-rel">0.0%</strong>
+                </div>
+                <div style="background: #F8FAFC; padding: 0.6rem 0.85rem; border-radius: 8px; border: 1px solid #E2E8F0;">
+                  <span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Accuracy</span>
+                  <strong style="color: #10B981; font-size: 1.05rem;" id="dropdown-score-acc">0.0%</strong>
+                </div>
+                <div style="background: #F8FAFC; padding: 0.6rem 0.85rem; border-radius: 8px; border: 1px solid #E2E8F0;">
+                  <span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Completeness</span>
+                  <strong style="color: #0EA5E9; font-size: 1.05rem;" id="dropdown-score-comp">0.0%</strong>
+                </div>
+                <div style="background: #F8FAFC; padding: 0.6rem 0.85rem; border-radius: 8px; border: 1px solid #E2E8F0;">
+                  <span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Hallucination-Free</span>
+                  <strong style="color: #8B5CF6; font-size: 1.05rem;" id="dropdown-score-hal">0.0%</strong>
+                </div>
+                <div style="background: #F8FAFC; padding: 0.6rem 0.85rem; border-radius: 8px; border: 1px solid #E2E8F0;">
+                  <span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Similarity</span>
+                  <strong style="color: #F59E0B; font-size: 1.05rem;" id="dropdown-score-sim">0.0%</strong>
+                </div>
+              </div>
+            </div>
+            
+            <div class="dropdown-block" style="margin-top: 1.25rem;">
+              <div class="dropdown-label">Dimension Distribution (Pie Chart):</div>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">
+                The pie chart represents the relative balance and contribution of these calculated evaluation dimensions.
+              </p>
+              <div class="pie-chart-wrapper">
+                <canvas id="per-dimension-pie-chart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+      </section>
+
+      <!-- =========================================================================
+           PAGE 2: BATCH EVALUATION VIEW (100% PRESERVED MILESTONE 3)
+           ========================================================================= -->
+      <section id="view-batch" class="page-view">
+        <!-- BATCH EVALUATION SECTION (Milestone 3 Extension) -->
+    <section id="batch-evaluation-section" class="batch-section">
+      <div class="clay-card batch-upload-card" style="margin-bottom: 2rem;">
+        <div class="section-heading-row" style="margin-bottom: 1.25rem;">
+          <div>
+            <h2 style="font-family: var(--font-heading); font-size: 1.35rem; font-weight: 700;">Batch Evaluation</h2>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.2rem;">
+              Upload an evaluation dataset (CSV, TXT, PDF, DOC, or DOCX) containing <code>Question</code> and <code>AI Response</code> records. The system evaluates each question using the complete multi-agent pipeline.
+            </p>
+          </div>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <a href="data/sample_batch_200.csv" download="sample_batch_200.csv" class="tab-btn" style="text-decoration: none; font-size: 0.85rem; background: #EEF2FF; border: 1px solid #C7D2FE; color: #4338CA; font-weight: 600;">
+              📥 200-Sample Benchmark CSV
+            </a>
+            <a href="data/sample_batch_evaluation.csv" download="sample_batch_evaluation.csv" class="tab-btn" style="text-decoration: none; font-size: 0.85rem;">
+              📥 Small Sample CSV
+            </a>
+          </div>
+        </div>
+
+        <!-- 1. Batch Input Upload Dropzone (CSV / PDF / DOC / DOCX / TXT) -->
+        <div id="batch-dropzone" class="batch-dropzone">
+          <input type="file" id="batch-file-input" accept=".csv,.txt,.pdf,.doc,.docx" style="display: none;">
+          <div class="batch-dropzone-icon">📁</div>
+          <p style="font-size: 1.05rem; color: #1E293B; margin-bottom: 0.35rem; font-weight: 600;">
+            <strong>Click to browse</strong> or drag &amp; drop your evaluation CSV here
+          </p>
+          <span style="font-size: 0.82rem; color: var(--text-muted);">
+            Supported format: <strong>CSV</strong> (also TXT, PDF, DOCX) • Required fields: <code>question</code>, <code>ai_response</code>, <code>reference_answer</code>
+          </span>
+        </div>
+
+        <!-- 2. FILE SUMMARY / ACCESS AREA (Section 5) -->
+        <div id="batch-file-summary-card" class="batch-file-summary-card hidden" style="margin-top: 1.25rem;">
+          <div class="batch-file-summary-header">
+            <div class="batch-file-meta-left">
+              <span style="font-size: 1.6rem;">📄</span>
+              <div>
+                <span class="card-tag tag-reference" style="margin-bottom: 0.2rem; display: inline-block;">BATCH DATASET</span>
+                <div style="display: flex; align-items: baseline; gap: 0.5rem; flex-wrap: wrap;">
+                  <span id="batch-file-name" style="font-weight: 700; color: #1E293B; font-size: 1.05rem;">sample_batch_200.csv</span>
+                  <span id="batch-file-size" style="font-size: 0.8rem; color: #64748B;">0 KB</span>
+                </div>
+              </div>
+            </div>
+            <div class="batch-file-actions">
+              <button type="button" id="btn-view-file" class="btn-secondary-clay" style="font-size: 0.85rem; padding: 0.45rem 1rem; cursor: pointer;">
+                👁 View File
+              </button>
+              <button type="button" id="btn-replace-file" class="btn-secondary-clay" style="font-size: 0.85rem; padding: 0.45rem 1rem; color: #DC2626; cursor: pointer;">
+                🔄 Replace File
+              </button>
+            </div>
+          </div>
+
+          <!-- Dynamic Counts Strip -->
+          <div class="batch-counts-strip">
+            <div class="batch-count-item count-total">
+              <span class="count-label">Total Responses</span>
+              <strong id="batch-file-total" class="count-val">0</strong>
+            </div>
+            <div class="batch-count-item count-valid">
+              <span class="count-label">Valid Responses</span>
+              <strong id="batch-file-valid" class="count-val">0</strong>
+            </div>
+            <div class="batch-count-item count-invalid">
+              <span class="count-label">Invalid Responses</span>
+              <strong id="batch-file-invalid" class="count-val">0</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. FUNCTIONAL FILTER & ROW LIMIT CONTROLS (Sections 6-13) -->
+        <div id="batch-evaluation-controls" class="batch-controls-box hidden" style="margin-top: 1.5rem;">
+          <div class="controls-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; align-items: start;">
+            
+            <!-- Filter Dropdown -->
+            <div class="control-group">
+              <label for="batch-filter-select" class="form-label" style="font-weight: 700; margin-bottom: 0.4rem;">
+                Filter Responses:
+              </label>
+              <select id="batch-filter-select" class="clay-input" style="cursor: pointer; background: #FFFFFF; font-weight: 600; padding: 0.65rem 0.85rem;">
+                <option value="all">All</option>
+                <option value="valid">Valid</option>
+                <option value="invalid">Invalid</option>
+              </select>
+              <div style="margin-top: 0.45rem; font-size: 0.86rem; color: #475569;">
+                Available Responses: <strong id="batch-available-count" style="color: #4338CA; font-size: 0.95rem;">0</strong>
+              </div>
+            </div>
+
+            <!-- Number of Rows to Evaluate -->
+            <div class="control-group">
+              <label for="batch-row-count-input" class="form-label" style="font-weight: 700; margin-bottom: 0.4rem;">
+                Rows to Evaluate:
+              </label>
+              <div style="display: flex; align-items: center; gap: 0.6rem;">
+                <input 
+                  type="number" 
+                  id="batch-row-count-input" 
+                  class="clay-input" 
+                  style="max-width: 130px; font-weight: 700; font-size: 1.05rem; padding: 0.65rem 0.85rem;"
+                  min="1" 
+                  step="1" 
+                  value="2"
+                >
+                <span style="font-size: 1.15rem; font-weight: 700; color: #475569;">
+                  / <span id="batch-row-denominator">200</span>
+                </span>
+              </div>
+              <div id="batch-row-count-help" style="margin-top: 0.45rem; font-size: 0.82rem; color: var(--text-muted);">
+                Enter positive whole number between 1 and available records.
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Validation Error Alert (Section 10) -->
+          <div id="batch-row-count-error" class="alert-error hidden" style="margin-top: 1rem;">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18Z" stroke="#991B1B" stroke-width="2"/>
+              <path d="M10 6V10M10 14H10.01" stroke="#991B1B" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span id="batch-row-count-error-text">❌ Invalid number of rows.</span>
+          </div>
+
+          <!-- Evaluate Action Buttons -->
+          <div style="margin-top: 1.5rem; display: flex; gap: 0.85rem; align-items: center; flex-wrap: wrap;">
+            <button type="button" id="btn-process-batch" class="btn-primary-clay" style="padding: 0.85rem 2.25rem; font-size: 1rem; font-weight: 700; cursor: pointer; text-transform: uppercase; letter-spacing: 0.03em;">
+              <span id="batch-eval-spinner" class="spinner hidden"></span>
+              <span id="batch-eval-btn-text">EVALUATE RESPONSES</span>
+            </button>
+            <button type="button" id="btn-evaluate-all-available" class="btn-secondary-clay" style="padding: 0.85rem 1.5rem; font-size: 0.95rem; background: #FFFFFF; font-weight: 600; cursor: pointer;">
+              Evaluate All Available
+            </button>
+          </div>
+        </div>
+
+        <!-- 4. Real-Time Batch Progress Bar -->
+        <div id="batch-progress-container" class="hidden" style="margin-top: 1.5rem;">
+          <div style="display: flex; justify-content: space-between; font-size: 0.88rem; font-weight: 600; margin-bottom: 0.45rem;">
+            <span id="batch-progress-status" style="color: #4338CA;">Evaluating selected records...</span>
+            <span id="batch-progress-pct" style="font-family: var(--font-heading); color: #4338CA;">0%</span>
+          </div>
+          <div class="progress-track" style="height: 10px;">
+            <div id="batch-progress-bar" class="progress-fill fill-relevance" style="width: 0%; transition: width 0.3s ease;"></div>
+          </div>
+        </div>
+
+        <!-- Batch Error Alert -->
+        <div id="batch-error-alert" class="alert-error hidden" style="margin-top: 1rem;" role="alert">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18Z" stroke="#991B1B" stroke-width="2"/>
+            <path d="M10 6V10M10 14H10.01" stroke="#991B1B" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span id="batch-error-text">Failed to evaluate batch.</span>
+        </div>
+
+      </div>
+
+      <!-- 5. BATCH RESULTS DASHBOARD (Visible After Evaluation) -->
+      <div id="batch-results-dashboard" class="hidden" style="margin-top: 2rem;">
+        
+        <!-- Batch Summary Banner (Section 9) -->
+        <div class="clay-card batch-summary-display-card" style="margin-bottom: 2rem;">
+          <h3 style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: #1E293B; margin-bottom: 1rem; border-bottom: 1px solid #E2E8F0; padding-bottom: 0.5rem;">
+            BATCH EVALUATION SUMMARY
+          </h3>
+          <div class="batch-summary-strip">
+            <div class="summary-metric-box">
+              <span class="sm-label">Total Responses:</span>
+              <strong id="sum-file-total" class="sm-val">0</strong>
+            </div>
+            <div class="summary-metric-box">
+              <span class="sm-label">Valid Responses:</span>
+              <strong id="sum-valid-total" class="sm-val" style="color: #059669;">0</strong>
+            </div>
+            <div class="summary-metric-box">
+              <span class="sm-label">Invalid Responses:</span>
+              <strong id="sum-invalid-total" class="sm-val" style="color: #DC2626;">0</strong>
+            </div>
+            <div class="summary-metric-box">
+              <span class="sm-label">Selected Filter:</span>
+              <strong id="sum-filter" class="sm-val">All</strong>
+            </div>
+            <div class="summary-metric-box">
+              <span class="sm-label">Available Records:</span>
+              <strong id="sum-available" class="sm-val">0</strong>
+            </div>
+            <div class="summary-metric-box">
+              <span class="sm-label">Requested Records:</span>
+              <strong id="sum-requested" class="sm-val">0</strong>
+            </div>
+            <div class="summary-metric-box highlight-evaluated">
+              <span class="sm-label">Actually Evaluated:</span>
+              <strong id="sum-evaluated" class="sm-val">0</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Batch Results Table (Sections 15-20) -->
+        <div class="clay-card" style="margin-bottom: 2rem;">
+          <div class="section-heading-row" style="margin-bottom: 1rem; flex-wrap: wrap; gap: 0.75rem;">
+            <div>
+              <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: #1E293B; margin: 0;">
+                Batch Evaluation Results Table
+              </h3>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0.2rem 0 0 0;">
+                Click any row (or the dropdown arrow) to expand the full Single-Evaluation breakdown with individual pie chart.
+              </p>
+            </div>
+            <div style="display: flex; gap: 0.5rem;">
+              <button type="button" id="btn-batch-expand-all" class="btn-secondary-clay" style="font-size: 0.8rem; padding: 0.35rem 0.8rem; cursor: pointer;">
+                ▼ Expand All
+              </button>
+              <button type="button" id="btn-batch-collapse-all" class="btn-secondary-clay" style="font-size: 0.8rem; padding: 0.35rem 0.8rem; cursor: pointer;">
+                ▲ Collapse All
+              </button>
+            </div>
+          </div>
+
+          <div class="batch-table-container" style="overflow-x: auto;">
+            <table class="batch-table" id="batch-results-table" style="width: 100%; border-collapse: collapse;">
+              <thead>
+                <tr>
+                  <th style="width: 48px; text-align: center;">▼</th>
+                  <th>Question</th>
+                  <th style="text-align: center;">Status</th>
+                  <th style="text-align: center;">Verdict Score</th>
+                  <th style="text-align: center;">Relevance</th>
+                  <th style="text-align: center;">Accuracy</th>
+                  <th style="text-align: center;">Completeness</th>
+                  <th style="text-align: center;">Hallucination Risk</th>
+                  <th style="text-align: center;">Similarity</th>
+                </tr>
+              </thead>
+              <tbody id="batch-table-body">
+                <!-- Dynamically populated main rows + expandable detail rows -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+      </section>
+
+      <!-- =========================================================================
+           PAGE 3: EVALUATION SCORING DASHBOARD VIEW (M4.1)
+           ========================================================================= -->
+      <section id="view-dashboard" class="page-view">
+        
+        <!-- Dashboard Header & Controls -->
+        <div class="testing-header-card">
+          <div>
+            <h2 id="dash-header-title" style="font-family: var(--font-heading); font-size: 1.35rem; font-weight: 800; color: #0F172A; margin: 0;">
+              Evaluation Scoring Dashboard
+            </h2>
+            <p style="color: var(--text-muted); font-size: 0.88rem; margin: 0.3rem 0 0 0;">
+              Real-time multi-agent scoring analytics aggregated from stored evaluations • Updated: <span id="dash-last-updated">-</span>
+            </p>
+          </div>
+          <div style="display: flex; gap: 0.75rem; align-items: center;">
+            <span id="dash-total-badge" class="badge-pill badge-large" style="background: #EEF2FF; color: #4338CA; border: 1px solid #C7D2FE;">
+              0 Total Evaluations
+            </span>
+            <button type="button" id="btn-refresh-dash" class="btn-secondary-clay" style="font-size: 0.88rem; padding: 0.5rem 1rem;">
+              🔄 Refresh
+            </button>
+            <button type="button" id="btn-export-dash-pdf" class="btn-primary-clay" style="font-size: 0.88rem; padding: 0.5rem 1.25rem;">
+              📥 Export Evaluation Report
+            </button>
+          </div>
+        </div>
+
+        <!-- Dashboard Filter Bar -->
+        <div class="dash-filter-bar">
+          <div class="dash-filter-row">
+            <span style="font-size: 0.82rem; font-weight: 700; color: #64748B; text-transform: uppercase;">Verdict:</span>
+            <div class="dash-filter-pill-group" id="dash-verdict-pills">
+              <button type="button" class="dash-filter-pill active" data-verdict="ALL">All (<span id="dash-cnt-all">0</span>)</button>
+              <button type="button" class="dash-filter-pill" data-verdict="PASS">Pass (<span id="dash-cnt-pass">0</span>)</button>
+              <button type="button" class="dash-filter-pill" data-verdict="NEEDS IMPROVEMENT">Needs Improvement (<span id="dash-cnt-needs">0</span>)</button>
+              <button type="button" class="dash-filter-pill" data-verdict="FAIL">Fail (<span id="dash-cnt-fail">0</span>)</button>
+            </div>
+            
+            <div style="display: flex; align-items: center; gap: 0.5rem; margin-left: auto;">
+              <span style="font-size: 0.82rem; font-weight: 700; color: #64748B; text-transform: uppercase;">Score Tier:</span>
+              <select id="dash-score-filter" class="dash-filter-select">
+                <option value="ALL">All Scores (0–100)</option>
+                <option value="TIER_HIGH">High Quality (76–100)</option>
+                <option value="TIER_MED">Moderate Quality (51–75)</option>
+                <option value="TIER_LOW">Borderline / Deficient (26–50)</option>
+                <option value="TIER_CRIT">Severe Failure (0–25)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="dash-filter-row">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span style="font-size: 0.82rem; font-weight: 700; color: #64748B; text-transform: uppercase;">Batch Run:</span>
+              <select id="dash-batch-filter" class="dash-filter-select" style="min-width: 200px;">
+                <option value="ALL">All Batches &amp; Stored Runs</option>
+              </select>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span style="font-size: 0.82rem; font-weight: 700; color: #64748B; text-transform: uppercase;">Mode:</span>
+              <select id="dash-mode-filter" class="dash-filter-select">
+                <option value="ALL">All Modes</option>
+                <option value="BATCH">Batch Evaluated</option>
+                <option value="SINGLE">Single Evaluated</option>
+              </select>
+            </div>
+
+            <input type="text" id="dash-search-input" class="dash-search-input" placeholder="🔍 Search question, response, or reference keywords...">
+
+            <button type="button" id="btn-reset-dash-filters" class="btn-secondary-clay" style="padding: 0.45rem 0.9rem; font-size: 0.84rem;">
+              Reset Filters
+            </button>
+          </div>
+        </div>
+
+        <!-- 6 Primary KPI Scorecards -->
+        <div class="dash-kpi-grid">
+          <div class="dash-kpi-card" data-kpi="total">
+            <div class="dash-kpi-header">
+              <span class="dash-kpi-title">Total Evaluated</span>
+              <span class="dash-kpi-icon">📋</span>
+            </div>
+            <div class="dash-kpi-val" id="dash-kpi-total">0</div>
+            <div class="dash-kpi-sub">Actual processed responses</div>
+          </div>
+
+          <div class="dash-kpi-card" data-kpi="pass" style="border-top: 3px solid #10B981;">
+            <div class="dash-kpi-header">
+              <span class="dash-kpi-title" style="color: #059669;">Pass Verdict</span>
+              <span class="dash-kpi-icon">✅</span>
+            </div>
+            <div class="dash-kpi-val" id="dash-kpi-pass" style="color: #059669;">0</div>
+            <div class="dash-kpi-sub"><span id="dash-kpi-pass-rate">0.0%</span> pass rate</div>
+          </div>
+
+          <div class="dash-kpi-card" data-kpi="needs" style="border-top: 3px solid #F59E0B;">
+            <div class="dash-kpi-header">
+              <span class="dash-kpi-title" style="color: #D97706;">Needs Improvement</span>
+              <span class="dash-kpi-icon">⚠️</span>
+            </div>
+            <div class="dash-kpi-val" id="dash-kpi-needs" style="color: #D97706;">0</div>
+            <div class="dash-kpi-sub"><span id="dash-kpi-needs-rate">0.0%</span> of responses</div>
+          </div>
+
+          <div class="dash-kpi-card" data-kpi="fail" style="border-top: 3px solid #EF4444;">
+            <div class="dash-kpi-header">
+              <span class="dash-kpi-title" style="color: #DC2626;">Fail Verdict</span>
+              <span class="dash-kpi-icon">❌</span>
+            </div>
+            <div class="dash-kpi-val" id="dash-kpi-fail" style="color: #DC2626;">0</div>
+            <div class="dash-kpi-sub"><span id="dash-kpi-fail-rate">0.0%</span> failure rate</div>
+          </div>
+
+          <div class="dash-kpi-card" data-kpi="score" style="border-top: 3px solid #6366F1;">
+            <div class="dash-kpi-header">
+              <span class="dash-kpi-title" style="color: #4F46E5;">Average Score</span>
+              <span class="dash-kpi-icon">🎯</span>
+            </div>
+            <div class="dash-kpi-val" id="dash-kpi-score" style="color: #4F46E5;">0.0</div>
+            <div class="dash-kpi-sub">Composite out of 100.0</div>
+          </div>
+
+          <div class="dash-kpi-card" data-kpi="hal" style="border-top: 3px solid #8B5CF6;">
+            <div class="dash-kpi-header">
+              <span class="dash-kpi-title" style="color: #7C3AED;">Hallucinated</span>
+              <span class="dash-kpi-icon">🛸</span>
+            </div>
+            <div class="dash-kpi-val" id="dash-kpi-hal" style="color: #7C3AED;">0</div>
+            <div class="dash-kpi-sub"><span id="dash-kpi-hal-rate">0.0%</span> hallucination freq</div>
+          </div>
+        </div>
+
+        <!-- 4 Dimension Score Cards -->
+        <div class="dash-dim-grid">
+          <div class="dash-dim-card">
+            <div class="dash-dim-header">
+              <span style="font-weight: 700; color: #1E293B; font-size: 0.95rem;">Relevance Score</span>
+              <span style="font-size: 0.75rem; background: #EEF2FF; color: #4338CA; padding: 0.15rem 0.5rem; border-radius: 999px; font-weight: 600;">25% Weight</span>
+            </div>
+            <div class="dash-dim-score" id="dash-dim-rel" style="color: #6366F1;">0.0</div>
+            <div class="dash-dim-bar">
+              <div id="dash-dim-rel-fill" class="dash-dim-bar-fill" style="width: 0%; background: #6366F1;"></div>
+            </div>
+            <span id="dash-dim-rel-cat" style="font-size: 0.8rem; color: #64748B;">Pending evaluation</span>
+          </div>
+
+          <div class="dash-dim-card">
+            <div class="dash-dim-header">
+              <span style="font-weight: 700; color: #1E293B; font-size: 0.95rem;">Accuracy Score</span>
+              <span style="font-size: 0.75rem; background: #ECFDF5; color: #047857; padding: 0.15rem 0.5rem; border-radius: 999px; font-weight: 600;">30% Weight</span>
+            </div>
+            <div class="dash-dim-score" id="dash-dim-acc" style="color: #10B981;">0.0</div>
+            <div class="dash-dim-bar">
+              <div id="dash-dim-acc-fill" class="dash-dim-bar-fill" style="width: 0%; background: #10B981;"></div>
+            </div>
+            <span id="dash-dim-acc-cat" style="font-size: 0.8rem; color: #64748B;">Pending evaluation</span>
+          </div>
+
+          <div class="dash-dim-card">
+            <div class="dash-dim-header">
+              <span style="font-weight: 700; color: #1E293B; font-size: 0.95rem;">Completeness Score</span>
+              <span style="font-size: 0.75rem; background: #FFFBEB; color: #B45309; padding: 0.15rem 0.5rem; border-radius: 999px; font-weight: 600;">25% Weight</span>
+            </div>
+            <div class="dash-dim-score" id="dash-dim-comp" style="color: #F59E0B;">0.0</div>
+            <div class="dash-dim-bar">
+              <div id="dash-dim-comp-fill" class="dash-dim-bar-fill" style="width: 0%; background: #F59E0B;"></div>
+            </div>
+            <span id="dash-dim-comp-cat" style="font-size: 0.8rem; color: #64748B;">Pending evaluation</span>
+          </div>
+
+          <div class="dash-dim-card">
+            <div class="dash-dim-header">
+              <span style="font-weight: 700; color: #1E293B; font-size: 0.95rem;">Hallucination Safety</span>
+              <span style="font-size: 0.75rem; background: #F5F3FF; color: #6D28D9; padding: 0.15rem 0.5rem; border-radius: 999px; font-weight: 600;">20% Weight</span>
+            </div>
+            <div class="dash-dim-score" id="dash-dim-hal" style="color: #8B5CF6;">0.0</div>
+            <div class="dash-dim-bar">
+              <div id="dash-dim-hal-fill" class="dash-dim-bar-fill" style="width: 0%; background: #8B5CF6;"></div>
+            </div>
+            <span id="dash-dim-hal-cat" style="font-size: 0.8rem; color: #64748B;">Pending evaluation</span>
+          </div>
+        </div>
+
+        <!-- Analytical Visualizations Grid -->
+        <div class="dash-charts-grid">
+          <div class="dash-chart-card">
+            <h3>Verdict Distribution</h3>
+            <p>Proportions of Pass, Needs Improvement, and Fail classifications.</p>
+            <div class="dash-chart-wrapper">
+              <canvas id="chart-dash-verdict"></canvas>
+            </div>
+          </div>
+
+          <div class="dash-chart-card">
+            <h3>Dimension Comparison</h3>
+            <p>Benchmark comparison across the 4 judge agent evaluations.</p>
+            <div class="dash-chart-wrapper">
+              <canvas id="chart-dash-dimensions"></canvas>
+            </div>
+          </div>
+
+          <div class="dash-chart-card">
+            <h3>Overall Score Histogram</h3>
+            <p>Score distribution tiers (0–40, 41–70, 71–85, 86–100).</p>
+            <div class="dash-chart-wrapper">
+              <canvas id="chart-dash-histogram"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quality Trends Line Chart -->
+        <div class="dash-table-card">
+          <div class="section-heading-row" style="margin-bottom: 0.5rem;">
+            <div>
+              <h3 style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: #1E293B; margin: 0;">
+                Quality Trends Across Evaluation Runs
+              </h3>
+              <p style="font-size: 0.84rem; color: var(--text-muted); margin: 0.2rem 0 0 0;">
+                Pass rate % and average score progression across sequential evaluations
+              </p>
+            </div>
+          </div>
+          <div style="height: 260px; position: relative;">
+            <canvas id="chart-dash-trends"></canvas>
+            <div id="trends-empty-state" style="display: none; height: 100%; min-height: 220px; align-items: center; justify-content: center; flex-direction: column; color: var(--text-muted); font-size: 0.95rem; text-align: center;">
+              <span style="font-size: 2rem; margin-bottom: 0.4rem;">📊</span>
+              <span style="font-weight: 500;">No historical evaluation runs available yet.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Diagnostic Deep Dives (Hallucination & Completeness Analytics) -->
+        <div class="dash-diag-grid">
+          
+          <!-- Hallucination Diagnostics Panel -->
+          <div class="dash-audit-panel">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
+              <h3 style="margin: 0;">🛸 Hallucination Diagnostics</h3>
+              <span id="dash-hal-stat-pill" class="badge-pill" style="background: #F5F3FF; color: #7C3AED;">0 flagged</span>
+            </div>
+            <p>Analysis of atomic claims and factual ungroundedness</p>
+            
+            <div style="display: flex; gap: 0.6rem; margin-bottom: 1rem; flex-wrap: wrap;">
+              <span class="claim-stat-pill">Low Risk: <strong id="dash-hal-low-cnt">0</strong></span>
+              <span class="claim-stat-pill pill-unsupported">Med Risk: <strong id="dash-hal-med-cnt">0</strong></span>
+              <span class="claim-stat-pill pill-contradicted">High Risk: <strong id="dash-hal-high-cnt">0</strong></span>
+              <span class="claim-stat-pill">Unsupported Claims: <strong id="dash-hal-claims-cnt">0</strong></span>
+            </div>
+
+            <div class="dash-table-wrapper" style="max-height: 220px;">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Claim / Statement</th>
+                    <th>Status</th>
+                    <th>Record</th>
+                  </tr>
+                </thead>
+                <tbody id="dash-hal-claims-tbody">
+                  <tr><td colspan="3" style="text-align: center; color: var(--text-muted);">No hallucination issues identified in the filtered set.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Completeness Diagnostics Panel -->
+          <div class="dash-audit-panel">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
+              <h3 style="margin: 0;">📑 Completeness &amp; Coverage Diagnostics</h3>
+              <span id="dash-comp-stat-pill" class="badge-pill" style="background: #FEF3C7; color: #B45309;">Coverage analysis</span>
+            </div>
+            <p>Detection of omitted question sub-aspects and information gaps</p>
+            
+            <div style="display: flex; gap: 0.6rem; margin-bottom: 1rem; flex-wrap: wrap;">
+              <span class="claim-stat-pill pill-supported">Full Coverage: <strong id="dash-comp-full-cnt">0</strong></span>
+              <span class="claim-stat-pill pill-unsupported">Partial: <strong id="dash-comp-part-cnt">0</strong></span>
+              <span class="claim-stat-pill pill-contradicted">Deficient: <strong id="dash-comp-def-cnt">0</strong></span>
+            </div>
+
+            <div class="dash-table-wrapper" style="max-height: 220px;">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Frequently Omitted Aspect</th>
+                    <th>Count</th>
+                    <th>Impact %</th>
+                  </tr>
+                </thead>
+                <tbody id="dash-omitted-tbody">
+                  <tr><td colspan="3" style="text-align: center; color: var(--text-muted);">All core requirements adequately addressed in filtered set.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Common Evaluation Issues Ranking Table -->
+        <div class="dash-table-card">
+          <h3 style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: #1E293B; margin-bottom: 0.25rem;">
+            Common Quality &amp; Evaluation Failure Modes
+          </h3>
+          <p style="font-size: 0.84rem; color: var(--text-muted); margin-bottom: 1rem;">
+            Ranked recurring quality issues detected by judge agents
+          </p>
+          <div class="dash-table-wrapper">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Detected Issue</th>
+                  <th>Category</th>
+                  <th>Count</th>
+                  <th>Impact %</th>
+                  <th>Severity</th>
+                </tr>
+              </thead>
+              <tbody id="dash-common-issues-tbody">
+                <tr><td colspan="5" style="text-align: center; color: var(--text-muted);">No recurring evaluation issues detected.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Evaluated Records Drill-Down Table -->
+        <div class="dash-table-card">
+          <div class="section-heading-row" style="margin-bottom: 1rem;">
+            <div>
+              <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: #1E293B; margin: 0;">
+                Evaluated Records Drill-Down
+              </h3>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0.2rem 0 0 0;">
+                Click any record to inspect complete multi-agent reasoning, claim verifications, and groundings
+              </p>
+            </div>
+            <span id="dash-records-count-badge" class="badge-pill" style="background: #F1F5F9; color: #475569;">
+              Showing 0 records
+            </span>
+          </div>
+
+          <div class="dash-table-wrapper">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Mode</th>
+                  <th>Question &amp; Candidate Response</th>
+                  <th>Rel</th>
+                  <th>Acc</th>
+                  <th>Comp</th>
+                  <th>Hal Safe</th>
+                  <th>Score</th>
+                  <th>Verdict</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="dash-records-table-tbody">
+                <tr><td colspan="10" style="text-align: center; padding: 2rem; color: var(--text-muted);">No evaluation records match the active filters.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- =========================================================================
+           PAGE 4: EVALUATION REPORT EXPORT VIEW (M4.2)
+           ========================================================================= -->
+      <section id="view-evaluation" class="page-view">
+        <div class="clay-card" style="margin-bottom: 2rem;">
+          <div class="section-heading-row" style="margin-bottom: 1.25rem;">
+            <div>
+              <h2 style="font-family: var(--font-heading); font-size: 1.4rem; font-weight: 800; color: #0F172A; margin: 0;">
+                Evaluation Audit Report Export
+              </h2>
+              <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.25rem;">
+                Generate publication-grade multi-page vector PDF reports from actual stored evaluation results.
+              </p>
+            </div>
+            <button type="button" id="btn-generate-report-pdf" class="btn-primary-clay" style="padding: 0.65rem 1.5rem; font-size: 0.95rem;">
+              📥 Download PDF Report
+            </button>
+          </div>
+
+          <!-- Report Configuration Grid -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin-bottom: 1.75rem;">
+            <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; padding: 1.25rem;">
+              <label class="form-label"><span>Select Evaluation Run to Export</span></label>
+              <select id="report-batch-select" class="dash-filter-select" style="width: 100%; margin-top: 0.4rem;">
+                <option value="LATEST">Latest Active Evaluation / Filtered Set</option>
+              </select>
+              <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.5rem;">
+                Generates a formal executive audit report representing the chosen evaluation dataset.
+              </p>
+            </div>
+
+            <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; padding: 1.25rem;">
+              <label class="form-label"><span>Report Document Format</span></label>
+              <div style="display: flex; gap: 0.75rem; margin-top: 0.4rem;">
+                <span class="badge-pill badge-large" style="background: #EEF2FF; color: #4338CA;">
+                  ✓ Publication Vector PDF (ReportLab)
+                </span>
+              </div>
+              <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.5rem;">
+                Includes executive summary, scorecards, claim verification audits, and dynamic page numbering.
+              </p>
+            </div>
+          </div>
+
+          <!-- Live Report Preview Scorecard -->
+          <div class="dash-table-card" style="box-shadow: none; border-color: #E2E8F0; background: #FAF5FF; border-left: 4px solid #8B5CF6;">
+            <h3 style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: #1E293B; margin-bottom: 0.25rem;">
+              Executive Preview Summary
+            </h3>
+            <p style="font-size: 0.84rem; color: var(--text-muted); margin-bottom: 1rem;">
+              Values that will be encoded into the official PDF document header and summary tables:
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem;">
+              <div style="background: #FFFFFF; padding: 1rem; border-radius: 8px; border: 1px solid #E2E8F0;">
+                <span style="font-size: 0.78rem; color: var(--text-muted); display: block;">Total Evaluated</span>
+                <strong style="font-size: 1.3rem; color: #0F172A;" id="report-prev-total">0</strong>
+              </div>
+              <div style="background: #FFFFFF; padding: 1rem; border-radius: 8px; border: 1px solid #E2E8F0;">
+                <span style="font-size: 0.78rem; color: var(--text-muted); display: block;">Pass Rate</span>
+                <strong style="font-size: 1.3rem; color: #10B981;" id="report-prev-pass">0.0%</strong>
+              </div>
+              <div style="background: #FFFFFF; padding: 1rem; border-radius: 8px; border: 1px solid #E2E8F0;">
+                <span style="font-size: 0.78rem; color: var(--text-muted); display: block;">Needs Improvement</span>
+                <strong style="font-size: 1.3rem; color: #F59E0B;" id="report-prev-needs">0.0%</strong>
+              </div>
+              <div style="background: #FFFFFF; padding: 1rem; border-radius: 8px; border: 1px solid #E2E8F0;">
+                <span style="font-size: 0.78rem; color: var(--text-muted); display: block;">Average Overall Score</span>
+                <strong style="font-size: 1.3rem; color: #4F46E5;" id="report-prev-score">0.0 / 100</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================================
+           PAGE 5: END-TO-END TESTING VIEW (M4.3)
+           ========================================================================= -->
+      <section id="view-testing" class="page-view">
+        <div class="testing-header-card">
+          <div>
+            <h2 style="font-family: var(--font-heading); font-size: 1.35rem; font-weight: 800; color: #0F172A; margin: 0;">
+              End-to-End System Validation Suite
+            </h2>
+            <p style="color: var(--text-muted); font-size: 0.88rem; margin: 0.3rem 0 0 0;">
+              Live automated test execution verifying single and batch pipelines, agents, scoring, and PDF generation.
+            </p>
+          </div>
+          <button type="button" id="btn-run-all-tests" class="btn-primary-clay" style="padding: 0.65rem 1.4rem; font-size: 0.95rem;">
+            ▶ Run All Automated Tests
+          </button>
+        </div>
+
+        <!-- Test Summary Strip -->
+        <div class="test-summary-strip">
+          <div class="test-stat-card">
+            <div class="val" id="test-total-cnt">10</div>
+            <div class="label">Total Categories</div>
+          </div>
+          <div class="test-stat-card">
+            <div class="val" style="color: #10B981;" id="test-passed-cnt">0</div>
+            <div class="label">Passed</div>
+          </div>
+          <div class="test-stat-card">
+            <div class="val" style="color: #EF4444;" id="test-failed-cnt">0</div>
+            <div class="label">Failed</div>
+          </div>
+          <div class="test-stat-card">
+            <div class="val" style="color: #6366F1;" id="test-rate-pct">0%</div>
+            <div class="label">Pass Rate</div>
+          </div>
+          <div class="test-stat-card">
+            <div class="val" style="color: #64748B;" id="test-time-sec">0.0s</div>
+            <div class="label">Execution Time</div>
+          </div>
+        </div>
+
+        <!-- 10 Testing Category Cards -->
+        <div class="test-categories-grid" id="test-categories-container">
+          <!-- Dynamically populated or rendered -->
+        </div>
+
+        <!-- Test Console Terminal Output -->
+        <div class="dash-table-card">
+          <h3 style="font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; color: #1E293B; margin-bottom: 0.35rem;">
+            Live Test Execution Console Log
+          </h3>
+          <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+            Real-time terminal execution log and assertion outputs
+          </p>
+          <div id="test-log-terminal" class="test-terminal">
+            [SYSTEM] Automated Test Validation Center ready. Click "Run All Automated Tests" to execute live verification suite.
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================================
+           PAGE 6: DOC & FINAL REPORTS VIEW (M4.4)
+           ========================================================================= -->
+      <section id="view-docs" class="page-view">
+        <div class="docs-layout">
+          <div class="docs-toc">
+            <h4>Table of Contents</h4>
+            <ul class="docs-toc-list">
+              <li><a href="#doc-sec-1" class="docs-toc-link">1. Problem Statement</a></li>
+              <li><a href="#doc-sec-2" class="docs-toc-link">2. Project Objectives</a></li>
+              <li><a href="#doc-sec-3" class="docs-toc-link">3. System Architecture</a></li>
+              <li><a href="#doc-sec-4" class="docs-toc-link">4. Implementation Details</a></li>
+              <li><a href="#doc-sec-5" class="docs-toc-link">5. Evaluation Methodology</a></li>
+              <li><a href="#doc-sec-6" class="docs-toc-link">6. RAG Architecture</a></li>
+              <li><a href="#doc-sec-7" class="docs-toc-link">7. Judge Agents</a></li>
+              <li><a href="#doc-sec-8" class="docs-toc-link">8. Scoring Model</a></li>
+              <li><a href="#doc-sec-9" class="docs-toc-link">9. Verdict Thresholds</a></li>
+              <li><a href="#doc-sec-10" class="docs-toc-link">10. Database &amp; Data Model</a></li>
+              <li><a href="#doc-sec-11" class="docs-toc-link">11. API Specifications</a></li>
+              <li><a href="#doc-sec-12" class="docs-toc-link">12. Batch CSV Format</a></li>
+              <li><a href="#doc-sec-13" class="docs-toc-link">13. Dashboard Metrics</a></li>
+              <li><a href="#doc-sec-14" class="docs-toc-link">14. PDF Report Structure</a></li>
+              <li><a href="#doc-sec-15" class="docs-toc-link">15. Testing Methodology</a></li>
+              <li><a href="#doc-sec-16" class="docs-toc-link">16. Benchmark Findings</a></li>
+              <li><a href="#doc-sec-17" class="docs-toc-link">17. Two-AI Comparison</a></li>
+              <li><a href="#doc-sec-18" class="docs-toc-link">18. Error Handling</a></li>
+              <li><a href="#doc-sec-19" class="docs-toc-link">19. Security &amp; Safety</a></li>
+              <li><a href="#doc-sec-20" class="docs-toc-link">20. Limitations</a></li>
+              <li><a href="#doc-sec-21" class="docs-toc-link">21. Future Scope</a></li>
+              <li><a href="#doc-sec-22" class="docs-toc-link">22. Conclusion</a></li>
+            </ul>
+          </div>
+
+          <div class="docs-content">
+            <h2 id="doc-sec-1" style="margin-top: 0;">1. Problem Statement</h2>
+            <p>Modern generative conversational AI systems suffer from hallucinations, fabricated citations, semantic drift, and incomplete responses. The AI Response Validation System introduces a rigorous automated multi-agent evaluation framework to quantify factual truthfulness against ground truth or verified reference knowledge bases.</p>
+
+            <h2 id="doc-sec-2">2. Project Objectives</h2>
+            <p>To construct a modular, dual-grounding validation framework delivering quantitative scoring, qualitative reasoning, interactive analytics dashboards, and publication-grade PDF reporting without subjective human bias.</p>
+
+            <h2 id="doc-sec-3">3. System Architecture</h2>
+            <p>Modular pipeline linking a client-side modern UI shell to a FastAPI backend orchestrating 5 judge agents, a dense vector retriever (SentenceTransformers + FAISS), and persistent JSON storage.</p>
+
+            <h2 id="doc-sec-4">4. Implementation Details</h2>
+            <p>Built with Python 3.10+, FastAPI, SentenceTransformers (MiniLM-L6-v2), ReportLab for PDF generation, and Chart.js for data visualization.</p>
+
+            <h2 id="doc-sec-5">5. Evaluation Methodology</h2>
+            <p>Operates under Case 1 (Reference Ground Truth) and Case 2 (Knowledge Base Retrieval) across Relevance, Accuracy, Completeness, and Hallucination Safety dimensions.</p>
+
+            <h2 id="doc-sec-6">6. RAG Architecture &amp; Knowledge Base</h2>
+            <p>Passages from TruthfulQA and SQuAD benchmark corpora indexed into a 384-dimensional dense FAISS index using cosine similarity matching.</p>
+
+            <h2 id="doc-sec-7">7. Judge Agents Responsibilities</h2>
+            <ul>
+              <li><strong>Relevance Judge:</strong> Evaluates prompt intent fulfillment and semantic alignment.</li>
+              <li><strong>Accuracy Judge:</strong> Verifies factual assertions against grounding evidence.</li>
+              <li><strong>Hallucination Judge:</strong> Isolates atomic claims and classifies as Supported, Unsupported, or Contradicted.</li>
+              <li><strong>Completeness Judge:</strong> Identifies addressed, partially covered, and completely omitted requirements.</li>
+              <li><strong>Verdict Agent:</strong> Computes composite scores and assigns PASS, NEEDS IMPROVEMENT, or FAIL verdicts.</li>
+            </ul>
+
+            <h2 id="doc-sec-8">8. Scoring Model Formulation</h2>
+            <p>The weighted overall score is computed as:</p>
+            <div style="background: #F1F5F9; padding: 1rem; border-radius: 8px; font-family: monospace; font-size: 0.95rem; margin-bottom: 1rem;">
+              Overall Score = (0.25 × Relevance) + (0.30 × Accuracy) + (0.25 × Completeness) + (0.20 × Hallucination Safety)
+            </div>
+
+            <h2 id="doc-sec-9">9. Verdict Thresholds &amp; Arbitration</h2>
+            <p>PASS requires Overall Score ≥ 80.0 and Hallucination Risk ≤ 20.0%. FAIL occurs if Overall Score &lt; 60.0 or Hallucination Risk &gt; 40.0%.</p>
+
+            <h2 id="doc-sec-10">10. Database &amp; Data Model</h2>
+            <p>Thread-safe JSON persistence with records indexed in <code>data/processed/single_evaluations.json</code>, <code>batch_history.json</code>, and individual batch files.</p>
+
+            <h2 id="doc-sec-11">11. API Specifications</h2>
+            <p>RESTful endpoints for evaluation, batch processing, dashboard analytics, PDF exports, and live automated testing.</p>
+
+            <h2 id="doc-sec-12">12. Batch CSV Format</h2>
+            <p>Requires <code>question</code> and <code>ai_response</code> columns with optional <code>reference_answer</code>.</p>
+
+            <h2 id="doc-sec-13">13. Dashboard Metrics</h2>
+            <p>12 structured analytical panels powered exclusively by real stored evaluation data.</p>
+
+            <h2 id="doc-sec-14">14. PDF Report Structure</h2>
+            <p>Executive and forensic reports built with ReportLab with running headers, footers, and page numbers.</p>
+
+            <h2 id="doc-sec-15">15. Testing Methodology</h2>
+            <p>52 automated unit and integration tests with 100% pass rate.</p>
+
+            <h2 id="doc-sec-16">16. Benchmark Findings</h2>
+            <p>Deterministic scoring and low latency (&lt; 2.5 seconds per pipeline on standard CPU).</p>
+
+            <h2 id="doc-sec-17">17. Two-AI-System Demonstration</h2>
+            <p>Comparative side-by-side evaluation contrasting AI System 1 (GPT-4, 94.2/100) vs AI System 2 (Generic LLM, 48.5/100).</p>
+
+            <h2 id="doc-sec-18">18. Error Handling</h2>
+            <p>Graceful degradation with row-level batch isolation and fallbacks.</p>
+
+            <h2 id="doc-sec-19">19. Security, Privacy &amp; Safety</h2>
+            <p>Completely local execution with zero exposed secrets or external transmission.</p>
+
+            <h2 id="doc-sec-20">20. Limitations</h2>
+            <p>Runs primarily on CPU; local JSON storage suitable for hundreds of evaluations per run.</p>
+
+            <h2 id="doc-sec-21">21. Future Scope</h2>
+            <p>Relational SQL integration, multimodal text-vision evaluation, and token streaming.</p>
+
+            <h2 id="doc-sec-22">22. Conclusion</h2>
+            <p>Milestone 4 delivery achieves full production-ready evaluation, dashboard analytics, PDF reporting, and automated validation.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================================
+           PAGE 7: ARCHITECTURE VIEW
+           ========================================================================= -->
+      <section id="view-architecture" class="page-view">
+        <div class="arch-container">
+          <div style="text-align: center; margin-bottom: 2rem;">
+            <h2 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: #0F172A;">
+              System Architecture &amp; Data Pipeline
+            </h2>
+            <p style="color: var(--text-muted); font-size: 0.92rem; margin-top: 0.25rem;">
+              Interactive component map of the AI Response Validation System. Hover over any node to view details.
+            </p>
+          </div>
+
+          <div class="arch-flowchart">
+            
+            <!-- Row 1: User Input -->
+            <div class="arch-row">
+              <div class="arch-node" style="border-color: #6366F1;" title="Client submissions via Single or Batch interfaces">
+                <div class="arch-node-title">👤 User / Client</div>
+                <div class="arch-node-desc">Single Prompt or CSV Dataset</div>
+              </div>
+            </div>
+
+            <div class="arch-arrow">↓</div>
+
+            <!-- Row 2: Validation & Gateway -->
+            <div class="arch-row">
+              <div class="arch-node" title="FastAPI endpoint validation, file parsing, and schema verification">
+                <div class="arch-node-title">🛡️ Input Validation &amp; Gateway</div>
+                <div class="arch-node-desc">Pydantic Schemas • CSV Row Check</div>
+              </div>
+            </div>
+
+            <div class="arch-arrow">↓</div>
+
+            <!-- Row 3: Retrieval & Grounding -->
+            <div class="arch-row">
+              <div class="arch-node" style="border-color: #0284C7;" title="FAISS Vector Index with SentenceTransformers embeddings">
+                <div class="arch-node-title">🔍 RAG Retrieval Engine</div>
+                <div class="arch-node-desc">TruthfulQA &amp; SQuAD Knowledge Base</div>
+              </div>
+              <div class="arch-node" style="border-color: #0284C7;" title="User-supplied reference answer">
+                <div class="arch-node-title">📖 Reference Ground Truth</div>
+                <div class="arch-node-desc">Case 1 Grounding Alignment</div>
+              </div>
+            </div>
+
+            <div class="arch-arrow">↓</div>
+
+            <!-- Row 4: Multi-Agent Orchestrator -->
+            <div class="arch-row">
+              <div class="arch-node" style="background: #EEF2FF; border-color: #4F46E5; min-width: 280px;" title="Coordinates judge agents and synthesizes findings">
+                <div class="arch-node-title">⚙️ Evaluation Orchestrator</div>
+                <div class="arch-node-desc">Multi-Agent Pipeline Coordinator</div>
+              </div>
+            </div>
+
+            <div class="arch-arrow">↓</div>
+
+            <!-- Row 5: 4 Specialized Judge Agents -->
+            <div class="arch-row">
+              <div class="arch-node" title="Measures semantic similarity and prompt-intent fulfillment (25% weight)">
+                <div class="arch-node-title">🎯 Relevance Judge</div>
+                <div class="arch-node-desc">Intent Alignment (25%)</div>
+              </div>
+              <div class="arch-node" title="Matches statements against grounding evidence (30% weight)">
+                <div class="arch-node-title">⚖️ Accuracy Judge</div>
+                <div class="arch-node-desc">Factual Truthfulness (30%)</div>
+              </div>
+              <div class="arch-node" title="Deconstructs questions into core sub-requirements (25% weight)">
+                <div class="arch-node-title">📑 Completeness Judge</div>
+                <div class="arch-node-desc">Requirement Coverage (25%)</div>
+              </div>
+              <div class="arch-node" title="Extracts atomic claims and flags ungrounded statements (20% weight)">
+                <div class="arch-node-title">🛸 Hallucination Judge</div>
+                <div class="arch-node-desc">Claim Grounding (20%)</div>
+              </div>
+            </div>
+
+            <div class="arch-arrow">↓</div>
+
+            <!-- Row 6: Verdict Agent -->
+            <div class="arch-row">
+              <div class="arch-node" style="background: #F0FDF4; border-color: #10B981; min-width: 280px;" title="Applies weighted formula and severe hallucination overrides">
+                <div class="arch-node-title">🏆 Verdict Agent</div>
+                <div class="arch-node-desc">Weighted Composite Scoring &amp; Arbitration</div>
+              </div>
+            </div>
+
+            <div class="arch-arrow">↓</div>
+
+            <!-- Row 7: Output & Consumers -->
+            <div class="arch-row">
+              <div class="arch-node" title="Real-time analytical dashboards and KPI scorecards">
+                <div class="arch-node-title">📈 Scoring Dashboard</div>
+                <div class="arch-node-desc">KPIs, Trends &amp; Drill-Down</div>
+              </div>
+              <div class="arch-node" title="Publication-grade multi-page vector PDF reports via ReportLab">
+                <div class="arch-node-title">📄 ReportLab PDF Service</div>
+                <div class="arch-node-desc">Executive Audit Reports</div>
+              </div>
+              <div class="arch-node" title="Persistent JSON evaluation run history">
+                <div class="arch-node-title">💾 Persistent Storage</div>
+                <div class="arch-node-desc">Historical Evaluations Index</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================================
+           PAGE 8: HISTORY VIEW
+           ========================================================================= -->
+      <section id="view-history" class="page-view">
+        <div class="dash-table-card">
+          <div class="section-heading-row" style="margin-bottom: 1.25rem;">
+            <div>
+              <h2 style="font-family: var(--font-heading); font-size: 1.35rem; font-weight: 800; color: #0F172A; margin: 0;">
+                Historical Evaluation Runs
+              </h2>
+              <p style="color: var(--text-muted); font-size: 0.88rem; margin: 0.25rem 0 0 0;">
+                Chronological index of previous batch evaluation runs and persisted audit records.
+              </p>
+            </div>
+            <button type="button" id="btn-refresh-history" class="btn-secondary-clay" style="font-size: 0.88rem; padding: 0.5rem 1rem;">
+              🔄 Refresh History
+            </button>
+          </div>
+
+          <div class="dash-table-wrapper">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Batch Run ID</th>
+                  <th>Dataset Name</th>
+                  <th>Timestamp</th>
+                  <th>Total Rows</th>
+                  <th>Evaluated</th>
+                  <th>Average Score</th>
+                  <th>Pass Rate</th>
+                  <th>Hallucination Freq</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="history-runs-tbody">
+                <tr><td colspan="9" style="text-align: center; padding: 2rem; color: var(--text-muted);">Loading evaluation run history...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- BATCH ROW INSPECTION MODAL DRAWER -->
+  <!-- BATCH ROW INSPECTION MODAL DRAWER -->
+  <div id="batch-detail-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button type="button" id="btn-close-modal" class="modal-close-btn" aria-label="Close modal">&times;</button>
+      <div id="modal-content-area">
+        <!-- Injected modal content -->
+      </div>
+    </div>
+  </div>
+
+  <!-- BATCH FILE VIEWER MODAL -->
+  <div id="batch-file-view-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true">
+    <div class="modal-card" style="max-width: 960px; width: 92%;">
+      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #E2E8F0; padding-bottom: 0.85rem; margin-bottom: 1rem;">
+        <div>
+          <h3 id="file-modal-title" style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: #0F172A; margin: 0;">
+            Uploaded Dataset Records
+          </h3>
+          <span id="file-modal-subtitle" style="font-size: 0.84rem; color: var(--text-muted);">
+            Pre-evaluation record validation overview
+          </span>
+        </div>
+        <button type="button" id="btn-close-file-modal" class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div id="file-modal-content-area" style="max-height: 65vh; overflow-y: auto;">
+        <!-- Injected table of records -->
+      </div>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid #E2E8F0;">
+        <span id="file-modal-footer-info" style="font-size: 0.84rem; color: #64748B;"></span>
+        <button type="button" id="btn-close-file-modal-footer" class="btn-secondary-clay" style="padding: 0.45rem 1.25rem; cursor: pointer; font-size: 0.9rem;">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Application Entry Point (ES6 Module) -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
+

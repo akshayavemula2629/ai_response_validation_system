@@ -1,0 +1,413 @@
+{
+  "batch_id": "BATCH-20261006-153622",
+  "dataset_name": "test_no_ref.csv",
+  "evaluation_time": "2026-10-06 15:36:22 UTC",
+  "summary": {
+    "total_records": 1,
+    "total_rows": 1,
+    "file_total": 1,
+    "valid_total": 1,
+    "invalid_total": 0,
+    "selected_filter": "All",
+    "available_records": 1,
+    "requested_records": 1,
+    "actually_evaluated": 1,
+    "successful": 1,
+    "valid_rows": 1,
+    "invalid": 0,
+    "invalid_rows": 0,
+    "failed": 0,
+    "average_relevance": 87.2,
+    "average_accuracy": 100.0,
+    "average_hallucination": 100.0,
+    "average_completeness": 100.0,
+    "average_overall": 96.8,
+    "average_score": 96.8,
+    "verdict_counts": {
+      "PASS": 1,
+      "NEEDS IMPROVEMENT": 0,
+      "FAIL": 0
+    },
+    "verdict_distribution": {
+      "PASS": {
+        "count": 1,
+        "percentage": 100.0
+      },
+      "NEEDS IMPROVEMENT": {
+        "count": 0,
+        "percentage": 0.0
+      },
+      "FAIL": {
+        "count": 0,
+        "percentage": 0.0
+      }
+    },
+    "hallucination_frequency": 0.0,
+    "average_hallucination_percentage": 0.0,
+    "batch_id": "BATCH-20261006-153622",
+    "evaluation_time": "2026-10-06 15:36:22 UTC",
+    "dataset_name": "test_no_ref.csv",
+    "pass_rate": 100.0,
+    "needs_improvement_rate": 0.0,
+    "fail_rate": 0.0,
+    "dimension_averages": {
+      "relevance": 87.2,
+      "accuracy": 100.0,
+      "hallucination_safety": 100.0,
+      "completeness": 100.0,
+      "similarity": 87.9,
+      "overall_score": 96.8
+    },
+    "hallucination_stats": {
+      "hallucinated_responses_count": 0,
+      "hallucination_free_count": 1,
+      "hallucination_frequency_pct": 0.0,
+      "total_unsupported_claims": 0,
+      "total_claims_evaluated": 1,
+      "unsupported_claim_frequency_pct": 0.0,
+      "risk_distribution": {
+        "low": 1,
+        "medium": 0,
+        "high": 0
+      }
+    },
+    "completeness_stats": {
+      "complete_count": 1,
+      "partial_count": 0,
+      "incomplete_count": 0,
+      "missing_info_frequency_pct": 0.0,
+      "commonly_omitted_aspects": []
+    },
+    "recurring_issues": [],
+    "score_distributions": {
+      "0-40": 0,
+      "41-70": 0,
+      "71-85": 0,
+      "86-100": 1
+    }
+  },
+  "analytics": {
+    "verdict_distribution": {
+      "PASS": {
+        "count": 1,
+        "percentage": 100.0
+      },
+      "NEEDS IMPROVEMENT": {
+        "count": 0,
+        "percentage": 0.0
+      },
+      "FAIL": {
+        "count": 0,
+        "percentage": 0.0
+      }
+    },
+    "dimension_averages": {
+      "relevance": 87.2,
+      "accuracy": 100.0,
+      "hallucination_safety": 100.0,
+      "completeness": 100.0,
+      "similarity": 87.9,
+      "overall_score": 96.8
+    },
+    "score_distributions": {
+      "0-40": 0,
+      "41-70": 0,
+      "71-85": 0,
+      "86-100": 1
+    },
+    "hallucination_stats": {
+      "hallucinated_responses_count": 0,
+      "hallucination_free_count": 1,
+      "hallucination_frequency_pct": 0.0,
+      "total_unsupported_claims": 0,
+      "total_claims_evaluated": 1,
+      "unsupported_claim_frequency_pct": 0.0,
+      "risk_distribution": {
+        "low": 1,
+        "medium": 0,
+        "high": 0
+      }
+    },
+    "completeness_stats": {
+      "complete_count": 1,
+      "partial_count": 0,
+      "incomplete_count": 0,
+      "missing_info_frequency_pct": 0.0,
+      "commonly_omitted_aspects": []
+    },
+    "recurring_issues": []
+  },
+  "results": [
+    {
+      "row_id": 1,
+      "row_index": 1,
+      "response_id": "row_1",
+      "question": "What is the capital of Australia?",
+      "ai_response": "The federal capital of Australia is Canberra.",
+      "reference_answer": "The capital of Australia is Canberra.",
+      "status": "SUCCESS",
+      "error_message": null,
+      "relevance_score": 87.2,
+      "accuracy_score": 100.0,
+      "hallucination_score": 100.0,
+      "hallucination_percentage": 0.0,
+      "completeness_score": 100.0,
+      "overall_score": 96.8,
+      "verdict": "PASS",
+      "final_verdict": "PASS",
+      "expected_status": null,
+      "record_status": "VALID",
+      "similarity_score": 87.9,
+      "evaluation_detail": {
+        "question": "What is the capital of Australia?",
+        "original_response": "The federal capital of Australia is Canberra.",
+        "reference_answer": "The capital of Australia is Canberra.",
+        "better_answer": "The federal capital of Australia is Canberra.",
+        "better_answer_reason": "The original AI response is already factually accurate, relevant, and free of significant hallucinations.",
+        "evaluation": {
+          "relevance": {
+            "score": 87.2,
+            "explanation": "The response directly and clearly addresses the core intent and specific subject of the question."
+          },
+          "accuracy": {
+            "score": 100.0,
+            "explanation": "The response is factually consistent and aligns accurately with verified reference answer."
+          },
+          "hallucination": {
+            "score": 100.0,
+            "percentage": 0.0,
+            "risk_level": "Low",
+            "explanation": "Low hallucination risk (0.0%). All 1 of 1 claims are verified and grounded in reference evidence.",
+            "issues": []
+          },
+          "completeness": {
+            "score": 100.0,
+            "explanation": "The response is Fully Complete (100.0/100). It thoroughly addresses all 2 key requirements and expected information points established in the reference ground truth without notable omissions."
+          },
+          "similarity": {
+            "percentage": 87.9,
+            "explanation": "The AI response exhibits high semantic similarity (87.9%) with the reference material, sharing substantially similar vocabulary and conceptual themes. Note: Semantic similarity measures structural and lexical alignment and is distinct from factual correctness or truthfulness."
+          },
+          "overall_score": 96.8,
+          "verdict": "Excellent",
+          "summary": "Final Evaluation Verdict: 'PASS' with Weighted Overall Score of 96.8/100. The response satisfies rigorous quality and factuality benchmarks with high grounding across all dimensions. Dimensional Breakdown: Relevance: 87.2/100 (25% weight), Accuracy: 100.0/100 (30% weight), Completeness: 100.0/100 (25% weight), and Hallucination-Free Quality: 100.0/100 (20% weight; Risk: 0.0% - Low risk). Semantic Similarity with reference: 87.9%. Recommended Action: Suitable for direct presentation and deployment."
+        },
+        "retrieved_evidence": [
+          {
+            "chunk_id": "truthfulqa_1_chunk_0",
+            "content": "Context: Question: What is the capital of Australia? Reference Answer: The capital of Australia is Canberra. Question: What is the capital of Australia? Answer: The capital of Australia is Canberra.",
+            "source": "TruthfulQA - Geography",
+            "similarity_score": 0.5024
+          },
+          {
+            "chunk_id": "benchmark200_11_chunk_0",
+            "content": "Context: Question: What is the capital of Australia? Reference Answer: The federal capital of Australia is Canberra, located in the Australian Capital Territory. Question: What is the capital of Australia? Answer: The federal capital of Australia is Canberra, located in the Australian Capital Territory.",
+            "source": "Verified Benchmark Knowledge Base",
+            "similarity_score": 0.4984
+          },
+          {
+            "chunk_id": "benchmark200_85_chunk_0",
+            "content": "Context: Question: What is the capital of Denmark? Reference Answer: Copenhagen is the capital and most populous city of Denmark, situated on the eastern coast of the island of Zealand. Question: What is the capital of Denmark? Answer: Copenhagen is the capital and most populous city of Denmark, situated on the eastern coast of the island of Zealand.",
+            "source": "Verified Benchmark Knowledge Base",
+            "similarity_score": 0.4185
+          }
+        ],
+        "comparison": {
+          "reference_answer_score": 100.0,
+          "better_answer_score": 96.3,
+          "similarity_percentage": 96.3
+        },
+        "relevance_judge": {
+          "score": 5,
+          "score_normalized": 87.2,
+          "category": "Fully Relevant",
+          "reasoning": "The response directly and clearly addresses the core intent and specific subject of the question.",
+          "explanation": "The response directly and clearly addresses the core intent and specific subject of the question."
+        },
+        "accuracy_judge": {
+          "score": 5,
+          "score_normalized": 100.0,
+          "category": "Fully Correct",
+          "evidence_source": "Reference Answer",
+          "supporting_evidence": [
+            "Context: Question: What is the capital of Australia? Reference Answer: The capital of Australia is Canberra. Question: What is the capital of Australia? Answer: The capital of Australia is Canberra.",
+            "Context: Question: What is the capital of Australia? Reference Answer: The federal capital of Australia is Canberra, located in the Australian Capital Territory. Question: What is the capital of Australia? Answer: The federal capital of Australia is ...",
+            "Context: Question: What is the capital of Denmark? Reference Answer: Copenhagen is the capital and most populous city of Denmark, situated on the eastern coast of the island of Zealand. Question: What is the capital of Denmark? Answer: Copenhagen is ..."
+          ],
+          "issues": [],
+          "reasoning": "The response is factually consistent and aligns accurately with verified reference answer.",
+          "explanation": "The response is factually consistent and aligns accurately with verified reference answer."
+        },
+        "hallucination_judge": {
+          "total_claims": 1,
+          "supported_claims": 1,
+          "unsupported_claims": 0,
+          "contradicted_claims": 0,
+          "claims_breakdown": [
+            {
+              "claim": "The federal capital of Australia is Canberra.",
+              "status": "Supported",
+              "evidence": "The capital of Australia is Canberra.",
+              "explanation": "Directly verified and grounded by evidence (similarity: 0.96).",
+              "confidence": 1.0
+            }
+          ],
+          "hallucination_percentage": 0.0,
+          "risk_level": "Low",
+          "score": 100.0,
+          "issues": [],
+          "explanation": "Low hallucination risk (0.0%). All 1 of 1 claims are verified and grounded in reference evidence."
+        },
+        "case_mode": "Case 1: Reference Ground Truth",
+        "completeness_judge": {
+          "completeness_score": 100.0,
+          "score": 100.0,
+          "addressed_aspects": [
+            "What is the capital of Australia",
+            "The capital of Australia is Canberra."
+          ],
+          "partially_addressed_aspects": [],
+          "missing_aspects": [],
+          "reasoning": "The response is Fully Complete (100.0/100). It thoroughly addresses all 2 key requirements and expected information points established in the reference ground truth without notable omissions."
+        },
+        "verdict_judge": {
+          "relevance_score": 87.2,
+          "accuracy_score": 100.0,
+          "hallucination_score": 100.0,
+          "completeness_score": 100.0,
+          "weighted_overall_score": 96.8,
+          "weighted_score": 96.8,
+          "final_verdict": "PASS",
+          "major_issues": [],
+          "consolidated_reasoning": "Final Evaluation Verdict: 'PASS' with Weighted Overall Score of 96.8/100. The response satisfies rigorous quality and factuality benchmarks with high grounding across all dimensions. Dimensional Breakdown: Relevance: 87.2/100 (25% weight), Accuracy: 100.0/100 (30% weight), Completeness: 100.0/100 (25% weight), and Hallucination-Free Quality: 100.0/100 (20% weight; Risk: 0.0% - Low risk). Semantic Similarity with reference: 87.9%.",
+          "severe_hallucination_override": false
+        }
+      },
+      "evaluation_response": {
+        "question": "What is the capital of Australia?",
+        "original_response": "The federal capital of Australia is Canberra.",
+        "reference_answer": "The capital of Australia is Canberra.",
+        "better_answer": "The federal capital of Australia is Canberra.",
+        "better_answer_reason": "The original AI response is already factually accurate, relevant, and free of significant hallucinations.",
+        "evaluation": {
+          "relevance": {
+            "score": 87.2,
+            "explanation": "The response directly and clearly addresses the core intent and specific subject of the question."
+          },
+          "accuracy": {
+            "score": 100.0,
+            "explanation": "The response is factually consistent and aligns accurately with verified reference answer."
+          },
+          "hallucination": {
+            "score": 100.0,
+            "percentage": 0.0,
+            "risk_level": "Low",
+            "explanation": "Low hallucination risk (0.0%). All 1 of 1 claims are verified and grounded in reference evidence.",
+            "issues": []
+          },
+          "completeness": {
+            "score": 100.0,
+            "explanation": "The response is Fully Complete (100.0/100). It thoroughly addresses all 2 key requirements and expected information points established in the reference ground truth without notable omissions."
+          },
+          "similarity": {
+            "percentage": 87.9,
+            "explanation": "The AI response exhibits high semantic similarity (87.9%) with the reference material, sharing substantially similar vocabulary and conceptual themes. Note: Semantic similarity measures structural and lexical alignment and is distinct from factual correctness or truthfulness."
+          },
+          "overall_score": 96.8,
+          "verdict": "Excellent",
+          "summary": "Final Evaluation Verdict: 'PASS' with Weighted Overall Score of 96.8/100. The response satisfies rigorous quality and factuality benchmarks with high grounding across all dimensions. Dimensional Breakdown: Relevance: 87.2/100 (25% weight), Accuracy: 100.0/100 (30% weight), Completeness: 100.0/100 (25% weight), and Hallucination-Free Quality: 100.0/100 (20% weight; Risk: 0.0% - Low risk). Semantic Similarity with reference: 87.9%. Recommended Action: Suitable for direct presentation and deployment."
+        },
+        "retrieved_evidence": [
+          {
+            "chunk_id": "truthfulqa_1_chunk_0",
+            "content": "Context: Question: What is the capital of Australia? Reference Answer: The capital of Australia is Canberra. Question: What is the capital of Australia? Answer: The capital of Australia is Canberra.",
+            "source": "TruthfulQA - Geography",
+            "similarity_score": 0.5024
+          },
+          {
+            "chunk_id": "benchmark200_11_chunk_0",
+            "content": "Context: Question: What is the capital of Australia? Reference Answer: The federal capital of Australia is Canberra, located in the Australian Capital Territory. Question: What is the capital of Australia? Answer: The federal capital of Australia is Canberra, located in the Australian Capital Territory.",
+            "source": "Verified Benchmark Knowledge Base",
+            "similarity_score": 0.4984
+          },
+          {
+            "chunk_id": "benchmark200_85_chunk_0",
+            "content": "Context: Question: What is the capital of Denmark? Reference Answer: Copenhagen is the capital and most populous city of Denmark, situated on the eastern coast of the island of Zealand. Question: What is the capital of Denmark? Answer: Copenhagen is the capital and most populous city of Denmark, situated on the eastern coast of the island of Zealand.",
+            "source": "Verified Benchmark Knowledge Base",
+            "similarity_score": 0.4185
+          }
+        ],
+        "comparison": {
+          "reference_answer_score": 100.0,
+          "better_answer_score": 96.3,
+          "similarity_percentage": 96.3
+        },
+        "relevance_judge": {
+          "score": 5,
+          "score_normalized": 87.2,
+          "category": "Fully Relevant",
+          "reasoning": "The response directly and clearly addresses the core intent and specific subject of the question.",
+          "explanation": "The response directly and clearly addresses the core intent and specific subject of the question."
+        },
+        "accuracy_judge": {
+          "score": 5,
+          "score_normalized": 100.0,
+          "category": "Fully Correct",
+          "evidence_source": "Reference Answer",
+          "supporting_evidence": [
+            "Context: Question: What is the capital of Australia? Reference Answer: The capital of Australia is Canberra. Question: What is the capital of Australia? Answer: The capital of Australia is Canberra.",
+            "Context: Question: What is the capital of Australia? Reference Answer: The federal capital of Australia is Canberra, located in the Australian Capital Territory. Question: What is the capital of Australia? Answer: The federal capital of Australia is ...",
+            "Context: Question: What is the capital of Denmark? Reference Answer: Copenhagen is the capital and most populous city of Denmark, situated on the eastern coast of the island of Zealand. Question: What is the capital of Denmark? Answer: Copenhagen is ..."
+          ],
+          "issues": [],
+          "reasoning": "The response is factually consistent and aligns accurately with verified reference answer.",
+          "explanation": "The response is factually consistent and aligns accurately with verified reference answer."
+        },
+        "hallucination_judge": {
+          "total_claims": 1,
+          "supported_claims": 1,
+          "unsupported_claims": 0,
+          "contradicted_claims": 0,
+          "claims_breakdown": [
+            {
+              "claim": "The federal capital of Australia is Canberra.",
+              "status": "Supported",
+              "evidence": "The capital of Australia is Canberra.",
+              "explanation": "Directly verified and grounded by evidence (similarity: 0.96).",
+              "confidence": 1.0
+            }
+          ],
+          "hallucination_percentage": 0.0,
+          "risk_level": "Low",
+          "score": 100.0,
+          "issues": [],
+          "explanation": "Low hallucination risk (0.0%). All 1 of 1 claims are verified and grounded in reference evidence."
+        },
+        "case_mode": "Case 1: Reference Ground Truth",
+        "completeness_judge": {
+          "completeness_score": 100.0,
+          "score": 100.0,
+          "addressed_aspects": [
+            "What is the capital of Australia",
+            "The capital of Australia is Canberra."
+          ],
+          "partially_addressed_aspects": [],
+          "missing_aspects": [],
+          "reasoning": "The response is Fully Complete (100.0/100). It thoroughly addresses all 2 key requirements and expected information points established in the reference ground truth without notable omissions."
+        },
+        "verdict_judge": {
+          "relevance_score": 87.2,
+          "accuracy_score": 100.0,
+          "hallucination_score": 100.0,
+          "completeness_score": 100.0,
+          "weighted_overall_score": 96.8,
+          "weighted_score": 96.8,
+          "final_verdict": "PASS",
+          "major_issues": [],
+          "consolidated_reasoning": "Final Evaluation Verdict: 'PASS' with Weighted Overall Score of 96.8/100. The response satisfies rigorous quality and factuality benchmarks with high grounding across all dimensions. Dimensional Breakdown: Relevance: 87.2/100 (25% weight), Accuracy: 100.0/100 (30% weight), Completeness: 100.0/100 (25% weight), and Hallucination-Free Quality: 100.0/100 (20% weight; Risk: 0.0% - Low risk). Semantic Similarity with reference: 87.9%.",
+          "severe_hallucination_override": false
+        }
+      }
+    }
+  ]
+}
