@@ -1,0 +1,1007 @@
+{
+  "batch_id": "BATCH-20261006-145311",
+  "dataset_name": "test_batch_m4.csv",
+  "evaluation_time": "2026-10-06 14:53:11 UTC",
+  "summary": {
+    "total_records": 3,
+    "total_rows": 3,
+    "file_total": 3,
+    "valid_total": 3,
+    "invalid_total": 0,
+    "selected_filter": "All",
+    "available_records": 3,
+    "requested_records": 3,
+    "actually_evaluated": 3,
+    "successful": 3,
+    "valid_rows": 3,
+    "invalid": 0,
+    "invalid_rows": 0,
+    "failed": 0,
+    "average_relevance": 71.7,
+    "average_accuracy": 76.8,
+    "average_hallucination": 100.0,
+    "average_completeness": 93.3,
+    "average_overall": 84.3,
+    "average_score": 84.3,
+    "verdict_counts": {
+      "PASS": 2,
+      "NEEDS IMPROVEMENT": 1,
+      "FAIL": 0
+    },
+    "verdict_distribution": {
+      "PASS": {
+        "count": 2,
+        "percentage": 66.7
+      },
+      "NEEDS IMPROVEMENT": {
+        "count": 1,
+        "percentage": 33.3
+      },
+      "FAIL": {
+        "count": 0,
+        "percentage": 0.0
+      }
+    },
+    "hallucination_frequency": 0.0,
+    "average_hallucination_percentage": 0.0,
+    "batch_id": "BATCH-20261006-145311",
+    "evaluation_time": "2026-10-06 14:53:11 UTC",
+    "dataset_name": "test_batch_m4.csv",
+    "pass_rate": 66.7,
+    "needs_improvement_rate": 33.3,
+    "fail_rate": 0.0,
+    "dimension_averages": {
+      "relevance": 71.7,
+      "accuracy": 76.8,
+      "hallucination_safety": 100.0,
+      "completeness": 93.3,
+      "similarity": 81.8,
+      "overall_score": 84.3
+    },
+    "hallucination_stats": {
+      "hallucinated_responses_count": 0,
+      "hallucination_free_count": 3,
+      "hallucination_frequency_pct": 0.0,
+      "total_unsupported_claims": 0,
+      "total_claims_evaluated": 3,
+      "unsupported_claim_frequency_pct": 0.0,
+      "risk_distribution": {
+        "low": 3,
+        "medium": 0,
+        "high": 0
+      }
+    },
+    "completeness_stats": {
+      "complete_count": 2,
+      "partial_count": 1,
+      "incomplete_count": 0,
+      "missing_info_frequency_pct": 33.3,
+      "commonly_omitted_aspects": []
+    },
+    "recurring_issues": [
+      {
+        "issue": "Low Factual Accuracy to Evidence",
+        "category": "Factual Grounding",
+        "count": 1,
+        "percentage": 33.3,
+        "severity": "High"
+      },
+      {
+        "issue": "Incomplete Coverage of Core Requirements",
+        "category": "Completeness",
+        "count": 1,
+        "percentage": 33.3,
+        "severity": "Medium"
+      },
+      {
+        "issue": "Partial Query Relevance / Semantic Deviation",
+        "category": "Relevance",
+        "count": 1,
+        "percentage": 33.3,
+        "severity": "Low"
+      }
+    ],
+    "score_distributions": {
+      "0-40": 0,
+      "41-70": 0,
+      "71-85": 2,
+      "86-100": 1
+    }
+  },
+  "analytics": {
+    "verdict_distribution": {
+      "PASS": {
+        "count": 2,
+        "percentage": 66.7
+      },
+      "NEEDS IMPROVEMENT": {
+        "count": 1,
+        "percentage": 33.3
+      },
+      "FAIL": {
+        "count": 0,
+        "percentage": 0.0
+      }
+    },
+    "dimension_averages": {
+      "relevance": 71.7,
+      "accuracy": 76.8,
+      "hallucination_safety": 100.0,
+      "completeness": 93.3,
+      "similarity": 81.8,
+      "overall_score": 84.3
+    },
+    "score_distributions": {
+      "0-40": 0,
+      "41-70": 0,
+      "71-85": 2,
+      "86-100": 1
+    },
+    "hallucination_stats": {
+      "hallucinated_responses_count": 0,
+      "hallucination_free_count": 3,
+      "hallucination_frequency_pct": 0.0,
+      "total_unsupported_claims": 0,
+      "total_claims_evaluated": 3,
+      "unsupported_claim_frequency_pct": 0.0,
+      "risk_distribution": {
+        "low": 3,
+        "medium": 0,
+        "high": 0
+      }
+    },
+    "completeness_stats": {
+      "complete_count": 2,
+      "partial_count": 1,
+      "incomplete_count": 0,
+      "missing_info_frequency_pct": 33.3,
+      "commonly_omitted_aspects": []
+    },
+    "recurring_issues": [
+      {
+        "issue": "Low Factual Accuracy to Evidence",
+        "category": "Factual Grounding",
+        "count": 1,
+        "percentage": 33.3,
+        "severity": "High"
+      },
+      {
+        "issue": "Incomplete Coverage of Core Requirements",
+        "category": "Completeness",
+        "count": 1,
+        "percentage": 33.3,
+        "severity": "Medium"
+      },
+      {
+        "issue": "Partial Query Relevance / Semantic Deviation",
+        "category": "Relevance",
+        "count": 1,
+        "percentage": 33.3,
+        "severity": "Low"
+      }
+    ]
+  },
+  "results": [
+    {
+      "row_id": 1,
+      "row_index": 1,
+      "response_id": "row_1",
+      "question": "What is the capital of Germany?",
+      "ai_response": "Berlin is the capital of Germany.",
+      "reference_answer": "Berlin is the capital of Germany.",
+      "status": "SUCCESS",
+      "error_message": null,
+      "relevance_score": 87.9,
+      "accuracy_score": 100.0,
+      "hallucination_score": 100.0,
+      "hallucination_percentage": 0.0,
+      "completeness_score": 100.0,
+      "overall_score": 97.0,
+      "verdict": "PASS",
+      "final_verdict": "PASS",
+      "expected_status": null,
+      "record_status": "VALID",
+      "similarity_score": 87.5,
+      "evaluation_detail": {
+        "question": "What is the capital of Germany?",
+        "original_response": "Berlin is the capital of Germany.",
+        "reference_answer": "Berlin is the capital of Germany.",
+        "better_answer": "Berlin is the capital of Germany.",
+        "better_answer_reason": "The original AI response is already factually accurate, relevant, and free of significant hallucinations.",
+        "evaluation": {
+          "relevance": {
+            "score": 87.9,
+            "explanation": "The response directly and clearly addresses the core intent and specific subject of the question."
+          },
+          "accuracy": {
+            "score": 100.0,
+            "explanation": "The response is factually consistent and aligns accurately with verified reference answer."
+          },
+          "hallucination": {
+            "score": 100.0,
+            "percentage": 0.0,
+            "risk_level": "Low",
+            "explanation": "Low hallucination risk (0.0%). All 1 of 1 claims are verified and grounded in reference evidence.",
+            "issues": []
+          },
+          "completeness": {
+            "score": 100.0,
+            "explanation": "The response is Fully Complete (100.0/100). It thoroughly addresses all 2 key requirements and expected information points established in the reference ground truth without notable omissions."
+          },
+          "similarity": {
+            "percentage": 87.5,
+            "explanation": "The AI response exhibits high semantic similarity (87.5%) with the reference material, sharing substantially similar vocabulary and conceptual themes. Note: Semantic similarity measures structural and lexical alignment and is distinct from factual correctness or truthfulness."
+          },
+          "overall_score": 97.0,
+          "verdict": "Excellent",
+          "summary": "Final Evaluation Verdict: 'PASS' with Weighted Overall Score of 97.0/100. The response satisfies rigorous quality and factuality benchmarks with high grounding across all dimensions. Dimensional Breakdown: Relevance: 87.9/100 (25% weight), Accuracy: 100.0/100 (30% weight), Completeness: 100.0/100 (25% weight), and Hallucination-Free Quality: 100.0/100 (20% weight; Risk: 0.0% - Low risk). Semantic Similarity with reference: 87.5%. Recommended Action: Suitable for direct presentation and deployment."
+        },
+        "retrieved_evidence": [
+          {
+            "chunk_id": "benchmark200_89_chunk_0",
+            "content": "Context: Question: What is the capital of Belgium? Reference Answer: Brussels is the capital city of Belgium and the de facto headquarters of the European Union. Question: What is the capital of Belgium? Answer: Brussels is the capital city of Belgium and the de facto headquarters of the European Union.",
+            "source": "Verified Benchmark Knowledge Base",
+            "similarity_score": 0.4081
+          },
+          {
+            "chunk_id": "benchmark200_22_chunk_0",
+            "content": "Context: Question: What is the capital of Germany? Reference Answer: The capital and largest city of Germany is Berlin. Question: What is the capital of Germany? Answer: The capital and largest city of Germany is Berlin.",
+            "source": "Verified Benchmark Knowledge Base",
+            "similarity_score": 0.4007
+          },
+          {
+            "chunk_id": "benchmark200_85_chunk_0",
+            "content": "Context: Question: What is the capital of Denmark? Reference Answer: Copenhagen is the capital and most populous city of Denmark, situated on the eastern coast of the island of Zealand. Question: What is the capital of Denmark? Answer: Copenhagen is the capital and most populous city of Denmark, situated on the eastern coast of the island of Zealand.",
+            "source": "Verified Benchmark Knowledge Base",
+            "similarity_score": 0.395
+          }
+        ],
+        "comparison": {
+          "reference_answer_score": 100.0,
+          "better_answer_score": 100.0,
+          "similarity_percentage": 100.0
+        },
+        "relevance_judge": {
+          "score": 5,
+          "score_normalized": 87.9,
+          "category": "Fully Relevant",
+          "reasoning": "The response directly and clearly addresses the core intent and specific subject of the question.",
+          "explanation": "The response directly and clearly addresses the core intent and specific subject of the question."
+        },
+        "accuracy_judge": {
+          "score": 5,
+          "score_normalized": 100.0,
+          "category": "Fully Correct",
+          "evidence_source": "Reference Answer",
+          "supporting_evidence": [
+            "Context: Question: What is the capital of Belgium? Reference Answer: Brussels is the capital city of Belgium and the de facto headquarters of the European Union. Question: What is the capital of Belgium? Answer: Brussels is the capital city of Belgiu...",
+            "Context: Question: What is the capital of Germany? Reference Answer: The capital and largest city of Germany is Berlin. Question: What is the capital of Germany? Answer: The capital and largest city of Germany is Berlin."
+          ],
+          "issues": [],
+          "reasoning": "The response is factually consistent and aligns accurately with verified reference answer.",
+          "explanation": "The response is factually consistent and aligns accurately with verified reference answer."
+        },
+        "hallucination_judge": {
+          "total_claims": 1,
+          "supported_claims": 1,
+          "unsupported_claims": 0,
+          "contradicted_claims": 0,
+          "claims_breakdown": [
+            {
+              "claim": "Berlin is the capital of Germany.",
+              "status": "Supported",
+              "evidence": "Berlin is the capital of Germany.",
+              "explanation": "Directly verified and grounded by evidence (similarity: 1.00).",
+              "confidence": 1.0
+            }
+          ],
+          "hallucination_percentage": 0.0,
+          "risk_level": "Low",
+          "score": 100.0,
+          "issues": [],
+          "explanation": "Low hallucination risk (0.0%). All 1 of 1 claims are verified and grounded in reference evidence."
+        },
+        "case_mode": "Case 1: Reference Ground Truth",
+        "completeness_judge": {
+          "completeness_score": 100.0,
+          "score": 100.0,
+          "addressed_aspects": [
+            "What is the capital of Germany",
+            "Berlin is the capital of Germany."
+          ],
+          "partially_addressed_aspects": [],
+          "missing_aspects": [],
+          "reasoning": "The response is Fully Complete (100.0/100). It thoroughly addresses all 2 key requirements and expected information points established in the reference ground truth without notable omissions."
+        },
+        "verdict_judge": {
+          "relevance_score": 87.9,
+          "accuracy_score": 100.0,
+          "hallucination_score": 100.0,
+          "completeness_score": 100.0,
+          "weighted_overall_score": 97.0,
+          "weighted_score": 97.0,
+          "final_verdict": "PASS",
+          "major_issues": [],
+          "consolidated_reasoning": "Final Evaluation Verdict: 'PASS' with Weighted Overall Score of 97.0/100. The response satisfies rigorous quality and factuality benchmarks with high grounding across all dimensions. Dimensional Breakdown: Relevance: 87.9/100 (25% weight), Accuracy: 100.0/100 (30% weight), Completeness: 100.0/100 (25% weight), and Hallucination-Free Quality: 100.0/100 (20% weight; Risk: 0.0% - Low risk). Semantic Similarity with reference: 87.5%.",
+          "severe_hallucination_override": false
+        }
+      },
+      "evaluation_response": {
+        "question": "What is the capital of Germany?",
+        "original_response": "Berlin is the capital of Germany.",
+        "reference_answer": "Berlin is the capital of Germany.",
+        "better_answer": "Berlin is the capital of Germany.",
+        "better_answer_reason": "The original AI response is already factually accurate, relevant, and free of significant hallucinations.",
+        "evaluation": {
+          "relevance": {
+            "score": 87.9,
+            "explanation": "The response directly and clearly addresses the core intent and specific subject of the question."
+          },
+          "accuracy": {
+            "score": 100.0,
+            "explanation": "The response is factually consistent and aligns accurately with verified reference answer."
+          },
+          "hallucination": {
+            "score": 100.0,
+            "percentage": 0.0,
+            "risk_level": "Low",
+            "explanation": "Low hallucination risk (0.0%). All 1 of 1 claims are verified and grounded in reference evidence.",
+            "issues": []
+          },
+          "completeness": {
+            "score": 100.0,
+            "explanation": "The response is Fully Complete (100.0/100). It thoroughly addresses all 2 key requirements and expected information points established in the reference ground truth without notable omissions."
+          },
+          "similarity": {
+            "percentage": 87.5,
+            "explanation": "The AI response exhibits high semantic similarity (87.5%) with the reference material, sharing substantially similar vocabulary and conceptual themes. Note: Semantic similarity measures structural and lexical alignment and is distinct from factual correctness or truthfulness."
+          },
+          "overall_score": 97.0,
+          "verdict": "Excellent",
+          "summary": "Final Evaluation Verdict: 'PASS' with Weighted Overall Score of 97.0/100. The response satisfies rigorous quality and factuality benchmarks with high grounding across all dimensions. Dimensional Breakdown: Relevance: 87.9/100 (25% weight), Accuracy: 100.0/100 (30% weight), Completeness: 100.0/100 (25% weight), and Hallucination-Free Quality: 100.0/100 (20% weight; Risk: 0.0% - Low risk). Semantic Similarity with reference: 87.5%. Recommended Action: Suitable for direct presentation and deployment."
+        },
+        "retrieved_evidence": [
+          {
+            "chunk_id": "benchmark200_89_chunk_0",
+            "content": "Context: Question: What is the capital of Belgium? Reference Answer: Brussels is the capital city of Belgium and the de facto headquarters of the European Union. Question: What is the capital of Belgium? Answer: Brussels is the capital city of Belgium and the de facto headquarters of the European Union.",
+            "source": "Verified Benchmark Knowledge Base",
+            "similarity_score": 0.4081
+          },
+          {
+            "chunk_id": "benchmark200_22_chunk_0",
+            "content": "Context: Question: What is the capital of Germany? Reference Answer: The capital and largest city of Germany is Berlin. Question: What is the capital of Germany? Answer: The capital and largest city of Germany is Berlin.",
+            "source": "Verified Benchmark Knowledge Base",
+            "similarity_score": 0.4007
+          },
+          {
+            "chunk_id": "benchmark200_85_chunk_0",
+            "content": "Context: Question: What is the capital of Denmark? Reference Answer: Copenhagen is the capital and most populous city of Denmark, situated on the eastern coast of the island of Zealand. Question: What is the capital of Denmark? Answer: Copenhagen is the capital and most populous city of Denmark, situated on the eastern coast of the island of Zealand.",
+            "source": "Verified Benchmark Knowledge Base",
+            "similarity_score": 0.395
+          }
+        ],
+        "comparison": {
+          "reference_answer_score": 100.0,
+          "better_answer_score": 100.0,
+          "similarity_percentage": 100.0
+        },
+        "relevance_judge": {
+          "score": 5,
+          "score_normalized": 87.9,
+          "category": "Fully Relevant",
+          "reasoning": "The response directly and clearly addresses the core intent and specific subject of the question.",
+          "explanation": "The response directly and clearly addresses the core intent and specific subject of the question."
+        },
+        "accuracy_judge": {
+          "score": 5,
+          "score_normalized": 100.0,
+          "category": "Fully Correct",
+          "evidence_source": "Reference Answer",
+          "supporting_evidence": [
+            "Context: Question: What is the capital of Belgium? Reference Answer: Brussels is the capital city of Belgium and the de facto headquarters of the European Union. Question: What is the capital of Belgium? Answer: Brussels is the capital city of Belgiu...",
+            "Context: Question: What is the capital of Germany? Reference Answer: The capital and largest city of Germany is Berlin. Question: What is the capital of Germany? Answer: The capital and largest city of Germany is Berlin."
+          ],
+          "issues": [],
+          "reasoning": "The response is factually consistent and aligns accurately with verified reference answer.",
+          "explanation": "The response is factually consistent and aligns accurately with verified reference answer."
+        },
+        "hallucination_judge": {
+          "total_claims": 1,
+          "supported_claims": 1,
+          "unsupported_claims": 0,
+          "contradicted_claims": 0,
+          "claims_breakdown": [
+            {
+              "claim": "Berlin is the capital of Germany.",
+              "status": "Supported",
+              "evidence": "Berlin is the capital of Germany.",
+              "explanation": "Directly verified and grounded by evidence (similarity: 1.00).",
+              "confidence": 1.0
+            }
+          ],
+          "hallucination_percentage": 0.0,
+          "risk_level": "Low",
+          "score": 100.0,
+          "issues": [],
+          "explanation": "Low hallucination risk (0.0%). All 1 of 1 claims are verified and grounded in reference evidence."
+        },
+        "case_mode": "Case 1: Reference Ground Truth",
+        "completeness_judge": {
+          "completeness_score": 100.0,
+          "score": 100.0,
+          "addressed_aspects": [
+            "What is the capital of Germany",
+            "Berlin is the capital of Germany."
+          ],
+          "partially_addressed_aspects": [],
+          "missing_aspects": [],
+          "reasoning": "The response is Fully Complete (100.0/100). It thoroughly addresses all 2 key requirements and expected information points established in the reference ground truth without notable omissions."
+        },
+        "verdict_judge": {
+          "relevance_score": 87.9,
+          "accuracy_score": 100.0,
+          "hallucination_score": 100.0,
+          "completeness_score": 100.0,
+          "weighted_overall_score": 97.0,
+          "weighted_score": 97.0,
+          "final_verdict": "PASS",
+          "major_issues": [],
+          "consolidated_reasoning": "Final Evaluation Verdict: 'PASS' with Weighted Overall Score of 97.0/100. The response satisfies rigorous quality and factuality benchmarks with high grounding across all dimensions. Dimensional Breakdown: Relevance: 87.9/100 (25% weight), Accuracy: 100.0/100 (30% weight), Completeness: 100.0/100 (25% weight), and Hallucination-Free Quality: 100.0/100 (20% weight; Risk: 0.0% - Low risk). Semantic Similarity with reference: 87.5%.",
+          "severe_hallucination_override": false
+        }
+      }
+    },
+    {
+      "row_id": 2,
+      "row_index": 2,
+      "response_id": "row_2",
+      "question": "What is the chemical formula for water?",
+      "ai_response": "Water is H2O.",
+      "reference_answer": "Water is H2O.",
+      "status": "SUCCESS",
+      "error_message": null,
+      "relevance_score": 49.3,
+      "accuracy_score": 100.0,
+      "hallucination_score": 100.0,
+      "hallucination_percentage": 0.0,
+      "completeness_score": 80.0,
+      "overall_score": 82.3,
+      "verdict": "PASS",
+      "final_verdict": "PASS",
+      "expected_status": null,
+      "record_status": "VALID",
+      "similarity_score": 88.4,
+      "evaluation_detail": {
+        "question": "What is the chemical formula for water?",
+        "original_response": "Water is H2O.",
+        "reference_answer": "Water is H2O.",
+        "better_answer": "Water is H2O.",
+        "better_answer_reason": "The original AI response is already factually accurate, relevant, and free of significant hallucinations.",
+        "evaluation": {
+          "relevance": {
+            "score": 49.3,
+            "explanation": "The response only partially relates to the question, diverting into off-topic or ambiguous details."
+          },
+          "accuracy": {
+            "score": 100.0,
+            "explanation": "The response is factually consistent and aligns accurately with verified reference answer."
+          },
+          "hallucination": {
+            "score": 100.0,
+            "percentage": 0.0,
+            "risk_level": "Low",
+            "explanation": "Low hallucination risk (0.0%). All 1 of 1 claims are verified and grounded in reference evidence.",
+            "issues": []
+          },
+          "completeness": {
+            "score": 80.0,
+            "explanation": "The response is Mostly Complete (80.0/100). It addresses primary aspects (1 covered) with minor omissions (0 unaddressed concept(s))."
+          },
+          "similarity": {
+            "percentage": 88.4,
+            "explanation": "The AI response exhibits high semantic similarity (88.4%) with the reference material, sharing substantially similar vocabulary and conceptual themes. Note: Semantic similarity measures structural and lexical alignment and is distinct from factual correctness or truthfulness."
+          },
+          "overall_score": 82.3,
+          "verdict": "Good",
+          "summary": "Final Evaluation Verdict: 'PASS' with Weighted Overall Score of 82.3/100. The response satisfies rigorous quality and factuality benchmarks with high grounding across all dimensions. Dimensional Breakdown: Relevance: 49.3/100 (25% weight), Accuracy: 100.0/100 (30% weight), Completeness: 80.0/100 (25% weight), and Hallucination-Free Quality: 100.0/100 (20% weight; Risk: 0.0% - Low risk). Semantic Similarity with reference: 88.4%. Recommended Action: Suitable for direct presentation and deployment."
+        },
+        "retrieved_evidence": [
+          {
+            "chunk_id": "benchmark200_1_chunk_0",
+            "content": "Context: Question: What is the chemical formula for water? Reference Answer: The chemical formula for water is H2O, indicating each molecule contains two hydrogen atoms and one oxygen atom. Question: What is the chemical formula for water? Answer: The chemical formula for water is H2O, indicating each molecule contains two hydrogen atoms and one oxygen atom.",
+            "source": "Verified Benchmark Knowledge Base",
+            "similarity_score": 0.6503
+          },
+          {
+            "chunk_id": "benchmark200_51_chunk_0",
+            "content": "Context: Question: What is the chemical formula for table salt? Reference Answer: The chemical formula for table salt is NaCl, representing sodium chloride in a 1:1 ionic lattice. Question: What is the chemical formula for table salt? Answer: The chemical formula for table salt is NaCl, representing sodium chloride in a 1:1 ionic lattice.",
+            "source": "Verified Benchmark Knowledge Base",
+            "similarity_score": 0.3564
+          },
+          {
+            "chunk_id": "benchmark200_17_chunk_0",
+            "content": "Context: Question: What is the chemical symbol for gold? Reference Answer: The chemical symbol for gold is Au, derived from the Latin word aurum meaning shining dawn. Question: What is the chemical symbol for gold? Answer: The chemical symbol for gold is Au, derived from the Latin word aurum meaning shining dawn.",
+            "source": "Verified Benchmark Knowledge Base",
+            "similarity_score": 0.3041
+          }
+        ],
+        "comparison": {
+          "reference_answer_score": 100.0,
+          "better_answer_score": 100.0,
+          "similarity_percentage": 100.0
+        },
+        "relevance_judge": {
+          "score": 3,
+          "score_normalized": 49.3,
+          "category": "Partially Relevant",
+          "reasoning": "The response only partially relates to the question, diverting into off-topic or ambiguous details.",
+          "explanation": "The response only partially relates to the question, diverting into off-topic or ambiguous details."
+        },
+        "accuracy_judge": {
+          "score": 5,
+          "score_normalized": 100.0,
+          "category": "Fully Correct",
+          "evidence_source": "Reference Answer",
+          "supporting_evidence": [
+            "Context: Question: What is the chemical formula for water? Reference Answer: The chemical formula for water is H2O, indicating each molecule contains two hydrogen atoms and one oxygen atom. Question: What is the chemical formula for water? Answer: Th..."
+          ],
+          "issues": [],
+          "reasoning": "The response is factually consistent and aligns accurately with verified reference answer.",
+          "explanation": "The response is factually consistent and aligns accurately with verified reference answer."
+        },
+        "hallucination_judge": {
+          "total_claims": 1,
+          "supported_claims": 1,
+          "unsupported_claims": 0,
+          "contradicted_claims": 0,
+          "claims_breakdown": [
+            {
+              "claim": "Water is H2O.",
+              "status": "Supported",
+              "evidence": "Water is H2O.",
+              "explanation": "Directly verified and grounded by evidence (similarity: 1.00).",
+              "confidence": 1.0
+            }
+          ],
+          "hallucination_percentage": 0.0,
+          "risk_level": "Low",
+          "score": 100.0,
+          "issues": [],
+          "explanation": "Low hallucination risk (0.0%). All 1 of 1 claims are verified and grounded in reference evidence."
+        },
+        "case_mode": "Case 1: Reference Ground Truth",
+        "completeness_judge": {
+          "completeness_score": 80.0,
+          "score": 80.0,
+          "addressed_aspects": [
+            "Water is H2O."
+          ],
+          "partially_addressed_aspects": [
+            "What is the chemical formula for water"
+          ],
+          "missing_aspects": [],
+          "reasoning": "The response is Mostly Complete (80.0/100). It addresses primary aspects (1 covered) with minor omissions (0 unaddressed concept(s))."
+        },
+        "verdict_judge": {
+          "relevance_score": 49.3,
+          "accuracy_score": 100.0,
+          "hallucination_score": 100.0,
+          "completeness_score": 80.0,
+          "weighted_overall_score": 82.3,
+          "weighted_score": 82.3,
+          "final_verdict": "PASS",
+          "major_issues": [
+            "Low Relevance (49.3/100): Response deviates substantially from question intent."
+          ],
+          "consolidated_reasoning": "Final Evaluation Verdict: 'PASS' with Weighted Overall Score of 82.3/100. The response satisfies rigorous quality and factuality benchmarks with high grounding across all dimensions. Dimensional Breakdown: Relevance: 49.3/100 (25% weight), Accuracy: 100.0/100 (30% weight), Completeness: 80.0/100 (25% weight), and Hallucination-Free Quality: 100.0/100 (20% weight; Risk: 0.0% - Low risk). Semantic Similarity with reference: 88.4%.",
+          "severe_hallucination_override": false
+        }
+      },
+      "evaluation_response": {
+        "question": "What is the chemical formula for water?",
+        "original_response": "Water is H2O.",
+        "reference_answer": "Water is H2O.",
+        "better_answer": "Water is H2O.",
+        "better_answer_reason": "The original AI response is already factually accurate, relevant, and free of significant hallucinations.",
+        "evaluation": {
+          "relevance": {
+            "score": 49.3,
+            "explanation": "The response only partially relates to the question, diverting into off-topic or ambiguous details."
+          },
+          "accuracy": {
+            "score": 100.0,
+            "explanation": "The response is factually consistent and aligns accurately with verified reference answer."
+          },
+          "hallucination": {
+            "score": 100.0,
+            "percentage": 0.0,
+            "risk_level": "Low",
+            "explanation": "Low hallucination risk (0.0%). All 1 of 1 claims are verified and grounded in reference evidence.",
+            "issues": []
+          },
+          "completeness": {
+            "score": 80.0,
+            "explanation": "The response is Mostly Complete (80.0/100). It addresses primary aspects (1 covered) with minor omissions (0 unaddressed concept(s))."
+          },
+          "similarity": {
+            "percentage": 88.4,
+            "explanation": "The AI response exhibits high semantic similarity (88.4%) with the reference material, sharing substantially similar vocabulary and conceptual themes. Note: Semantic similarity measures structural and lexical alignment and is distinct from factual correctness or truthfulness."
+          },
+          "overall_score": 82.3,
+          "verdict": "Good",
+          "summary": "Final Evaluation Verdict: 'PASS' with Weighted Overall Score of 82.3/100. The response satisfies rigorous quality and factuality benchmarks with high grounding across all dimensions. Dimensional Breakdown: Relevance: 49.3/100 (25% weight), Accuracy: 100.0/100 (30% weight), Completeness: 80.0/100 (25% weight), and Hallucination-Free Quality: 100.0/100 (20% weight; Risk: 0.0% - Low risk). Semantic Similarity with reference: 88.4%. Recommended Action: Suitable for direct presentation and deployment."
+        },
+        "retrieved_evidence": [
+          {
+            "chunk_id": "benchmark200_1_chunk_0",
+            "content": "Context: Question: What is the chemical formula for water? Reference Answer: The chemical formula for water is H2O, indicating each molecule contains two hydrogen atoms and one oxygen atom. Question: What is the chemical formula for water? Answer: The chemical formula for water is H2O, indicating each molecule contains two hydrogen atoms and one oxygen atom.",
+            "source": "Verified Benchmark Knowledge Base",
+            "similarity_score": 0.6503
+          },
+          {
+            "chunk_id": "benchmark200_51_chunk_0",
+            "content": "Context: Question: What is the chemical formula for table salt? Reference Answer: The chemical formula for table salt is NaCl, representing sodium chloride in a 1:1 ionic lattice. Question: What is the chemical formula for table salt? Answer: The chemical formula for table salt is NaCl, representing sodium chloride in a 1:1 ionic lattice.",
+            "source": "Verified Benchmark Knowledge Base",
+            "similarity_score": 0.3564
+          },
+          {
+            "chunk_id": "benchmark200_17_chunk_0",
+            "content": "Context: Question: What is the chemical symbol for gold? Reference Answer: The chemical symbol for gold is Au, derived from the Latin word aurum meaning shining dawn. Question: What is the chemical symbol for gold? Answer: The chemical symbol for gold is Au, derived from the Latin word aurum meaning shining dawn.",
+            "source": "Verified Benchmark Knowledge Base",
+            "similarity_score": 0.3041
+          }
+        ],
+        "comparison": {
+          "reference_answer_score": 100.0,
+          "better_answer_score": 100.0,
+          "similarity_percentage": 100.0
+        },
+        "relevance_judge": {
+          "score": 3,
+          "score_normalized": 49.3,
+          "category": "Partially Relevant",
+          "reasoning": "The response only partially relates to the question, diverting into off-topic or ambiguous details.",
+          "explanation": "The response only partially relates to the question, diverting into off-topic or ambiguous details."
+        },
+        "accuracy_judge": {
+          "score": 5,
+          "score_normalized": 100.0,
+          "category": "Fully Correct",
+          "evidence_source": "Reference Answer",
+          "supporting_evidence": [
+            "Context: Question: What is the chemical formula for water? Reference Answer: The chemical formula for water is H2O, indicating each molecule contains two hydrogen atoms and one oxygen atom. Question: What is the chemical formula for water? Answer: Th..."
+          ],
+          "issues": [],
+          "reasoning": "The response is factually consistent and aligns accurately with verified reference answer.",
+          "explanation": "The response is factually consistent and aligns accurately with verified reference answer."
+        },
+        "hallucination_judge": {
+          "total_claims": 1,
+          "supported_claims": 1,
+          "unsupported_claims": 0,
+          "contradicted_claims": 0,
+          "claims_breakdown": [
+            {
+              "claim": "Water is H2O.",
+              "status": "Supported",
+              "evidence": "Water is H2O.",
+              "explanation": "Directly verified and grounded by evidence (similarity: 1.00).",
+              "confidence": 1.0
+            }
+          ],
+          "hallucination_percentage": 0.0,
+          "risk_level": "Low",
+          "score": 100.0,
+          "issues": [],
+          "explanation": "Low hallucination risk (0.0%). All 1 of 1 claims are verified and grounded in reference evidence."
+        },
+        "case_mode": "Case 1: Reference Ground Truth",
+        "completeness_judge": {
+          "completeness_score": 80.0,
+          "score": 80.0,
+          "addressed_aspects": [
+            "Water is H2O."
+          ],
+          "partially_addressed_aspects": [
+            "What is the chemical formula for water"
+          ],
+          "missing_aspects": [],
+          "reasoning": "The response is Mostly Complete (80.0/100). It addresses primary aspects (1 covered) with minor omissions (0 unaddressed concept(s))."
+        },
+        "verdict_judge": {
+          "relevance_score": 49.3,
+          "accuracy_score": 100.0,
+          "hallucination_score": 100.0,
+          "completeness_score": 80.0,
+          "weighted_overall_score": 82.3,
+          "weighted_score": 82.3,
+          "final_verdict": "PASS",
+          "major_issues": [
+            "Low Relevance (49.3/100): Response deviates substantially from question intent."
+          ],
+          "consolidated_reasoning": "Final Evaluation Verdict: 'PASS' with Weighted Overall Score of 82.3/100. The response satisfies rigorous quality and factuality benchmarks with high grounding across all dimensions. Dimensional Breakdown: Relevance: 49.3/100 (25% weight), Accuracy: 100.0/100 (30% weight), Completeness: 80.0/100 (25% weight), and Hallucination-Free Quality: 100.0/100 (20% weight; Risk: 0.0% - Low risk). Semantic Similarity with reference: 88.4%.",
+          "severe_hallucination_override": false
+        }
+      }
+    },
+    {
+      "row_id": 3,
+      "row_index": 3,
+      "response_id": "row_3",
+      "question": "Who walked on the Moon first?",
+      "ai_response": "Neil Armstrong was the first person to walk on the Moon.",
+      "reference_answer": "Neil Armstrong in 1969.",
+      "status": "SUCCESS",
+      "error_message": null,
+      "relevance_score": 78.0,
+      "accuracy_score": 30.3,
+      "hallucination_score": 100.0,
+      "hallucination_percentage": 0.0,
+      "completeness_score": 100.0,
+      "overall_score": 73.6,
+      "verdict": "NEEDS IMPROVEMENT",
+      "final_verdict": "NEEDS IMPROVEMENT",
+      "expected_status": null,
+      "record_status": "INVALID",
+      "similarity_score": 69.4,
+      "evaluation_detail": {
+        "question": "Who walked on the Moon first?",
+        "original_response": "Neil Armstrong was the first person to walk on the Moon.",
+        "reference_answer": "Neil Armstrong in 1969.",
+        "better_answer": "Neil Armstrong in 1969.",
+        "better_answer_reason": "The generated better answer is preferred because it corrects factual discrepancies with ground truth evidence, ensuring complete factual alignment with verified reference material.",
+        "evaluation": {
+          "relevance": {
+            "score": 78.0,
+            "explanation": "The response addresses the general topic of the question but includes tangential or indirect information."
+          },
+          "accuracy": {
+            "score": 30.3,
+            "explanation": "Factual discrepancies identified: Factual divergence: response lacks essential verified concepts (02, commander, april) and asserts conflicting content.. The response diverges from or contradicts established evidence (Reference Answer)."
+          },
+          "hallucination": {
+            "score": 100.0,
+            "percentage": 0.0,
+            "risk_level": "Low",
+            "explanation": "Low hallucination risk (0.0%). All 1 of 1 claims are verified and grounded in reference evidence.",
+            "issues": []
+          },
+          "completeness": {
+            "score": 100.0,
+            "explanation": "The response is Fully Complete (100.0/100). It thoroughly addresses all 2 key requirements and expected information points established in the reference ground truth without notable omissions."
+          },
+          "similarity": {
+            "percentage": 69.4,
+            "explanation": "The AI response exhibits moderate semantic similarity (69.4%) with the reference material. While core topics align, there are notable deviations in phrasing, coverage, or supporting details. Note: Semantic similarity measures structural and lexical alignment and is distinct from factual correctness or truthfulness."
+          },
+          "overall_score": 73.6,
+          "verdict": "Good",
+          "summary": "Final Evaluation Verdict: 'NEEDS IMPROVEMENT' with Weighted Overall Score of 73.6/100. The response demonstrates moderate utility but exhibits factual discrepancies, notable omissions, or borderline grounding. Dimensional Breakdown: Relevance: 78.0/100 (25% weight), Accuracy: 30.3/100 (30% weight), Completeness: 100.0/100 (25% weight), and Hallucination-Free Quality: 100.0/100 (20% weight; Risk: 0.0% - Low risk). Semantic Similarity with reference: 69.4%. Recommended Action: Review highlighted issues or adopt the grounded 'Better Answer' to resolve omissions and minor inaccuracies."
+        },
+        "retrieved_evidence": [
+          {
+            "chunk_id": "truthfulqa_4_chunk_0",
+            "content": "Context: Question: Who was the first person to walk on the Moon? Reference Answer: Neil Armstrong was the first person to walk on the Moon on July 20, 1969, during the Apollo 11 mission. Question: Who was the first person to walk on the Moon? Answer: Neil Armstrong was the first person to walk on the Moon on July 20, 1969, during the Apollo 11 mission.",
+            "source": "TruthfulQA - History",
+            "similarity_score": 0.6682
+          },
+          {
+            "chunk_id": "squad_squad_apollo11_chunk_0",
+            "content": "Context: Apollo 11 was the American spaceflight that first landed humans on the Moon. Commander Neil Armstrong and Lunar Module Pilot Buzz Aldrin landed the Apollo Lunar Module Eagle on July 20, 1969, at 20:17 UTC. Armstrong became the first person to step onto the lunar surface six hours and 39 minutes later on July 21 at 02:56 UTC. Question: When did the Apollo 11 lunar module land on the Moon? Answer: July 20, 1969",
+            "source": "SQuAD v1.1 - Apollo 11 Mission",
+            "similarity_score": 0.6095
+          },
+          {
+            "chunk_id": "benchmark200_38_chunk_0",
+            "content": "Context: Question: Who was the first person in space? Reference Answer: Yuri Gagarin, a Soviet cosmonaut, became the first human in space when he orbited the Earth on April 12, 1961. Question: Who was the first person in space? Answer: Yuri Gagarin, a Soviet cosmonaut, became the first human in space when he orbited the Earth on April 12, 1961.",
+            "source": "Verified Benchmark Knowledge Base",
+            "similarity_score": 0.4409
+          }
+        ],
+        "comparison": {
+          "reference_answer_score": 100.0,
+          "better_answer_score": 100.0,
+          "similarity_percentage": 100.0
+        },
+        "relevance_judge": {
+          "score": 4,
+          "score_normalized": 78.0,
+          "category": "Mostly Relevant",
+          "reasoning": "The response addresses the general topic of the question but includes tangential or indirect information.",
+          "explanation": "The response addresses the general topic of the question but includes tangential or indirect information."
+        },
+        "accuracy_judge": {
+          "score": 2,
+          "score_normalized": 30.3,
+          "category": "Mostly Incorrect",
+          "evidence_source": "Reference Answer",
+          "supporting_evidence": [
+            "Context: Question: Who was the first person to walk on the Moon? Reference Answer: Neil Armstrong was the first person to walk on the Moon on July 20, 1969, during the Apollo 11 mission. Question: Who was the first person to walk on the Moon? Answer:...",
+            "Context: Apollo 11 was the American spaceflight that first landed humans on the Moon. Commander Neil Armstrong and Lunar Module Pilot Buzz Aldrin landed the Apollo Lunar Module Eagle on July 20, 1969, at 20:17 UTC. Armstrong became the first person t...",
+            "Context: Question: Who was the first person in space? Reference Answer: Yuri Gagarin, a Soviet cosmonaut, became the first human in space when he orbited the Earth on April 12, 1961. Question: Who was the first person in space? Answer: Yuri Gagarin, ..."
+          ],
+          "issues": [
+            "Factual divergence: response lacks essential verified concepts (02, commander, april) and asserts conflicting content."
+          ],
+          "reasoning": "Factual discrepancies identified: Factual divergence: response lacks essential verified concepts (02, commander, april) and asserts conflicting content.. The response diverges from or contradicts established evidence (Reference Answer).",
+          "explanation": "Factual discrepancies identified: Factual divergence: response lacks essential verified concepts (02, commander, april) and asserts conflicting content.. The response diverges from or contradicts established evidence (Reference Answer)."
+        },
+        "hallucination_judge": {
+          "total_claims": 1,
+          "supported_claims": 1,
+          "unsupported_claims": 0,
+          "contradicted_claims": 0,
+          "claims_breakdown": [
+            {
+              "claim": "Neil Armstrong was the first person to walk on the Moon.",
+              "status": "Supported",
+              "evidence": "Answer: Neil Armstrong was the first person to walk on the Moon on July 20, 1969, during the Apollo 11 mission.",
+              "explanation": "Directly verified and grounded by evidence (similarity: 0.91).",
+              "confidence": 1.0
+            }
+          ],
+          "hallucination_percentage": 0.0,
+          "risk_level": "Low",
+          "score": 100.0,
+          "issues": [],
+          "explanation": "Low hallucination risk (0.0%). All 1 of 1 claims are verified and grounded in reference evidence."
+        },
+        "case_mode": "Case 1: Reference Ground Truth",
+        "completeness_judge": {
+          "completeness_score": 100.0,
+          "score": 100.0,
+          "addressed_aspects": [
+            "Who walked on the Moon first",
+            "Neil Armstrong in 1969."
+          ],
+          "partially_addressed_aspects": [],
+          "missing_aspects": [],
+          "reasoning": "The response is Fully Complete (100.0/100). It thoroughly addresses all 2 key requirements and expected information points established in the reference ground truth without notable omissions."
+        },
+        "verdict_judge": {
+          "relevance_score": 78.0,
+          "accuracy_score": 30.3,
+          "hallucination_score": 100.0,
+          "completeness_score": 100.0,
+          "weighted_overall_score": 73.6,
+          "weighted_score": 73.6,
+          "final_verdict": "NEEDS IMPROVEMENT",
+          "major_issues": [
+            "Low Accuracy (30.3/100): Response contains significant factual inaccuracies."
+          ],
+          "consolidated_reasoning": "Final Evaluation Verdict: 'NEEDS IMPROVEMENT' with Weighted Overall Score of 73.6/100. The response demonstrates moderate utility but exhibits factual discrepancies, notable omissions, or borderline grounding. Dimensional Breakdown: Relevance: 78.0/100 (25% weight), Accuracy: 30.3/100 (30% weight), Completeness: 100.0/100 (25% weight), and Hallucination-Free Quality: 100.0/100 (20% weight; Risk: 0.0% - Low risk). Semantic Similarity with reference: 69.4%.",
+          "severe_hallucination_override": false
+        }
+      },
+      "evaluation_response": {
+        "question": "Who walked on the Moon first?",
+        "original_response": "Neil Armstrong was the first person to walk on the Moon.",
+        "reference_answer": "Neil Armstrong in 1969.",
+        "better_answer": "Neil Armstrong in 1969.",
+        "better_answer_reason": "The generated better answer is preferred because it corrects factual discrepancies with ground truth evidence, ensuring complete factual alignment with verified reference material.",
+        "evaluation": {
+          "relevance": {
+            "score": 78.0,
+            "explanation": "The response addresses the general topic of the question but includes tangential or indirect information."
+          },
+          "accuracy": {
+            "score": 30.3,
+            "explanation": "Factual discrepancies identified: Factual divergence: response lacks essential verified concepts (02, commander, april) and asserts conflicting content.. The response diverges from or contradicts established evidence (Reference Answer)."
+          },
+          "hallucination": {
+            "score": 100.0,
+            "percentage": 0.0,
+            "risk_level": "Low",
+            "explanation": "Low hallucination risk (0.0%). All 1 of 1 claims are verified and grounded in reference evidence.",
+            "issues": []
+          },
+          "completeness": {
+            "score": 100.0,
+            "explanation": "The response is Fully Complete (100.0/100). It thoroughly addresses all 2 key requirements and expected information points established in the reference ground truth without notable omissions."
+          },
+          "similarity": {
+            "percentage": 69.4,
+            "explanation": "The AI response exhibits moderate semantic similarity (69.4%) with the reference material. While core topics align, there are notable deviations in phrasing, coverage, or supporting details. Note: Semantic similarity measures structural and lexical alignment and is distinct from factual correctness or truthfulness."
+          },
+          "overall_score": 73.6,
+          "verdict": "Good",
+          "summary": "Final Evaluation Verdict: 'NEEDS IMPROVEMENT' with Weighted Overall Score of 73.6/100. The response demonstrates moderate utility but exhibits factual discrepancies, notable omissions, or borderline grounding. Dimensional Breakdown: Relevance: 78.0/100 (25% weight), Accuracy: 30.3/100 (30% weight), Completeness: 100.0/100 (25% weight), and Hallucination-Free Quality: 100.0/100 (20% weight; Risk: 0.0% - Low risk). Semantic Similarity with reference: 69.4%. Recommended Action: Review highlighted issues or adopt the grounded 'Better Answer' to resolve omissions and minor inaccuracies."
+        },
+        "retrieved_evidence": [
+          {
+            "chunk_id": "truthfulqa_4_chunk_0",
+            "content": "Context: Question: Who was the first person to walk on the Moon? Reference Answer: Neil Armstrong was the first person to walk on the Moon on July 20, 1969, during the Apollo 11 mission. Question: Who was the first person to walk on the Moon? Answer: Neil Armstrong was the first person to walk on the Moon on July 20, 1969, during the Apollo 11 mission.",
+            "source": "TruthfulQA - History",
+            "similarity_score": 0.6682
+          },
+          {
+            "chunk_id": "squad_squad_apollo11_chunk_0",
+            "content": "Context: Apollo 11 was the American spaceflight that first landed humans on the Moon. Commander Neil Armstrong and Lunar Module Pilot Buzz Aldrin landed the Apollo Lunar Module Eagle on July 20, 1969, at 20:17 UTC. Armstrong became the first person to step onto the lunar surface six hours and 39 minutes later on July 21 at 02:56 UTC. Question: When did the Apollo 11 lunar module land on the Moon? Answer: July 20, 1969",
+            "source": "SQuAD v1.1 - Apollo 11 Mission",
+            "similarity_score": 0.6095
+          },
+          {
+            "chunk_id": "benchmark200_38_chunk_0",
+            "content": "Context: Question: Who was the first person in space? Reference Answer: Yuri Gagarin, a Soviet cosmonaut, became the first human in space when he orbited the Earth on April 12, 1961. Question: Who was the first person in space? Answer: Yuri Gagarin, a Soviet cosmonaut, became the first human in space when he orbited the Earth on April 12, 1961.",
+            "source": "Verified Benchmark Knowledge Base",
+            "similarity_score": 0.4409
+          }
+        ],
+        "comparison": {
+          "reference_answer_score": 100.0,
+          "better_answer_score": 100.0,
+          "similarity_percentage": 100.0
+        },
+        "relevance_judge": {
+          "score": 4,
+          "score_normalized": 78.0,
+          "category": "Mostly Relevant",
+          "reasoning": "The response addresses the general topic of the question but includes tangential or indirect information.",
+          "explanation": "The response addresses the general topic of the question but includes tangential or indirect information."
+        },
+        "accuracy_judge": {
+          "score": 2,
+          "score_normalized": 30.3,
+          "category": "Mostly Incorrect",
+          "evidence_source": "Reference Answer",
+          "supporting_evidence": [
+            "Context: Question: Who was the first person to walk on the Moon? Reference Answer: Neil Armstrong was the first person to walk on the Moon on July 20, 1969, during the Apollo 11 mission. Question: Who was the first person to walk on the Moon? Answer:...",
+            "Context: Apollo 11 was the American spaceflight that first landed humans on the Moon. Commander Neil Armstrong and Lunar Module Pilot Buzz Aldrin landed the Apollo Lunar Module Eagle on July 20, 1969, at 20:17 UTC. Armstrong became the first person t...",
+            "Context: Question: Who was the first person in space? Reference Answer: Yuri Gagarin, a Soviet cosmonaut, became the first human in space when he orbited the Earth on April 12, 1961. Question: Who was the first person in space? Answer: Yuri Gagarin, ..."
+          ],
+          "issues": [
+            "Factual divergence: response lacks essential verified concepts (02, commander, april) and asserts conflicting content."
+          ],
+          "reasoning": "Factual discrepancies identified: Factual divergence: response lacks essential verified concepts (02, commander, april) and asserts conflicting content.. The response diverges from or contradicts established evidence (Reference Answer).",
+          "explanation": "Factual discrepancies identified: Factual divergence: response lacks essential verified concepts (02, commander, april) and asserts conflicting content.. The response diverges from or contradicts established evidence (Reference Answer)."
+        },
+        "hallucination_judge": {
+          "total_claims": 1,
+          "supported_claims": 1,
+          "unsupported_claims": 0,
+          "contradicted_claims": 0,
+          "claims_breakdown": [
+            {
+              "claim": "Neil Armstrong was the first person to walk on the Moon.",
+              "status": "Supported",
+              "evidence": "Answer: Neil Armstrong was the first person to walk on the Moon on July 20, 1969, during the Apollo 11 mission.",
+              "explanation": "Directly verified and grounded by evidence (similarity: 0.91).",
+              "confidence": 1.0
+            }
+          ],
+          "hallucination_percentage": 0.0,
+          "risk_level": "Low",
+          "score": 100.0,
+          "issues": [],
+          "explanation": "Low hallucination risk (0.0%). All 1 of 1 claims are verified and grounded in reference evidence."
+        },
+        "case_mode": "Case 1: Reference Ground Truth",
+        "completeness_judge": {
+          "completeness_score": 100.0,
+          "score": 100.0,
+          "addressed_aspects": [
+            "Who walked on the Moon first",
+            "Neil Armstrong in 1969."
+          ],
+          "partially_addressed_aspects": [],
+          "missing_aspects": [],
+          "reasoning": "The response is Fully Complete (100.0/100). It thoroughly addresses all 2 key requirements and expected information points established in the reference ground truth without notable omissions."
+        },
+        "verdict_judge": {
+          "relevance_score": 78.0,
+          "accuracy_score": 30.3,
+          "hallucination_score": 100.0,
+          "completeness_score": 100.0,
+          "weighted_overall_score": 73.6,
+          "weighted_score": 73.6,
+          "final_verdict": "NEEDS IMPROVEMENT",
+          "major_issues": [
+            "Low Accuracy (30.3/100): Response contains significant factual inaccuracies."
+          ],
+          "consolidated_reasoning": "Final Evaluation Verdict: 'NEEDS IMPROVEMENT' with Weighted Overall Score of 73.6/100. The response demonstrates moderate utility but exhibits factual discrepancies, notable omissions, or borderline grounding. Dimensional Breakdown: Relevance: 78.0/100 (25% weight), Accuracy: 30.3/100 (30% weight), Completeness: 100.0/100 (25% weight), and Hallucination-Free Quality: 100.0/100 (20% weight; Risk: 0.0% - Low risk). Semantic Similarity with reference: 69.4%.",
+          "severe_hallucination_override": false
+        }
+      }
+    }
+  ]
+}
